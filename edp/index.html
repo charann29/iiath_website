@@ -12,180 +12,206 @@
   <script>
     (function () {
       const root = document.documentElement;
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'dark') root.classList.add('dark');
-      else if (savedTheme === 'light') root.classList.remove('dark');
-      else if (window.matchMedia('(prefers-color-scheme: dark)').matches) root.classList.add('dark');
-      root.style.setProperty('--primary', '#0d9488');
+      /* Force light mode */
+      root.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+      root.style.setProperty('--primary', '#e34614');
     })();
   </script>
-  <style>
-    /* ===== MINIMALIST 2-COLOR THEME: TEAL + CORAL ===== */
+    <style>
+    /* ===== WARM WHEAT + ORANGE THEME ===== */
     :root {
-      --primary: #0d9488;
-      --teal: #0d9488;
-      --teal-light: #14b8a6;
-      --coral: #f0736a;
-      --coral-dark: #dc5f56;
+      --primary: #e34614;
+      --primary-dark: #cc5227;
+      --primary-light: #da8159;
+      --accent: #f5b891;
+      --wheat: #f7e8ca;
+      --wheat-light: #fedfb9;
+      --wheat-lighter: #fef6e8;
     }
 
-    html { color-scheme: dark; }
+    html { color-scheme: light !important; }
+    html.dark { color-scheme: light !important; }
 
     /* --- Base --- */
-    body { background: #0a0a0a !important; color: #d4d4d4 !important; }
-    .bg-background { background: #0a0a0a !important; }
-
-    /* --- Backgrounds --- */
-    .bg-white, .bg-neutral-50 { background: #111 !important; }
-    .bg-neutral-100 { background: #161616 !important; }
-    .bg-neutral-200 { background: #1a1a1a !important; }
-    .bg-neutral-900 { background: #0a0a0a !important; }
-    .dark\:bg-black, .dark\:bg-\[\#0a0a0a\] { background: #0a0a0a !important; }
-    .dark\:bg-\[\#1a1a1a\], .dark\:bg-neutral-800 { background: #161616 !important; }
-    .dark\:bg-\[\#222222\] { background: #1a1a1a !important; }
-    .dark\:bg-\[\#111111\], .dark\:bg-neutral-900 { background: #111 !important; }
-    .dark\:bg-neutral-950 { background: #0a0a0a !important; }
-
-    /* --- Text --- */
-    h1, h2, h3 { color: #fff !important; }
-    .text-neutral-900, .text-black, .dark\:text-white { color: #fff !important; }
-    .text-neutral-700, .text-gray-700 { color: #a1a1a1 !important; }
-    .text-neutral-600, .text-gray-600 { color: #a1a1a1 !important; }
-    .text-neutral-500, .text-gray-500 { color: #737373 !important; }
-    .dark\:text-neutral-300 { color: #d4d4d4 !important; }
-    .dark\:text-neutral-400 { color: #a1a1a1 !important; }
-
-    /* --- Primary accent (teal) --- */
-    .text-\[var\(--primary\)\], .text-primary { color: #0d9488 !important; }
-    .group-hover\:text-\[var\(--primary\)\]:hover,
-    .hover\:text-primary:hover { color: #14b8a6 !important; }
-    h1 .text-\[var\(--primary\)\], h2 .text-\[var\(--primary\)\],
-    h1 span.text-\[var\(--primary\)\], h2 span.text-\[var\(--primary\)\] {
-      color: #14b8a6 !important;
-      background: none !important;
-      -webkit-background-clip: unset !important;
-      -webkit-text-fill-color: #14b8a6 !important;
-      background-clip: unset !important;
+    body {
+      background: #fedfb9 !important;
+      color: #3b2314 !important;
     }
-    .text-red-600 { color: #0d9488 !important; }
+    .bg-background { background: #fedfb9 !important; }
 
-    /* --- Borders --- */
-    .border-neutral-200, .border-neutral-300, .border-neutral-700 { border-color: #262626 !important; }
-    .dark\:border-neutral-700, .dark\:border-neutral-800 { border-color: #262626 !important; }
-    .border-\[var\(--primary\)\], .dark\:border-\[var\(--primary\)\] { border-color: rgba(13, 148, 136, 0.3) !important; }
+    /* --- Backgrounds: force warm light --- */
+    .bg-white { background: #fef6e8 !important; }
+    .bg-neutral-50 { background: #fef6e8 !important; }
+    .bg-neutral-100 { background: #f7e8ca !important; }
+    .bg-neutral-200 { background: #fedfb9 !important; }
+    .bg-neutral-900 { background: #fef6e8 !important; }
+    .bg-black { background: #fedfb9 !important; }
+
+    /* Override ALL dark: bg classes to warm light */
+    .dark\:bg-black { background: #fedfb9 !important; }
+    .dark\:bg-\[\#0a0a0a\] { background: #fedfb9 !important; }
+    .dark\:bg-\[\#1a1a1a\] { background: #f7e8ca !important; }
+    .dark\:bg-\[\#222222\] { background: #f7e8ca !important; }
+    .dark\:bg-\[\#111111\] { background: #fef6e8 !important; }
+    .dark\:bg-\[\#18191A\] { background: #fef6e8 !important; }
+    .dark\:bg-neutral-800 { background: #f7e8ca !important; }
+    .dark\:bg-neutral-800\/50 { background: #fef6e8 !important; }
+    .dark\:bg-neutral-900 { background: #fedfb9 !important; }
+    .dark\:bg-neutral-900\/50 { background: #fef6e8 !important; }
+    .dark\:bg-neutral-950 { background: #fedfb9 !important; }
+    .dark\:bg-zinc-800\/50 { background: #fef6e8 !important; }
+
+    /* --- Text: dark brown on warm bg --- */
+    h1, h2, h3, h4, h5, h6 { color: #2d1a0e !important; }
+    p { color: #3b2314; }
+    .text-white { color: #2d1a0e !important; }
+    .text-neutral-900, .text-black { color: #2d1a0e !important; }
+    .text-neutral-800 { color: #3b2314 !important; }
+    .text-neutral-700, .text-gray-700 { color: #4a3222 !important; }
+    .text-neutral-600, .text-gray-600 { color: #5c4033 !important; }
+    .text-neutral-500, .text-gray-500 { color: #7a6352 !important; }
+    .text-neutral-400, .text-gray-400 { color: #9a8574 !important; }
+    .text-neutral-300, .text-gray-300 { color: #9a8574 !important; }
+    .dark\:text-white { color: #2d1a0e !important; }
+    .dark\:text-neutral-100 { color: #2d1a0e !important; }
+    .dark\:text-neutral-200 { color: #3b2314 !important; }
+    .dark\:text-neutral-300 { color: #4a3222 !important; }
+    .dark\:text-neutral-400 { color: #5c4033 !important; }
+    .dark\:text-gray-300 { color: #4a3222 !important; }
+
+    /* Keep white text ONLY inside primary-bg elements and CTA buttons */
+    .bg-\[var\(--primary\)\] *, [style*="background-color: var(--primary)"] *,
+    .bg-primary *, a[href*="apply.niatindia.com"],
+    a[href*="apply.niatindia.com"] * { color: #fff !important; }
+
+    /* --- Primary accent (orange-red) --- */
+    .text-\[var\(--primary\)\], .text-primary { color: #e34614 !important; }
+    span.text-\[var\(--primary\)\] { color: #e34614 !important; }
+    .text-red-600 { color: #e34614 !important; }
+    .text-red-500 { color: #e34614 !important; }
+    .text-orange-600 { color: #e34614 !important; }
+
+    /* --- Borders: warm mode --- */
+    .border-neutral-200, .border-neutral-300 { border-color: #e8d5b5 !important; }
+    .border-neutral-700 { border-color: #e8d5b5 !important; }
+    .dark\:border-neutral-700, .dark\:border-neutral-800 { border-color: #e8d5b5 !important; }
+    .border-gray-200, .border-gray-800, .dark\:border-gray-800 { border-color: #e8d5b5 !important; }
+    .border-\[var\(--primary\)\], .dark\:border-\[var\(--primary\)\] { border-color: rgba(227, 70, 20, 0.3) !important; }
 
     /* --- Navbar --- */
     header nav > div {
-      background: rgba(10, 10, 10, 0.8) !important;
-      border-color: #262626 !important;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.4) !important;
+      background: rgba(254, 246, 232, 0.9) !important;
+      border-color: #e8d5b5 !important;
+      box-shadow: 0 1px 3px rgba(45,26,14,0.08) !important;
       backdrop-filter: blur(20px) !important;
     }
-    header nav ul a.text-primary,
-    header nav ul a[href="/"] .leading-none { color: #14b8a6 !important; }
-    header nav ul a.text-white .leading-none,
-    header nav ul .text-white .leading-none { color: #d4d4d4 !important; }
+    header nav ul a .leading-none,
+    header nav ul div .leading-none { color: #3b2314 !important; }
+    header nav ul a.text-primary .leading-none,
+    header nav ul a[href="/"] .leading-none { color: #e34614 !important; }
     header nav ul a:hover .leading-none,
-    header nav ul div:hover .leading-none { color: #14b8a6 !important; }
-    header nav ul a::after, header nav ul div::after { background: #0d9488 !important; }
+    header nav ul div:hover .leading-none { color: #e34614 !important; }
+    header nav ul a::after, header nav ul div::after { background: #e34614 !important; }
 
-    /* --- CTA buttons (coral) --- */
+    /* --- CTA buttons (primary orange-red) --- */
     a[href*="apply.niatindia.com"] {
-      background: #f0736a !important;
+      background: linear-gradient(135deg, #e34614, #cc5227) !important;
       color: #fff !important;
-      border-color: #f0736a !important;
+      border-color: #e34614 !important;
       font-weight: 600 !important;
     }
     a[href*="apply.niatindia.com"]:hover {
-      background: #dc5f56 !important;
-      box-shadow: 0 0 20px rgba(240, 115, 106, 0.25) !important;
+      background: linear-gradient(135deg, #cc5227, #da8159) !important;
+      box-shadow: 0 0 20px rgba(227, 70, 20, 0.25) !important;
     }
-    .relative a[href*="apply.niatindia.com"] {
-      background: #f0736a !important;
-    }
-    .relative a[href*="apply.niatindia.com"]:hover {
-      background: #dc5f56 !important;
-    }
-    button.bg-primary { background: #0d9488 !important; color: #fff !important; }
+    button.bg-primary { background: #e34614 !important; color: #fff !important; }
 
     /* --- Active tabs / primary bg elements --- */
     .bg-\[var\(--primary\)\],
     [style*="background-color: var(--primary)"] {
-      background-color: #0d9488 !important;
+      background-color: #e34614 !important;
       color: #fff !important;
     }
-    .bg-primary { background-color: #0d9488 !important; }
-    .bg-primary\/10 { background-color: rgba(13, 148, 136, 0.1) !important; }
+    .bg-primary { background-color: #e34614 !important; }
+    .bg-primary\/10 { background-color: rgba(227, 70, 20, 0.1) !important; }
+    .bg-red-600 { background-color: #e34614 !important; }
 
     /* --- Cards --- */
     .bg-neutral-200.rounded-xl, .bg-neutral-200.rounded-2xl {
-      background: #1a1a1a !important;
-      border-color: #262626 !important;
+      background: #fef6e8 !important;
+      border-color: #e8d5b5 !important;
     }
     .bg-neutral-200.rounded-xl:hover, .bg-neutral-200.rounded-2xl:hover {
-      border-color: rgba(13, 148, 136, 0.4) !important;
+      border-color: rgba(227, 70, 20, 0.4) !important;
     }
-    .bg-neutral-100.rounded-2xl, .bg-neutral-100.rounded-3xl { background: #161616 !important; }
+    .bg-neutral-100.rounded-2xl, .bg-neutral-100.rounded-3xl { background: #f7e8ca !important; }
 
     /* --- Stats section --- */
-    .bg-neutral-50.rounded-2xl { background: #111 !important; border: 1px solid #262626 !important; }
+    .bg-neutral-50.rounded-2xl { background: #fef6e8 !important; border: 1px solid #e8d5b5 !important; }
 
     /* --- Footer --- */
-    footer, footer > div { background: #0a0a0a !important; border-color: #1a1a1a !important; }
-    footer a { color: #a1a1a1 !important; }
-    footer a:hover { color: #14b8a6 !important; }
-    footer h3, footer h4 { color: #d4d4d4 !important; }
+    footer, footer > div { background: #f7e8ca !important; border-color: #e8d5b5 !important; }
+    footer a { color: #7a6352 !important; }
+    footer a:hover { color: #e34614 !important; }
+    footer h3, footer h4 { color: #2d1a0e !important; }
+    footer p, footer span { color: #5c4033 !important; }
+    footer .text-white { color: #2d1a0e !important; }
 
     /* --- Mega menu --- */
     #resources-mega-menu {
-      background: rgba(17, 17, 17, 0.98) !important;
-      border-color: #262626 !important;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.5) !important;
+      background: rgba(254, 246, 232, 0.98) !important;
+      border-color: #e8d5b5 !important;
+      box-shadow: 0 20px 40px rgba(45,26,14,0.1) !important;
     }
-    #resources-mega-menu h4 { color: #14b8a6 !important; border-bottom-color: #262626 !important; }
-    #resources-mega-menu a { color: #a1a1a1 !important; }
-    #resources-mega-menu a:hover { color: #14b8a6 !important; }
+    #resources-mega-menu h4 { color: #e34614 !important; border-bottom-color: #e8d5b5 !important; }
+    #resources-mega-menu a { color: #5c4033 !important; }
+    #resources-mega-menu a:hover { color: #e34614 !important; }
 
     /* --- Dropdowns --- */
-    .group\/item .absolute { background: rgba(17, 17, 17, 0.98) !important; border-color: #262626 !important; }
+    .group\/item .absolute {
+      background: rgba(254, 246, 232, 0.98) !important;
+      border-color: #e8d5b5 !important;
+      box-shadow: 0 10px 25px rgba(45,26,14,0.08) !important;
+    }
 
     /* --- Mobile menu --- */
-    #mobile-menu-panel { background: #111 !important; }
-    #mobile-menu-panel button, #mobile-menu-panel a { color: #d4d4d4 !important; }
-    .lucide-menu { stroke: #d4d4d4 !important; }
+    #mobile-menu-panel { background: #fef6e8 !important; }
+    #mobile-menu-panel button, #mobile-menu-panel a { color: #3b2314 !important; }
+    .lucide-menu { stroke: #3b2314 !important; }
+
+    /* --- Dark-mode gradient overrides for warm bg --- */
+    .dark\:from-black { --tw-gradient-from: #fedfb9 !important; }
+    .dark\:from-black\/70 { --tw-gradient-from: rgba(254,223,185,0.7) !important; }
+    .bg-white\/70, .dark\:bg-black\/70 { background: rgba(254,246,232,0.7) !important; }
 
     /* --- Decorative blurs --- */
-    .blur-3xl[style*="--primary"] { opacity: 0.08 !important; }
+    .blur-3xl { opacity: 0.2 !important; }
 
     /* --- Scrollbar --- */
     ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #0a0a0a; }
-    ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: #0d9488; }
+    ::-webkit-scrollbar-track { background: #f7e8ca; }
+    ::-webkit-scrollbar-thumb { background: #da8159; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #e34614; }
 
     /* --- Selection --- */
-    ::selection { background: rgba(13, 148, 136, 0.3); color: #fff; }
+    ::selection { background: rgba(227, 70, 20, 0.2); color: #2d1a0e; }
 
-    /* --- Shadows (subtle) --- */
-    .shadow-lg { box-shadow: 0 1px 3px rgba(0,0,0,0.3) !important; }
+    /* --- Shadows --- */
+    .shadow-lg { box-shadow: 0 1px 3px rgba(45,26,14,0.08), 0 1px 2px rgba(45,26,14,0.04) !important; }
+    .dark\:shadow-neutral-900\/50 { --tw-shadow-color: rgba(45,26,14,0.05) !important; }
 
-    /* --- Light mode force (ensure consistency) --- */
-    html:not(.dark) body { background: #0a0a0a !important; color: #d4d4d4 !important; }
-    html:not(.dark) .bg-white { background: #111 !important; }
-    html:not(.dark) .text-black, html:not(.dark) .text-neutral-900 { color: #fff !important; }
-    html:not(.dark) .text-gray-900 { color: #fff !important; }
-    html:not(.dark) .text-gray-700, html:not(.dark) .text-gray-600 { color: #a1a1a1 !important; }
-    html:not(.dark) .bg-neutral-50, html:not(.dark) .bg-neutral-100 { background: #161616 !important; }
-    html:not(.dark) .bg-neutral-200 { background: #1a1a1a !important; }
-    html:not(.dark) .border-neutral-200, html:not(.dark) .border-neutral-300 { border-color: #262626 !important; }
-    html:not(.dark) header nav > div { background: rgba(10, 10, 10, 0.8) !important; }
-    html:not(.dark) h1, html:not(.dark) h2, html:not(.dark) h3 { color: #fff !important; }
+    /* --- Ensure dark: text overrides don't break warm mode --- */
+    .dark\:text-neutral-100, .dark\:text-white { color: #2d1a0e !important; }
 
-    /* --- Dark mode consistency --- */
-    .dark .bg-white { background: #111 !important; }
-    .dark .text-black { color: #fff !important; }
-    .dark .bg-background { background: #0a0a0a !important; }
-    .dark .border-neutral-200 { border-color: #262626 !important; }
+    /* --- Gradient fade edges (scrolling sections) --- */
+    .bg-gradient-to-r.from-white, .bg-gradient-to-l.from-white { from: #fedfb9 !important; }
+
+    /* --- color-mix references use var(--primary) — auto-updates with new --primary --- */
+
+    /* --- Ring / focus --- */
+    .ring-neutral-200 { --tw-ring-color: #e8d5b5 !important; }
+
   </style>
 </head>
 <body class="antialiased bg-background">

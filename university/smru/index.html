@@ -10,175 +10,208 @@
   <link rel="icon" type="image/svg+xml" href="../../assets/faviconD.svg">
   <title>SMRU Campus - upGrad School of Technology</title>
   <script>
-    (function(){const r=document.documentElement;const t=localStorage.getItem('theme');if(t==='dark')r.classList.add('dark');else if(t==='light')r.classList.remove('dark');else if(window.matchMedia('(prefers-color-scheme:dark)').matches)r.classList.add('dark');r.style.setProperty('--primary','#0d9488');})();
+    (function () {
+      const root = document.documentElement;
+      /* Force light mode */
+      root.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+      root.style.setProperty('--primary', '#e34614');
+    })();
   </script>
-  <style>
-    /* ===== MINIMALIST 2-COLOR THEME: TEAL + CORAL ===== */
+    <style>
+    /* ===== WARM WHEAT + ORANGE THEME ===== */
     :root {
-      --primary: #0d9488;
-      --teal: #0d9488;
-      --teal-light: #14b8a6;
-      --coral: #f0736a;
-      --coral-dark: #dc5f56;
+      --primary: #e34614;
+      --primary-dark: #cc5227;
+      --primary-light: #da8159;
+      --accent: #f5b891;
+      --wheat: #f7e8ca;
+      --wheat-light: #fedfb9;
+      --wheat-lighter: #fef6e8;
     }
 
-    html { color-scheme: dark; }
+    html { color-scheme: light !important; }
+    html.dark { color-scheme: light !important; }
 
     /* --- Base --- */
-    body { background: #0a0a0a !important; color: #d4d4d4 !important; }
-    .bg-background { background: #0a0a0a !important; }
-
-    /* --- Backgrounds --- */
-    .bg-white, .bg-neutral-50 { background: #111 !important; }
-    .bg-neutral-100 { background: #161616 !important; }
-    .bg-neutral-200 { background: #1a1a1a !important; }
-    .bg-neutral-900 { background: #0a0a0a !important; }
-    .dark\:bg-black, .dark\:bg-\[\#0a0a0a\] { background: #0a0a0a !important; }
-    .dark\:bg-\[\#1a1a1a\], .dark\:bg-neutral-800 { background: #161616 !important; }
-    .dark\:bg-\[\#222222\] { background: #1a1a1a !important; }
-    .dark\:bg-\[\#111111\], .dark\:bg-neutral-900 { background: #111 !important; }
-    .dark\:bg-neutral-950 { background: #0a0a0a !important; }
-
-    /* --- Text --- */
-    h1, h2, h3 { color: #fff !important; }
-    .text-neutral-900, .text-black, .dark\:text-white { color: #fff !important; }
-    .text-neutral-700, .text-gray-700 { color: #a1a1a1 !important; }
-    .text-neutral-600, .text-gray-600 { color: #a1a1a1 !important; }
-    .text-neutral-500, .text-gray-500 { color: #737373 !important; }
-    .dark\:text-neutral-300 { color: #d4d4d4 !important; }
-    .dark\:text-neutral-400 { color: #a1a1a1 !important; }
-
-    /* --- Primary accent (teal) --- */
-    .text-\[var\(--primary\)\], .text-primary { color: #0d9488 !important; }
-    .group-hover\:text-\[var\(--primary\)\]:hover,
-    .hover\:text-primary:hover { color: #14b8a6 !important; }
-    h1 .text-\[var\(--primary\)\], h2 .text-\[var\(--primary\)\],
-    h1 span.text-\[var\(--primary\)\], h2 span.text-\[var\(--primary\)\] {
-      color: #14b8a6 !important;
-      background: none !important;
-      -webkit-background-clip: unset !important;
-      -webkit-text-fill-color: #14b8a6 !important;
-      background-clip: unset !important;
+    body {
+      background: #fedfb9 !important;
+      color: #3b2314 !important;
     }
-    .text-red-600 { color: #0d9488 !important; }
+    .bg-background { background: #fedfb9 !important; }
 
-    /* --- Borders --- */
-    .border-neutral-200, .border-neutral-300, .border-neutral-700 { border-color: #262626 !important; }
-    .dark\:border-neutral-700, .dark\:border-neutral-800 { border-color: #262626 !important; }
-    .border-\[var\(--primary\)\], .dark\:border-\[var\(--primary\)\] { border-color: rgba(13, 148, 136, 0.3) !important; }
+    /* --- Backgrounds: force warm light --- */
+    .bg-white { background: #fef6e8 !important; }
+    .bg-neutral-50 { background: #fef6e8 !important; }
+    .bg-neutral-100 { background: #f7e8ca !important; }
+    .bg-neutral-200 { background: #fedfb9 !important; }
+    .bg-neutral-900 { background: #fef6e8 !important; }
+    .bg-black { background: #fedfb9 !important; }
+
+    /* Override ALL dark: bg classes to warm light */
+    .dark\:bg-black { background: #fedfb9 !important; }
+    .dark\:bg-\[\#0a0a0a\] { background: #fedfb9 !important; }
+    .dark\:bg-\[\#1a1a1a\] { background: #f7e8ca !important; }
+    .dark\:bg-\[\#222222\] { background: #f7e8ca !important; }
+    .dark\:bg-\[\#111111\] { background: #fef6e8 !important; }
+    .dark\:bg-\[\#18191A\] { background: #fef6e8 !important; }
+    .dark\:bg-neutral-800 { background: #f7e8ca !important; }
+    .dark\:bg-neutral-800\/50 { background: #fef6e8 !important; }
+    .dark\:bg-neutral-900 { background: #fedfb9 !important; }
+    .dark\:bg-neutral-900\/50 { background: #fef6e8 !important; }
+    .dark\:bg-neutral-950 { background: #fedfb9 !important; }
+    .dark\:bg-zinc-800\/50 { background: #fef6e8 !important; }
+
+    /* --- Text: dark brown on warm bg --- */
+    h1, h2, h3, h4, h5, h6 { color: #2d1a0e !important; }
+    p { color: #3b2314; }
+    .text-white { color: #2d1a0e !important; }
+    .text-neutral-900, .text-black { color: #2d1a0e !important; }
+    .text-neutral-800 { color: #3b2314 !important; }
+    .text-neutral-700, .text-gray-700 { color: #4a3222 !important; }
+    .text-neutral-600, .text-gray-600 { color: #5c4033 !important; }
+    .text-neutral-500, .text-gray-500 { color: #7a6352 !important; }
+    .text-neutral-400, .text-gray-400 { color: #9a8574 !important; }
+    .text-neutral-300, .text-gray-300 { color: #9a8574 !important; }
+    .dark\:text-white { color: #2d1a0e !important; }
+    .dark\:text-neutral-100 { color: #2d1a0e !important; }
+    .dark\:text-neutral-200 { color: #3b2314 !important; }
+    .dark\:text-neutral-300 { color: #4a3222 !important; }
+    .dark\:text-neutral-400 { color: #5c4033 !important; }
+    .dark\:text-gray-300 { color: #4a3222 !important; }
+
+    /* Keep white text ONLY inside primary-bg elements and CTA buttons */
+    .bg-\[var\(--primary\)\] *, [style*="background-color: var(--primary)"] *,
+    .bg-primary *, a[href*="apply.niatindia.com"],
+    a[href*="apply.niatindia.com"] * { color: #fff !important; }
+
+    /* --- Primary accent (orange-red) --- */
+    .text-\[var\(--primary\)\], .text-primary { color: #e34614 !important; }
+    span.text-\[var\(--primary\)\] { color: #e34614 !important; }
+    .text-red-600 { color: #e34614 !important; }
+    .text-red-500 { color: #e34614 !important; }
+    .text-orange-600 { color: #e34614 !important; }
+
+    /* --- Borders: warm mode --- */
+    .border-neutral-200, .border-neutral-300 { border-color: #e8d5b5 !important; }
+    .border-neutral-700 { border-color: #e8d5b5 !important; }
+    .dark\:border-neutral-700, .dark\:border-neutral-800 { border-color: #e8d5b5 !important; }
+    .border-gray-200, .border-gray-800, .dark\:border-gray-800 { border-color: #e8d5b5 !important; }
+    .border-\[var\(--primary\)\], .dark\:border-\[var\(--primary\)\] { border-color: rgba(227, 70, 20, 0.3) !important; }
 
     /* --- Navbar --- */
     header nav > div {
-      background: rgba(10, 10, 10, 0.8) !important;
-      border-color: #262626 !important;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.4) !important;
+      background: rgba(254, 246, 232, 0.9) !important;
+      border-color: #e8d5b5 !important;
+      box-shadow: 0 1px 3px rgba(45,26,14,0.08) !important;
       backdrop-filter: blur(20px) !important;
     }
-    header nav ul a.text-primary,
-    header nav ul a[href="/"] .leading-none { color: #14b8a6 !important; }
-    header nav ul a.text-white .leading-none,
-    header nav ul .text-white .leading-none { color: #d4d4d4 !important; }
+    header nav ul a .leading-none,
+    header nav ul div .leading-none { color: #3b2314 !important; }
+    header nav ul a.text-primary .leading-none,
+    header nav ul a[href="/"] .leading-none { color: #e34614 !important; }
     header nav ul a:hover .leading-none,
-    header nav ul div:hover .leading-none { color: #14b8a6 !important; }
-    header nav ul a::after, header nav ul div::after { background: #0d9488 !important; }
+    header nav ul div:hover .leading-none { color: #e34614 !important; }
+    header nav ul a::after, header nav ul div::after { background: #e34614 !important; }
 
-    /* --- CTA buttons (coral) --- */
+    /* --- CTA buttons (primary orange-red) --- */
     a[href*="apply.niatindia.com"] {
-      background: #f0736a !important;
+      background: linear-gradient(135deg, #e34614, #cc5227) !important;
       color: #fff !important;
-      border-color: #f0736a !important;
+      border-color: #e34614 !important;
       font-weight: 600 !important;
     }
     a[href*="apply.niatindia.com"]:hover {
-      background: #dc5f56 !important;
-      box-shadow: 0 0 20px rgba(240, 115, 106, 0.25) !important;
+      background: linear-gradient(135deg, #cc5227, #da8159) !important;
+      box-shadow: 0 0 20px rgba(227, 70, 20, 0.25) !important;
     }
-    .relative a[href*="apply.niatindia.com"] {
-      background: #f0736a !important;
-    }
-    .relative a[href*="apply.niatindia.com"]:hover {
-      background: #dc5f56 !important;
-    }
-    button.bg-primary { background: #0d9488 !important; color: #fff !important; }
+    button.bg-primary { background: #e34614 !important; color: #fff !important; }
 
     /* --- Active tabs / primary bg elements --- */
     .bg-\[var\(--primary\)\],
     [style*="background-color: var(--primary)"] {
-      background-color: #0d9488 !important;
+      background-color: #e34614 !important;
       color: #fff !important;
     }
-    .bg-primary { background-color: #0d9488 !important; }
-    .bg-primary\/10 { background-color: rgba(13, 148, 136, 0.1) !important; }
+    .bg-primary { background-color: #e34614 !important; }
+    .bg-primary\/10 { background-color: rgba(227, 70, 20, 0.1) !important; }
+    .bg-red-600 { background-color: #e34614 !important; }
 
     /* --- Cards --- */
     .bg-neutral-200.rounded-xl, .bg-neutral-200.rounded-2xl {
-      background: #1a1a1a !important;
-      border-color: #262626 !important;
+      background: #fef6e8 !important;
+      border-color: #e8d5b5 !important;
     }
     .bg-neutral-200.rounded-xl:hover, .bg-neutral-200.rounded-2xl:hover {
-      border-color: rgba(13, 148, 136, 0.4) !important;
+      border-color: rgba(227, 70, 20, 0.4) !important;
     }
-    .bg-neutral-100.rounded-2xl, .bg-neutral-100.rounded-3xl { background: #161616 !important; }
+    .bg-neutral-100.rounded-2xl, .bg-neutral-100.rounded-3xl { background: #f7e8ca !important; }
 
     /* --- Stats section --- */
-    .bg-neutral-50.rounded-2xl { background: #111 !important; border: 1px solid #262626 !important; }
+    .bg-neutral-50.rounded-2xl { background: #fef6e8 !important; border: 1px solid #e8d5b5 !important; }
 
     /* --- Footer --- */
-    footer, footer > div { background: #0a0a0a !important; border-color: #1a1a1a !important; }
-    footer a { color: #a1a1a1 !important; }
-    footer a:hover { color: #14b8a6 !important; }
-    footer h3, footer h4 { color: #d4d4d4 !important; }
+    footer, footer > div { background: #f7e8ca !important; border-color: #e8d5b5 !important; }
+    footer a { color: #7a6352 !important; }
+    footer a:hover { color: #e34614 !important; }
+    footer h3, footer h4 { color: #2d1a0e !important; }
+    footer p, footer span { color: #5c4033 !important; }
+    footer .text-white { color: #2d1a0e !important; }
 
     /* --- Mega menu --- */
     #resources-mega-menu {
-      background: rgba(17, 17, 17, 0.98) !important;
-      border-color: #262626 !important;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.5) !important;
+      background: rgba(254, 246, 232, 0.98) !important;
+      border-color: #e8d5b5 !important;
+      box-shadow: 0 20px 40px rgba(45,26,14,0.1) !important;
     }
-    #resources-mega-menu h4 { color: #14b8a6 !important; border-bottom-color: #262626 !important; }
-    #resources-mega-menu a { color: #a1a1a1 !important; }
-    #resources-mega-menu a:hover { color: #14b8a6 !important; }
+    #resources-mega-menu h4 { color: #e34614 !important; border-bottom-color: #e8d5b5 !important; }
+    #resources-mega-menu a { color: #5c4033 !important; }
+    #resources-mega-menu a:hover { color: #e34614 !important; }
 
     /* --- Dropdowns --- */
-    .group\/item .absolute { background: rgba(17, 17, 17, 0.98) !important; border-color: #262626 !important; }
+    .group\/item .absolute {
+      background: rgba(254, 246, 232, 0.98) !important;
+      border-color: #e8d5b5 !important;
+      box-shadow: 0 10px 25px rgba(45,26,14,0.08) !important;
+    }
 
     /* --- Mobile menu --- */
-    #mobile-menu-panel { background: #111 !important; }
-    #mobile-menu-panel button, #mobile-menu-panel a { color: #d4d4d4 !important; }
-    .lucide-menu { stroke: #d4d4d4 !important; }
+    #mobile-menu-panel { background: #fef6e8 !important; }
+    #mobile-menu-panel button, #mobile-menu-panel a { color: #3b2314 !important; }
+    .lucide-menu { stroke: #3b2314 !important; }
+
+    /* --- Dark-mode gradient overrides for warm bg --- */
+    .dark\:from-black { --tw-gradient-from: #fedfb9 !important; }
+    .dark\:from-black\/70 { --tw-gradient-from: rgba(254,223,185,0.7) !important; }
+    .bg-white\/70, .dark\:bg-black\/70 { background: rgba(254,246,232,0.7) !important; }
 
     /* --- Decorative blurs --- */
-    .blur-3xl[style*="--primary"] { opacity: 0.08 !important; }
+    .blur-3xl { opacity: 0.2 !important; }
 
     /* --- Scrollbar --- */
     ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #0a0a0a; }
-    ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: #0d9488; }
+    ::-webkit-scrollbar-track { background: #f7e8ca; }
+    ::-webkit-scrollbar-thumb { background: #da8159; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #e34614; }
 
     /* --- Selection --- */
-    ::selection { background: rgba(13, 148, 136, 0.3); color: #fff; }
+    ::selection { background: rgba(227, 70, 20, 0.2); color: #2d1a0e; }
 
-    /* --- Shadows (subtle) --- */
-    .shadow-lg { box-shadow: 0 1px 3px rgba(0,0,0,0.3) !important; }
+    /* --- Shadows --- */
+    .shadow-lg { box-shadow: 0 1px 3px rgba(45,26,14,0.08), 0 1px 2px rgba(45,26,14,0.04) !important; }
+    .dark\:shadow-neutral-900\/50 { --tw-shadow-color: rgba(45,26,14,0.05) !important; }
 
-    /* --- Light mode force (ensure consistency) --- */
-    html:not(.dark) body { background: #0a0a0a !important; color: #d4d4d4 !important; }
-    html:not(.dark) .bg-white { background: #111 !important; }
-    html:not(.dark) .text-black, html:not(.dark) .text-neutral-900 { color: #fff !important; }
-    html:not(.dark) .text-gray-900 { color: #fff !important; }
-    html:not(.dark) .text-gray-700, html:not(.dark) .text-gray-600 { color: #a1a1a1 !important; }
-    html:not(.dark) .bg-neutral-50, html:not(.dark) .bg-neutral-100 { background: #161616 !important; }
-    html:not(.dark) .bg-neutral-200 { background: #1a1a1a !important; }
-    html:not(.dark) .border-neutral-200, html:not(.dark) .border-neutral-300 { border-color: #262626 !important; }
-    html:not(.dark) header nav > div { background: rgba(10, 10, 10, 0.8) !important; }
-    html:not(.dark) h1, html:not(.dark) h2, html:not(.dark) h3 { color: #fff !important; }
+    /* --- Ensure dark: text overrides don't break warm mode --- */
+    .dark\:text-neutral-100, .dark\:text-white { color: #2d1a0e !important; }
 
-    /* --- Dark mode consistency --- */
-    .dark .bg-white { background: #111 !important; }
-    .dark .text-black { color: #fff !important; }
-    .dark .bg-background { background: #0a0a0a !important; }
-    .dark .border-neutral-200 { border-color: #262626 !important; }
+    /* --- Gradient fade edges (scrolling sections) --- */
+    .bg-gradient-to-r.from-white, .bg-gradient-to-l.from-white { from: #fedfb9 !important; }
+
+    /* --- color-mix references use var(--primary) — auto-updates with new --primary --- */
+
+    /* --- Ring / focus --- */
+    .ring-neutral-200 { --tw-ring-color: #e8d5b5 !important; }
+
   </style>
 </head>
 <body class="antialiased bg-background">
@@ -186,7 +219,7 @@
   <!-- Navbar -->
   <header>
     <nav class="fixed z-[10000] w-full pt-2 transition-all duration-300" style="top:0">
-      <div class="mx-auto max-w-7xl rounded-xl border px-4 sm:px-6 lg:px-12 duration-300 relative overflow-visible backdrop-blur-xl shadow-lg bg-background/50" style="border-color:rgba(255,255,255,0.1);border-bottom-width:1px;border-radius:1rem;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06),0 0 20px rgba(255,215,0,0.1)">
+      <div class="mx-auto max-w-7xl rounded-xl border px-4 sm:px-6 lg:px-12 duration-300 relative overflow-visible backdrop-blur-xl shadow-lg bg-background/50" style="border-color:rgba(255,255,255,0.1);border-bottom-width:1px;border-radius:1rem;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06),0 0 20px rgba(227,70,20,0.1)">
         <div class="relative flex items-center justify-between py-3 sm:py-4 lg:py-6">
           <a href="/" class="flex items-center">
             <img alt="upGrad School of Technology" loading="eager" width="120" height="40" class="h-8 sm:h-10 w-auto" src="../../_next/image/url=%2Fassets%2FU_light_logo.png&w=256&q=75">
@@ -248,18 +281,18 @@
         <div class="max-w-3xl">
           <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-4 py-1.5 text-xs font-medium text-white/90 mb-6">
             <span class="relative flex h-2 w-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style="background-color:oklch(0.577 0.245 27.325)"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2" style="background-color:oklch(0.577 0.245 27.325)"></span>
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style="background-color:#e34614"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2" style="background-color:#e34614"></span>
             </span>
             University Partner Campus
           </div>
           <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white mb-4">
             St. Mary's<br>
-            <span class="bg-gradient-to-r from-red-500 via-orange-500 to-amber-500 bg-clip-text text-transparent">Rehabilitation University</span>
+            <span class="bg-gradient-to-r from-orange-500 via-red-600 to-orange-700 bg-clip-text text-transparent">Rehabilitation University</span>
           </h1>
           <p class="text-xl sm:text-2xl text-white/80 mb-3 font-light">Hyderabad, Telangana</p>
           <p class="text-neutral-300 text-base sm:text-lg mb-10 max-w-xl leading-relaxed">A pioneering institution blending rehabilitation sciences with cutting-edge technology education through the uGSOT collaboration.</p>
-          <a href="https://apply.niatindia.com/login?utm_source=apply+button&utm_medium=website&utm_campaign=cta-apply-now-variant" class="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl" style="background:linear-gradient(135deg, oklch(0.577 0.245 27.325), oklch(0.637 0.237 25));">
+          <a href="https://apply.niatindia.com/login?utm_source=apply+button&utm_medium=website&utm_campaign=cta-apply-now-variant" class="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl" style="background:linear-gradient(135deg, #e34614, #da8159);">
             Apply Now
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
@@ -289,7 +322,7 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <!-- Feature 1 -->
             <div class="group rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 p-6 transition-all duration-300 hover:border-red-500/30 hover:shadow-lg hover:shadow-red-500/5">
-              <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-red-500/20 mb-4">
+              <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500/10 to-orange-400/10 border border-orange-500/20 mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-red-500"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
               </div>
               <h3 class="text-sm font-bold text-neutral-900 dark:text-white mb-2">India's First Rehabilitation-Focused Campus</h3>
@@ -297,27 +330,27 @@
             </div>
 
             <!-- Feature 2 -->
-            <div class="group rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 p-6 transition-all duration-300 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/5">
-              <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border border-blue-500/20 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-blue-500"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            <div class="group rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 p-6 transition-all duration-300 hover:border-orange-500/30 hover:shadow-lg hover:shadow-orange-500/5">
+              <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500/10 to-orange-400/10 border border-orange-500/20 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-orange-600"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
               </div>
               <h3 class="text-sm font-bold text-neutral-900 dark:text-white mb-2">Clinical-Linked Learning</h3>
               <p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">Academic programs integrated with real-world clinical practice and healthcare exposure.</p>
             </div>
 
             <!-- Feature 3 -->
-            <div class="group rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 p-6 transition-all duration-300 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/5">
-              <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/10 to-violet-500/10 border border-purple-500/20 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-purple-500"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            <div class="group rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 p-6 transition-all duration-300 hover:border-orange-500/30 hover:shadow-lg hover:shadow-orange-500/5">
+              <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500/10 to-orange-400/10 border border-orange-500/20 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-orange-600"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
               </div>
               <h3 class="text-sm font-bold text-neutral-900 dark:text-white mb-2">Immersive Healthcare Education</h3>
               <p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">A campus environment designed for hands-on, immersive healthcare and tech learning.</p>
             </div>
 
             <!-- Feature 4 -->
-            <div class="group rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 p-6 transition-all duration-300 hover:border-emerald-500/30 hover:shadow-lg hover:shadow-emerald-500/5">
-              <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 border border-emerald-500/20 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-emerald-500"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <div class="group rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 p-6 transition-all duration-300 hover:border-orange-500/30 hover:shadow-lg hover:shadow-orange-500/5">
+              <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500/10 to-orange-500/10 border border-orange-500/20 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-orange-600"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
               </div>
               <h3 class="text-sm font-bold text-neutral-900 dark:text-white mb-2">Compassion-Centred Campus Life</h3>
               <p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">A nurturing environment built on empathy, inclusion, and holistic student development.</p>
@@ -344,7 +377,7 @@
           <div class="group relative rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900/50 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-red-500/5 hover:border-red-500/30">
             <div class="h-2" style="background:linear-gradient(90deg, #ef4444, #f97316);"></div>
             <div class="p-6 sm:p-8">
-              <div class="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-red-500/20 mb-5">
+              <div class="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500/10 to-orange-400/10 border border-orange-500/20 mb-5">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-red-500"><path d="M12 2a8 8 0 0 0-8 8c0 3.4 2.1 6.3 5 7.4V20a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-2.6c2.9-1.1 5-4 5-7.4a8 8 0 0 0-8-8z"/><line x1="9" x2="15" y1="22" y2="22"/></svg>
               </div>
               <h3 class="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-white mb-2">B.Tech in Computer Science</h3>
@@ -358,11 +391,11 @@
           </div>
 
           <!-- B.Tech Data Science -->
-          <div class="group relative rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900/50 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/5 hover:border-blue-500/30">
+          <div class="group relative rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900/50 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/5 hover:border-orange-500/30">
             <div class="h-2" style="background:linear-gradient(90deg, #3b82f6, #6366f1);"></div>
             <div class="p-6 sm:p-8">
-              <div class="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border border-blue-500/20 mb-5">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-blue-500"><path d="M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.997.398-.997.95v8a1 1 0 0 0 1 1h8z"/><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/></svg>
+              <div class="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500/10 to-orange-400/10 border border-orange-500/20 mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-orange-600"><path d="M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.997.398-.997.95v8a1 1 0 0 0 1 1h8z"/><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/></svg>
               </div>
               <h3 class="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-white mb-2">B.Tech in Computer Science</h3>
               <span class="inline-block text-sm font-semibold text-primary mb-4">Data Science</span>
@@ -375,11 +408,11 @@
           </div>
 
           <!-- B.Tech Cybersecurity -->
-          <div class="group relative rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900/50 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/5 hover:border-emerald-500/30">
+          <div class="group relative rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900/50 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/5 hover:border-orange-500/30">
             <div class="h-2" style="background:linear-gradient(90deg, #10b981, #059669);"></div>
             <div class="p-6 sm:p-8">
-              <div class="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-emerald-500/10 to-green-500/10 border border-emerald-500/20 mb-5">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-emerald-500"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+              <div class="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500/10 to-orange-400/10 border border-orange-500/20 mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-orange-600"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
               </div>
               <h3 class="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-white mb-2">B.Tech in Computer Science</h3>
               <span class="inline-block text-sm font-semibold text-primary mb-4">Cybersecurity</span>
@@ -407,7 +440,7 @@
 
           <!-- Step 1 -->
           <div class="relative rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 p-6 text-center">
-            <div class="flex items-center justify-center w-14 h-14 rounded-full mx-auto mb-5" style="background:linear-gradient(135deg, oklch(0.577 0.245 27.325), oklch(0.637 0.237 25));">
+            <div class="flex items-center justify-center w-14 h-14 rounded-full mx-auto mb-5" style="background:linear-gradient(135deg, #e34614, #da8159);">
               <span class="text-xl font-bold text-white">1</span>
             </div>
             <h3 class="text-lg font-bold text-neutral-900 dark:text-white mb-2">Apply Online</h3>
@@ -416,7 +449,7 @@
 
           <!-- Step 2 -->
           <div class="relative rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 p-6 text-center">
-            <div class="flex items-center justify-center w-14 h-14 rounded-full mx-auto mb-5" style="background:linear-gradient(135deg, oklch(0.577 0.245 27.325), oklch(0.637 0.237 25));">
+            <div class="flex items-center justify-center w-14 h-14 rounded-full mx-auto mb-5" style="background:linear-gradient(135deg, #e34614, #da8159);">
               <span class="text-xl font-bold text-white">2</span>
             </div>
             <h3 class="text-lg font-bold text-neutral-900 dark:text-white mb-2">Take uGNET Exam</h3>
@@ -425,7 +458,7 @@
 
           <!-- Step 3 -->
           <div class="relative rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 p-6 text-center">
-            <div class="flex items-center justify-center w-14 h-14 rounded-full mx-auto mb-5" style="background:linear-gradient(135deg, oklch(0.577 0.245 27.325), oklch(0.637 0.237 25));">
+            <div class="flex items-center justify-center w-14 h-14 rounded-full mx-auto mb-5" style="background:linear-gradient(135deg, #e34614, #da8159);">
               <span class="text-xl font-bold text-white">3</span>
             </div>
             <h3 class="text-lg font-bold text-neutral-900 dark:text-white mb-2">Campus Interview</h3>
@@ -434,7 +467,7 @@
 
           <!-- Step 4 -->
           <div class="relative rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 p-6 text-center">
-            <div class="flex items-center justify-center w-14 h-14 rounded-full mx-auto mb-5" style="background:linear-gradient(135deg, oklch(0.577 0.245 27.325), oklch(0.637 0.237 25));">
+            <div class="flex items-center justify-center w-14 h-14 rounded-full mx-auto mb-5" style="background:linear-gradient(135deg, #e34614, #da8159);">
               <span class="text-xl font-bold text-white">4</span>
             </div>
             <h3 class="text-lg font-bold text-neutral-900 dark:text-white mb-2">Enrollment</h3>
@@ -450,30 +483,30 @@
       <div class="max-w-7xl mx-auto">
         <div class="max-w-4xl mx-auto">
           <div class="rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900/50 overflow-hidden">
-            <div class="h-2" style="background:linear-gradient(90deg, oklch(0.577 0.245 27.325), oklch(0.637 0.237 25));"></div>
+            <div class="h-2" style="background:linear-gradient(90deg, #e34614, #da8159);"></div>
             <div class="p-8 sm:p-12">
               <h2 class="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white mb-6 text-center">Eligibility Criteria</h2>
               <div class="space-y-4">
                 <div class="flex items-start gap-3">
-                  <div class="flex items-center justify-center w-6 h-6 rounded-full shrink-0 mt-0.5" style="background-color:oklch(0.577 0.245 27.325);">
+                  <div class="flex items-center justify-center w-6 h-6 rounded-full shrink-0 mt-0.5" style="background-color:#e34614;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
                   </div>
                   <p class="text-neutral-700 dark:text-neutral-300 text-sm sm:text-base">Passed 10+2 (or equivalent) from a recognized board with <strong>Physics and Mathematics</strong> as compulsory subjects.</p>
                 </div>
                 <div class="flex items-start gap-3">
-                  <div class="flex items-center justify-center w-6 h-6 rounded-full shrink-0 mt-0.5" style="background-color:oklch(0.577 0.245 27.325);">
+                  <div class="flex items-center justify-center w-6 h-6 rounded-full shrink-0 mt-0.5" style="background-color:#e34614;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
                   </div>
                   <p class="text-neutral-700 dark:text-neutral-300 text-sm sm:text-base">Minimum <strong>50% aggregate marks</strong> in 10+2 (45% for reserved categories).</p>
                 </div>
                 <div class="flex items-start gap-3">
-                  <div class="flex items-center justify-center w-6 h-6 rounded-full shrink-0 mt-0.5" style="background-color:oklch(0.577 0.245 27.325);">
+                  <div class="flex items-center justify-center w-6 h-6 rounded-full shrink-0 mt-0.5" style="background-color:#e34614;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
                   </div>
                   <p class="text-neutral-700 dark:text-neutral-300 text-sm sm:text-base">Valid <strong>uGNET score</strong> or equivalent national entrance exam scores (JEE Main, State CET, etc.) accepted.</p>
                 </div>
                 <div class="flex items-start gap-3">
-                  <div class="flex items-center justify-center w-6 h-6 rounded-full shrink-0 mt-0.5" style="background-color:oklch(0.577 0.245 27.325);">
+                  <div class="flex items-center justify-center w-6 h-6 rounded-full shrink-0 mt-0.5" style="background-color:#e34614;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
                   </div>
                   <p class="text-neutral-700 dark:text-neutral-300 text-sm sm:text-base">Students appearing for 12th board exams in the current academic year are also eligible to apply.</p>
@@ -493,7 +526,7 @@
         </div>
         <div class="max-w-2xl mx-auto">
           <div class="rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 p-8 sm:p-10 text-center">
-            <div class="flex items-center justify-center w-16 h-16 rounded-full mx-auto mb-6 bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-red-500/20">
+            <div class="flex items-center justify-center w-16 h-16 rounded-full mx-auto mb-6 bg-gradient-to-br from-orange-500/10 to-orange-400/10 border border-orange-500/20">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-red-500"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-3">St. Mary's Rehabilitation University</h3>
@@ -511,11 +544,11 @@
     <!-- Bottom CTA Section -->
     <section class="relative overflow-hidden py-16 sm:py-24">
       <div class="absolute inset-0 bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 dark:from-black dark:via-neutral-950 dark:to-black"></div>
-      <div class="absolute inset-0 opacity-10" style="background-image:radial-gradient(circle at 50% 50%, oklch(0.577 0.245 27.325 / 0.4) 0%, transparent 60%);"></div>
+      <div class="absolute inset-0 opacity-10" style="background-image:radial-gradient(circle at 50% 50%, #e34614 0%, transparent 60%);"></div>
       <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">Begin your journey at SMRU</h2>
         <p class="text-neutral-400 text-base sm:text-lg mb-10 max-w-xl mx-auto">Apply now to join St. Mary's Rehabilitation University and experience world-class tech education powered by upGrad School of Technology.</p>
-        <a href="https://apply.niatindia.com/login?utm_source=apply+button&utm_medium=website&utm_campaign=cta-apply-now-variant" class="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl" style="background:linear-gradient(135deg, oklch(0.577 0.245 27.325), oklch(0.637 0.237 25));">
+        <a href="https://apply.niatindia.com/login?utm_source=apply+button&utm_medium=website&utm_campaign=cta-apply-now-variant" class="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl" style="background:linear-gradient(135deg, #e34614, #da8159);">
           Apply Now
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>

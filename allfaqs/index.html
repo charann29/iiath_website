@@ -10,101 +10,175 @@
   <link rel="icon" type="image/svg+xml" href="../assets/faviconD.svg">
   <title>FAQs - upGrad School of Technology</title>
   <script>
-    (function(){const r=document.documentElement;const t=localStorage.getItem('theme');if(t==='dark')r.classList.add('dark');else if(t==='light')r.classList.remove('dark');else if(window.matchMedia('(prefers-color-scheme:dark)').matches)r.classList.add('dark');r.style.setProperty('--primary','oklch(0.577 0.245 27.325)');})();
+    (function(){const r=document.documentElement;const t=localStorage.getItem('theme');if(t==='dark')r.classList.add('dark');else if(t==='light')r.classList.remove('dark');else if(window.matchMedia('(prefers-color-scheme:dark)').matches)r.classList.add('dark');r.style.setProperty('--primary','#0d9488');})();
   </script>
   <style>
-    /* ========== PREMIUM COLOR PALETTE OVERRIDES ========== */
+    /* ===== MINIMALIST 2-COLOR THEME: TEAL + CORAL ===== */
     :root {
-      --gold: #f7ba26;
-      --gold-bright: #fbd05a;
-      --navy: #1f3484;
-      --indigo: #21275a;
-      --crimson: #b00f1e;
-      --orange: #d46324;
-      --bronze: #a08b6f;
-      --primary: #f7ba26;
+      --primary: #0d9488;
+      --teal: #0d9488;
+      --teal-light: #14b8a6;
+      --coral: #f0736a;
+      --coral-dark: #dc5f56;
     }
+
     html { color-scheme: dark; }
-    body { background-color: #0c0f1a !important; color: #e8e6e3 !important; }
-    .bg-background { background-color: #0c0f1a !important; }
-    .bg-white { background-color: #0f1225 !important; }
-    .dark\:bg-black { background-color: #0c0f1a !important; }
-    .bg-neutral-50 { background-color: #0f1225 !important; }
-    .bg-neutral-100 { background-color: #131735 !important; }
-    .bg-neutral-200 { background-color: #1a1f45 !important; }
-    .bg-neutral-900 { background-color: #0c0f1a !important; }
-    .dark\:bg-\[\#0a0a0a\] { background-color: #0c0f1a !important; }
-    .dark\:bg-\[\#1a1a1a\] { background-color: #131735 !important; }
-    .dark\:bg-\[\#222222\] { background-color: #1a1f45 !important; }
-    .dark\:bg-\[\#111111\] { background-color: #0f1225 !important; }
-    .dark\:bg-neutral-900 { background-color: #0c0f1a !important; }
-    .dark\:bg-neutral-800 { background-color: #131735 !important; }
-    .text-neutral-900, .text-black { color: #f0ece6 !important; }
-    .dark\:text-white { color: #f0ece6 !important; }
-    .text-neutral-700 { color: #b8b2a8 !important; }
-    .text-neutral-600 { color: #a89f94 !important; }
-    .dark\:text-neutral-300 { color: #c5bfb5 !important; }
-    .dark\:text-neutral-400 { color: #a89f94 !important; }
-    .text-neutral-500 { color: #9a9189 !important; }
-    .text-\[var\(--primary\)\], .text-primary { color: #f7ba26 !important; }
-    h1, h2 { color: #f0ece6 !important; }
+
+    /* --- Base --- */
+    body { background: #0a0a0a !important; color: #d4d4d4 !important; }
+    .bg-background { background: #0a0a0a !important; }
+
+    /* --- Backgrounds --- */
+    .bg-white, .bg-neutral-50 { background: #111 !important; }
+    .bg-neutral-100 { background: #161616 !important; }
+    .bg-neutral-200 { background: #1a1a1a !important; }
+    .bg-neutral-900 { background: #0a0a0a !important; }
+    .dark\:bg-black, .dark\:bg-\[\#0a0a0a\] { background: #0a0a0a !important; }
+    .dark\:bg-\[\#1a1a1a\], .dark\:bg-neutral-800 { background: #161616 !important; }
+    .dark\:bg-\[\#222222\] { background: #1a1a1a !important; }
+    .dark\:bg-\[\#111111\], .dark\:bg-neutral-900 { background: #111 !important; }
+    .dark\:bg-neutral-950 { background: #0a0a0a !important; }
+
+    /* --- Text --- */
+    h1, h2, h3 { color: #fff !important; }
+    .text-neutral-900, .text-black, .dark\:text-white { color: #fff !important; }
+    .text-neutral-700, .text-gray-700 { color: #a1a1a1 !important; }
+    .text-neutral-600, .text-gray-600 { color: #a1a1a1 !important; }
+    .text-neutral-500, .text-gray-500 { color: #737373 !important; }
+    .dark\:text-neutral-300 { color: #d4d4d4 !important; }
+    .dark\:text-neutral-400 { color: #a1a1a1 !important; }
+
+    /* --- Primary accent (teal) --- */
+    .text-\[var\(--primary\)\], .text-primary { color: #0d9488 !important; }
+    .group-hover\:text-\[var\(--primary\)\]:hover,
+    .hover\:text-primary:hover { color: #14b8a6 !important; }
     h1 .text-\[var\(--primary\)\], h2 .text-\[var\(--primary\)\],
     h1 span.text-\[var\(--primary\)\], h2 span.text-\[var\(--primary\)\] {
-      background: linear-gradient(135deg, #f7ba26 0%, #fbd05a 50%, #d46324 100%) !important;
-      -webkit-background-clip: text !important;
-      -webkit-text-fill-color: transparent !important;
-      background-clip: text !important;
+      color: #14b8a6 !important;
+      background: none !important;
+      -webkit-background-clip: unset !important;
+      -webkit-text-fill-color: #14b8a6 !important;
+      background-clip: unset !important;
     }
-    .border-neutral-200, .border-neutral-300 { border-color: rgba(160, 139, 111, 0.2) !important; }
-    .dark\:border-neutral-700, .dark\:border-neutral-800 { border-color: rgba(160, 139, 111, 0.15) !important; }
-    .border-\[var\(--primary\)\] { border-color: rgba(247, 186, 38, 0.3) !important; }
-    .border-neutral-700 { border-color: rgba(160, 139, 111, 0.2) !important; }
+    .text-red-600 { color: #0d9488 !important; }
+
+    /* --- Borders --- */
+    .border-neutral-200, .border-neutral-300, .border-neutral-700 { border-color: #262626 !important; }
+    .dark\:border-neutral-700, .dark\:border-neutral-800 { border-color: #262626 !important; }
+    .border-\[var\(--primary\)\], .dark\:border-\[var\(--primary\)\] { border-color: rgba(13, 148, 136, 0.3) !important; }
+
+    /* --- Navbar --- */
+    header nav > div {
+      background: rgba(10, 10, 10, 0.8) !important;
+      border-color: #262626 !important;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.4) !important;
+      backdrop-filter: blur(20px) !important;
+    }
+    header nav ul a.text-primary,
+    header nav ul a[href="/"] .leading-none { color: #14b8a6 !important; }
+    header nav ul a.text-white .leading-none,
+    header nav ul .text-white .leading-none { color: #d4d4d4 !important; }
+    header nav ul a:hover .leading-none,
+    header nav ul div:hover .leading-none { color: #14b8a6 !important; }
+    header nav ul a::after, header nav ul div::after { background: #0d9488 !important; }
+
+    /* --- CTA buttons (coral) --- */
     a[href*="apply.niatindia.com"] {
-      background: linear-gradient(135deg, #b00f1e 0%, #d46324 100%) !important;
-      color: white !important; border-color: #b00f1e !important; font-weight: 700 !important;
+      background: #f0736a !important;
+      color: #fff !important;
+      border-color: #f0736a !important;
+      font-weight: 600 !important;
     }
     a[href*="apply.niatindia.com"]:hover {
-      background: linear-gradient(135deg, #8b0c17 0%, #b5531d 100%) !important;
-      box-shadow: 0 4px 15px rgba(176, 15, 30, 0.4) !important;
+      background: #dc5f56 !important;
+      box-shadow: 0 0 20px rgba(240, 115, 106, 0.25) !important;
     }
-    .bg-primary { background-color: #f7ba26 !important; }
-    header nav > div {
-      background: rgba(12, 15, 26, 0.85) !important;
-      border-color: rgba(247, 186, 38, 0.15) !important;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 30px rgba(247, 186, 38, 0.05) !important;
+    .relative a[href*="apply.niatindia.com"] {
+      background: #f0736a !important;
     }
-    header nav ul a.text-primary { color: #f7ba26 !important; }
-    header nav ul a::after, header nav ul div::after { background: #f7ba26 !important; }
-    footer, footer > div { background-color: #090c18 !important; border-color: rgba(160, 139, 111, 0.1) !important; }
-    footer a { color: #c5bfb5 !important; }
-    footer a:hover { color: #f7ba26 !important; }
-    footer h3, footer h4 { color: #f7ba26 !important; }
+    .relative a[href*="apply.niatindia.com"]:hover {
+      background: #dc5f56 !important;
+    }
+    button.bg-primary { background: #0d9488 !important; color: #fff !important; }
+
+    /* --- Active tabs / primary bg elements --- */
+    .bg-\[var\(--primary\)\],
+    [style*="background-color: var(--primary)"] {
+      background-color: #0d9488 !important;
+      color: #fff !important;
+    }
+    .bg-primary { background-color: #0d9488 !important; }
+    .bg-primary\/10 { background-color: rgba(13, 148, 136, 0.1) !important; }
+
+    /* --- Cards --- */
+    .bg-neutral-200.rounded-xl, .bg-neutral-200.rounded-2xl {
+      background: #1a1a1a !important;
+      border-color: #262626 !important;
+    }
+    .bg-neutral-200.rounded-xl:hover, .bg-neutral-200.rounded-2xl:hover {
+      border-color: rgba(13, 148, 136, 0.4) !important;
+    }
+    .bg-neutral-100.rounded-2xl, .bg-neutral-100.rounded-3xl { background: #161616 !important; }
+
+    /* --- Stats section --- */
+    .bg-neutral-50.rounded-2xl { background: #111 !important; border: 1px solid #262626 !important; }
+
+    /* --- Footer --- */
+    footer, footer > div { background: #0a0a0a !important; border-color: #1a1a1a !important; }
+    footer a { color: #a1a1a1 !important; }
+    footer a:hover { color: #14b8a6 !important; }
+    footer h3, footer h4 { color: #d4d4d4 !important; }
+
+    /* --- Mega menu --- */
     #resources-mega-menu {
-      background: rgba(15, 18, 37, 0.98) !important;
-      border-color: rgba(247, 186, 38, 0.15) !important;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(247, 186, 38, 0.05) !important;
+      background: rgba(17, 17, 17, 0.98) !important;
+      border-color: #262626 !important;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5) !important;
     }
-    #resources-mega-menu h4 { color: #f7ba26 !important; border-bottom-color: rgba(247, 186, 38, 0.2) !important; }
-    #resources-mega-menu a { color: #c5bfb5 !important; }
-    #resources-mega-menu a:hover { color: #fbd05a !important; }
-    .group\/item .absolute {
-      background: rgba(15, 18, 37, 0.98) !important;
-      border-color: rgba(247, 186, 38, 0.15) !important;
-    }
-    #mobile-menu-panel { background-color: #0f1225 !important; }
-    #mobile-menu-panel button, #mobile-menu-panel a { color: #e8e6e3 !important; }
-    .lucide-menu { stroke: #f0ece6 !important; }
-    ::selection { background-color: rgba(247, 186, 38, 0.3); color: #f0ece6; }
-    html:not(.dark) body { background-color: #0c0f1a !important; color: #e8e6e3 !important; }
-    html:not(.dark) .bg-white { background-color: #0f1225 !important; }
-    html:not(.dark) .text-black { color: #f0ece6 !important; }
-    html:not(.dark) .text-neutral-900 { color: #f0ece6 !important; }
-    html:not(.dark) .bg-neutral-50 { background-color: #0f1225 !important; }
-    html:not(.dark) .bg-neutral-100 { background-color: #131735 !important; }
-    html:not(.dark) .bg-neutral-200 { background-color: #1a1f45 !important; }
-    html:not(.dark) .text-neutral-700 { color: #b8b2a8 !important; }
-    html:not(.dark) header nav > div { background: rgba(12, 15, 26, 0.85) !important; }
-    html:not(.dark) h1, html:not(.dark) h2, html:not(.dark) h3 { color: #f0ece6 !important; }
+    #resources-mega-menu h4 { color: #14b8a6 !important; border-bottom-color: #262626 !important; }
+    #resources-mega-menu a { color: #a1a1a1 !important; }
+    #resources-mega-menu a:hover { color: #14b8a6 !important; }
+
+    /* --- Dropdowns --- */
+    .group\/item .absolute { background: rgba(17, 17, 17, 0.98) !important; border-color: #262626 !important; }
+
+    /* --- Mobile menu --- */
+    #mobile-menu-panel { background: #111 !important; }
+    #mobile-menu-panel button, #mobile-menu-panel a { color: #d4d4d4 !important; }
+    .lucide-menu { stroke: #d4d4d4 !important; }
+
+    /* --- Decorative blurs --- */
+    .blur-3xl[style*="--primary"] { opacity: 0.08 !important; }
+
+    /* --- Scrollbar --- */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0a0a0a; }
+    ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #0d9488; }
+
+    /* --- Selection --- */
+    ::selection { background: rgba(13, 148, 136, 0.3); color: #fff; }
+
+    /* --- Shadows (subtle) --- */
+    .shadow-lg { box-shadow: 0 1px 3px rgba(0,0,0,0.3) !important; }
+
+    /* --- Light mode force (ensure consistency) --- */
+    html:not(.dark) body { background: #0a0a0a !important; color: #d4d4d4 !important; }
+    html:not(.dark) .bg-white { background: #111 !important; }
+    html:not(.dark) .text-black, html:not(.dark) .text-neutral-900 { color: #fff !important; }
+    html:not(.dark) .text-gray-900 { color: #fff !important; }
+    html:not(.dark) .text-gray-700, html:not(.dark) .text-gray-600 { color: #a1a1a1 !important; }
+    html:not(.dark) .bg-neutral-50, html:not(.dark) .bg-neutral-100 { background: #161616 !important; }
+    html:not(.dark) .bg-neutral-200 { background: #1a1a1a !important; }
+    html:not(.dark) .border-neutral-200, html:not(.dark) .border-neutral-300 { border-color: #262626 !important; }
+    html:not(.dark) header nav > div { background: rgba(10, 10, 10, 0.8) !important; }
+    html:not(.dark) h1, html:not(.dark) h2, html:not(.dark) h3 { color: #fff !important; }
+
+    /* --- Dark mode consistency --- */
+    .dark .bg-white { background: #111 !important; }
+    .dark .text-black { color: #fff !important; }
+    .dark .bg-background { background: #0a0a0a !important; }
+    .dark .border-neutral-200 { border-color: #262626 !important; }
   </style>
 </head>
 <body class="antialiased bg-background">

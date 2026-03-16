@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="../../_next/static/media/4cf2300e9c8272f7-s.p.woff2" as="font" crossorigin="" type="font/woff2">
+  <link rel="preload" href="../../_next/static/media/93f479601ee12b01-s.p.woff2" as="font" crossorigin="" type="font/woff2">
+  <link rel="stylesheet" href="../../_next/static/css/de70bee13400563f.css">
+  <link rel="stylesheet" href="../../_next/static/css/7bfa864fea7726bd.css">
+  <link rel="icon" type="image/svg+xml" href="../../assets/faviconD.svg">
+  <title>SMRU Campus - upGrad School of Technology</title>
+  <script>
+    (function(){const r=document.documentElement;const t=localStorage.getItem('theme');if(t==='dark')r.classList.add('dark');else if(t==='light')r.classList.remove('dark');else if(window.matchMedia('(prefers-color-scheme:dark)').matches)r.classList.add('dark');r.style.setProperty('--primary','oklch(0.577 0.245 27.325)');})();
+  </script>
+  <style>
+    /* ========== PREMIUM COLOR PALETTE OVERRIDES ========== */
+    :root {
+      --gold: #f7ba26;
+      --gold-bright: #fbd05a;
+      --navy: #1f3484;
+      --indigo: #21275a;
+      --crimson: #b00f1e;
+      --orange: #d46324;
+      --bronze: #a08b6f;
+      --primary: #f7ba26;
+    }
+    html { color-scheme: dark; }
+    body { background-color: #0c0f1a !important; color: #e8e6e3 !important; }
+    .bg-background { background-color: #0c0f1a !important; }
+    .bg-white { background-color: #0f1225 !important; }
+    .dark\:bg-black { background-color: #0c0f1a !important; }
+    .bg-neutral-50 { background-color: #0f1225 !important; }
+    .bg-neutral-100 { background-color: #131735 !important; }
+    .bg-neutral-200 { background-color: #1a1f45 !important; }
+    .bg-neutral-900 { background-color: #0c0f1a !important; }
+    .dark\:bg-\[\#0a0a0a\] { background-color: #0c0f1a !important; }
+    .dark\:bg-\[\#1a1a1a\] { background-color: #131735 !important; }
+    .dark\:bg-\[\#222222\] { background-color: #1a1f45 !important; }
+    .dark\:bg-\[\#111111\] { background-color: #0f1225 !important; }
+    .dark\:bg-neutral-900 { background-color: #0c0f1a !important; }
+    .dark\:bg-neutral-800 { background-color: #131735 !important; }
+    .text-neutral-900, .text-black { color: #f0ece6 !important; }
+    .dark\:text-white { color: #f0ece6 !important; }
+    .text-neutral-700 { color: #b8b2a8 !important; }
+    .text-neutral-600 { color: #a89f94 !important; }
+    .dark\:text-neutral-300 { color: #c5bfb5 !important; }
+    .dark\:text-neutral-400 { color: #a89f94 !important; }
+    .text-neutral-500 { color: #9a9189 !important; }
+    .text-\[var\(--primary\)\], .text-primary { color: #f7ba26 !important; }
+    h1, h2 { color: #f0ece6 !important; }
+    h1 .text-\[var\(--primary\)\], h2 .text-\[var\(--primary\)\],
+    h1 span.text-\[var\(--primary\)\], h2 span.text-\[var\(--primary\)\] {
+      background: linear-gradient(135deg, #f7ba26 0%, #fbd05a 50%, #d46324 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+    .border-neutral-200, .border-neutral-300 { border-color: rgba(160, 139, 111, 0.2) !important; }
+    .dark\:border-neutral-700, .dark\:border-neutral-800 { border-color: rgba(160, 139, 111, 0.15) !important; }
+    .border-\[var\(--primary\)\] { border-color: rgba(247, 186, 38, 0.3) !important; }
+    .border-neutral-700 { border-color: rgba(160, 139, 111, 0.2) !important; }
+    a[href*="apply.niatindia.com"] {
+      background: linear-gradient(135deg, #b00f1e 0%, #d46324 100%) !important;
+      color: white !important; border-color: #b00f1e !important; font-weight: 700 !important;
+    }
+    a[href*="apply.niatindia.com"]:hover {
+      background: linear-gradient(135deg, #8b0c17 0%, #b5531d 100%) !important;
+      box-shadow: 0 4px 15px rgba(176, 15, 30, 0.4) !important;
+    }
+    .bg-primary { background-color: #f7ba26 !important; }
+    header nav > div {
+      background: rgba(12, 15, 26, 0.85) !important;
+      border-color: rgba(247, 186, 38, 0.15) !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 30px rgba(247, 186, 38, 0.05) !important;
+    }
+    header nav ul a.text-primary { color: #f7ba26 !important; }
+    header nav ul a::after, header nav ul div::after { background: #f7ba26 !important; }
+    footer, footer > div { background-color: #090c18 !important; border-color: rgba(160, 139, 111, 0.1) !important; }
+    footer a { color: #c5bfb5 !important; }
+    footer a:hover { color: #f7ba26 !important; }
+    footer h3, footer h4 { color: #f7ba26 !important; }
+    #resources-mega-menu {
+      background: rgba(15, 18, 37, 0.98) !important;
+      border-color: rgba(247, 186, 38, 0.15) !important;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(247, 186, 38, 0.05) !important;
+    }
+    #resources-mega-menu h4 { color: #f7ba26 !important; border-bottom-color: rgba(247, 186, 38, 0.2) !important; }
+    #resources-mega-menu a { color: #c5bfb5 !important; }
+    #resources-mega-menu a:hover { color: #fbd05a !important; }
+    .group\/item .absolute {
+      background: rgba(15, 18, 37, 0.98) !important;
+      border-color: rgba(247, 186, 38, 0.15) !important;
+    }
+    #mobile-menu-panel { background-color: #0f1225 !important; }
+    #mobile-menu-panel button, #mobile-menu-panel a { color: #e8e6e3 !important; }
+    .lucide-menu { stroke: #f0ece6 !important; }
+    ::selection { background-color: rgba(247, 186, 38, 0.3); color: #f0ece6; }
+    html:not(.dark) body { background-color: #0c0f1a !important; color: #e8e6e3 !important; }
+    html:not(.dark) .bg-white { background-color: #0f1225 !important; }
+    html:not(.dark) .text-black { color: #f0ece6 !important; }
+    html:not(.dark) .text-neutral-900 { color: #f0ece6 !important; }
+    html:not(.dark) .bg-neutral-50 { background-color: #0f1225 !important; }
+    html:not(.dark) .bg-neutral-100 { background-color: #131735 !important; }
+    html:not(.dark) .bg-neutral-200 { background-color: #1a1f45 !important; }
+    html:not(.dark) .text-neutral-700 { color: #b8b2a8 !important; }
+    html:not(.dark) header nav > div { background: rgba(12, 15, 26, 0.85) !important; }
+    html:not(.dark) h1, html:not(.dark) h2, html:not(.dark) h3 { color: #f0ece6 !important; }
+  </style>
+</head>
+<body class="antialiased bg-background">
+
+  <!-- Navbar -->
+  <header>
+    <nav class="fixed z-[10000] w-full pt-2 transition-all duration-300" style="top:0">
+      <div class="mx-auto max-w-7xl rounded-xl border px-4 sm:px-6 lg:px-12 duration-300 relative overflow-visible backdrop-blur-xl shadow-lg bg-background/50" style="border-color:rgba(255,255,255,0.1);border-bottom-width:1px;border-radius:1rem;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06),0 0 20px rgba(255,215,0,0.1)">
+        <div class="relative flex items-center justify-between py-3 sm:py-4 lg:py-6">
+          <a href="/" class="flex items-center">
+            <img alt="upGrad School of Technology" loading="eager" width="120" height="40" class="h-8 sm:h-10 w-auto" src="../../_next/image/url=%2Fassets%2FU_light_logo.png&w=256&q=75">
+          </a>
+          <div class="hidden lg:flex items-center gap-8 xl:gap-10">
+            <ul class="flex items-center gap-8 xl:gap-10 text-sm sm:text-base font-medium relative">
+              <li><a class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full text-white" href="/"><span class="leading-none">Home</span></a></li>
+              <li class="relative group/item">
+                <div class="relative inline-flex items-center gap-1.5 duration-150 cursor-pointer after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full text-white">
+                  <span class="leading-none">University Collaborations</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-4 h-4 shrink-0 transition-transform group-hover/item:rotate-180 duration-300"><path d="m6 9 6 6 6-6"></path></svg>
+                </div>
+                <div class="absolute left-0 top-full pt-2 hidden group-hover/item:block">
+                  <ul class="w-80 rounded-xl backdrop-blur-xl shadow-2xl border overflow-hidden bg-background/90 border-border">
+                    <li><a class="group/card block px-5 py-4 text-sm transition-all duration-200 text-foreground hover:text-primary" href="/university/smru/">
+                      <div class="flex items-start gap-3"><div class="flex-1 min-w-0">
+                        <div class="font-semibold text-white group-hover/card:text-primary group-hover/card:underline group-hover/card:decoration-2 group-hover/card:underline-offset-4">SMRU</div>
+                        <p class="text-xs text-neutral-400 mt-1">St. Mary's Rehabilitation University, Hyderabad</p>
+                      </div></div>
+                    </a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="relative" id="resources-menu-item">
+                <button type="button" id="resources-toggle" class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-primary after:transition-all after:duration-300 after:w-full text-primary">
+                  <span class="leading-none">Resources</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-4 h-4 shrink-0 transition-transform duration-300" id="resources-chevron"><path d="m6 9 6 6 6-6"></path></svg>
+                </button>
+                <div id="resources-mega-menu" class="absolute right-0 top-full pt-2 hidden" style="width:720px;transform:translateX(40%);">
+                  <div class="rounded-xl backdrop-blur-xl shadow-2xl border overflow-hidden bg-background/90 border-border p-6">
+                    <div class="grid grid-cols-4 gap-6">
+                      <div><h4 class="text-xs font-bold uppercase tracking-wider text-primary mb-3">AI Playground</h4><ul class="space-y-2"><li><a href="/Playground/" class="block text-sm text-white hover:text-primary font-semibold">Agentic Multiverse</a></li><li class="pl-3"><a href="/Playground/" class="block text-xs text-neutral-400 hover:text-primary">ResumeCraft Agent</a></li><li class="pl-3"><a href="/Playground/" class="block text-xs text-neutral-400 hover:text-primary">CollegePredict Agent</a></li><li class="pl-3"><a href="/Playground/" class="block text-xs text-neutral-400 hover:text-primary">EntrancePractice Agent</a></li><li class="pl-3"><a href="/Playground/" class="block text-xs text-neutral-400 hover:text-primary">InterviewPrep Agent</a></li></ul></div>
+                      <div><h4 class="text-xs font-bold uppercase tracking-wider text-primary mb-3">For Students</h4><ul class="space-y-2"><li><a href="/internship/" class="block text-sm text-white hover:text-primary font-semibold">Ignite Internship</a></li><li><a href="/uGNET/" class="block text-sm text-white hover:text-primary font-semibold">uGNET</a></li></ul></div>
+                      <div><h4 class="text-xs font-bold uppercase tracking-wider text-primary mb-3">For Faculty</h4><ul class="space-y-2"><li><a href="/edp/" class="block text-sm text-white hover:text-primary font-semibold">EDP</a></li></ul></div>
+                      <div><h4 class="text-xs font-bold uppercase tracking-wider text-primary mb-3">Others</h4><ul class="space-y-2"><li><a href="/contactus/" class="block text-sm text-white hover:text-primary font-semibold">Contact Us</a></li><li><a href="/admission/" class="block text-sm text-white hover:text-primary font-semibold">Admissions</a></li></ul></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li><a class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full text-white" href="/allfaqs/"><span class="leading-none">FAQs</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pt-28 sm:pt-32">
+
+    <!-- Hero Section with Campus Image -->
+    <section class="relative overflow-hidden min-h-[70vh] flex items-center">
+      <div class="absolute inset-0">
+        <img src="https://framerusercontent.com/images/nKoJgpof7MGpJ85Yx1nqsxzsm0.webp" alt="SMRU Campus" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30"></div>
+      </div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-4 py-1.5 text-xs font-medium text-white/90 mb-6">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style="background-color:oklch(0.577 0.245 27.325)"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2" style="background-color:oklch(0.577 0.245 27.325)"></span>
+            </span>
+            University Partner Campus
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white mb-4">
+            St. Mary's<br>
+            <span class="bg-gradient-to-r from-red-500 via-orange-500 to-amber-500 bg-clip-text text-transparent">Rehabilitation University</span>
+          </h1>
+          <p class="text-xl sm:text-2xl text-white/80 mb-3 font-light">Hyderabad, Telangana</p>
+          <p class="text-neutral-300 text-base sm:text-lg mb-10 max-w-xl leading-relaxed">A pioneering institution blending rehabilitation sciences with cutting-edge technology education through the uGSOT collaboration.</p>
+          <a href="https://apply.niatindia.com/login?utm_source=apply+button&utm_medium=website&utm_campaign=cta-apply-now-variant" class="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl" style="background:linear-gradient(135deg, oklch(0.577 0.245 27.325), oklch(0.637 0.237 25));">
+            Apply Now
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <!-- Text Column -->
+          <div>
+            <div class="inline-flex items-center gap-2 rounded-full border border-neutral-200 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-800/50 px-4 py-1.5 text-xs font-medium text-neutral-600 dark:text-neutral-300 mb-6">
+              About the Campus
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-white mb-6">About <span class="text-primary">SMRU</span></h2>
+            <p class="text-neutral-600 dark:text-neutral-400 text-base sm:text-lg leading-relaxed mb-6">
+              St. Mary's Rehabilitation University (SMRU) is a pioneering institution dedicated to rehabilitation sciences, inclusive healthcare, and allied health education. Located in the heart of Hyderabad, it combines clinical practice with academic excellence.
+            </p>
+            <p class="text-neutral-600 dark:text-neutral-400 text-base leading-relaxed">
+              Through its collaboration with upGrad School of Technology, SMRU now offers industry-aligned B.Tech programs that blend world-class tech education with the university's commitment to holistic, compassion-driven learning.
+            </p>
+          </div>
+
+          <!-- Feature Cards Column -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Feature 1 -->
+            <div class="group rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 p-6 transition-all duration-300 hover:border-red-500/30 hover:shadow-lg hover:shadow-red-500/5">
+              <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-red-500/20 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-red-500"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+              </div>
+              <h3 class="text-sm font-bold text-neutral-900 dark:text-white mb-2">India's First Rehabilitation-Focused Campus</h3>
+              <p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">A unique institution dedicated to rehabilitation sciences and inclusive education.</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="group rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 p-6 transition-all duration-300 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/5">
+              <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border border-blue-500/20 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-blue-500"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </div>
+              <h3 class="text-sm font-bold text-neutral-900 dark:text-white mb-2">Clinical-Linked Learning</h3>
+              <p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">Academic programs integrated with real-world clinical practice and healthcare exposure.</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="group rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 p-6 transition-all duration-300 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/5">
+              <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/10 to-violet-500/10 border border-purple-500/20 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-purple-500"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              </div>
+              <h3 class="text-sm font-bold text-neutral-900 dark:text-white mb-2">Immersive Healthcare Education</h3>
+              <p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">A campus environment designed for hands-on, immersive healthcare and tech learning.</p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="group rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 p-6 transition-all duration-300 hover:border-emerald-500/30 hover:shadow-lg hover:shadow-emerald-500/5">
+              <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 border border-emerald-500/20 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-emerald-500"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <h3 class="text-sm font-bold text-neutral-900 dark:text-white mb-2">Compassion-Centred Campus Life</h3>
+              <p class="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">A nurturing environment built on empathy, inclusion, and holistic student development.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs Offered -->
+    <section class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-neutral-50 dark:bg-neutral-950">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12 sm:mb-16">
+          <div class="inline-flex items-center gap-2 rounded-full border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800/50 px-4 py-1.5 text-xs font-medium text-neutral-600 dark:text-neutral-300 mb-6">
+            uGSOT Collaboration
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-white mb-4">Programs Offered</h2>
+          <p class="max-w-xl mx-auto text-neutral-600 dark:text-neutral-400 text-base sm:text-lg">Industry-aligned B.Tech programs available at SMRU through the upGrad School of Technology partnership.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+          <!-- B.Tech AI & ML -->
+          <div class="group relative rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900/50 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-red-500/5 hover:border-red-500/30">
+            <div class="h-2" style="background:linear-gradient(90deg, #ef4444, #f97316);"></div>
+            <div class="p-6 sm:p-8">
+              <div class="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-red-500/20 mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-red-500"><path d="M12 2a8 8 0 0 0-8 8c0 3.4 2.1 6.3 5 7.4V20a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-2.6c2.9-1.1 5-4 5-7.4a8 8 0 0 0-8-8z"/><line x1="9" x2="15" y1="22" y2="22"/></svg>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-white mb-2">B.Tech in Computer Science</h3>
+              <span class="inline-block text-sm font-semibold text-primary mb-4">Artificial Intelligence &amp; Machine Learning</span>
+              <p class="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed mb-6">Master AI fundamentals, deep learning, NLP, and computer vision. Build intelligent systems that solve real-world problems across industries.</p>
+              <div class="flex items-center gap-4 text-xs text-neutral-500 dark:text-neutral-400">
+                <span class="flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 4 Years</span>
+                <span class="flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> UGC Approved</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- B.Tech Data Science -->
+          <div class="group relative rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900/50 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/5 hover:border-blue-500/30">
+            <div class="h-2" style="background:linear-gradient(90deg, #3b82f6, #6366f1);"></div>
+            <div class="p-6 sm:p-8">
+              <div class="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border border-blue-500/20 mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-blue-500"><path d="M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.997.398-.997.95v8a1 1 0 0 0 1 1h8z"/><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/></svg>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-white mb-2">B.Tech in Computer Science</h3>
+              <span class="inline-block text-sm font-semibold text-primary mb-4">Data Science</span>
+              <p class="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed mb-6">Dive into data analytics, statistical modeling, big data technologies, and data-driven decision making. Transform raw data into actionable insights.</p>
+              <div class="flex items-center gap-4 text-xs text-neutral-500 dark:text-neutral-400">
+                <span class="flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 4 Years</span>
+                <span class="flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> UGC Approved</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- B.Tech Cybersecurity -->
+          <div class="group relative rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900/50 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/5 hover:border-emerald-500/30">
+            <div class="h-2" style="background:linear-gradient(90deg, #10b981, #059669);"></div>
+            <div class="p-6 sm:p-8">
+              <div class="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-emerald-500/10 to-green-500/10 border border-emerald-500/20 mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-emerald-500"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-white mb-2">B.Tech in Computer Science</h3>
+              <span class="inline-block text-sm font-semibold text-primary mb-4">Cybersecurity</span>
+              <p class="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed mb-6">Learn ethical hacking, network security, cryptography, and digital forensics. Become a cybersecurity expert protecting organizations from evolving threats.</p>
+              <div class="flex items-center gap-4 text-xs text-neutral-500 dark:text-neutral-400">
+                <span class="flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 4 Years</span>
+                <span class="flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> UGC Approved</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Admission Steps -->
+    <section class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12 sm:mb-16">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-white mb-4">Admission Process</h2>
+          <p class="max-w-xl mx-auto text-neutral-600 dark:text-neutral-400 text-base sm:text-lg">Four simple steps to begin your journey at SMRU with upGrad School of Technology.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- Step 1 -->
+          <div class="relative rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 p-6 text-center">
+            <div class="flex items-center justify-center w-14 h-14 rounded-full mx-auto mb-5" style="background:linear-gradient(135deg, oklch(0.577 0.245 27.325), oklch(0.637 0.237 25));">
+              <span class="text-xl font-bold text-white">1</span>
+            </div>
+            <h3 class="text-lg font-bold text-neutral-900 dark:text-white mb-2">Apply Online</h3>
+            <p class="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">Fill out the online application form with your academic details and personal information.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="relative rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 p-6 text-center">
+            <div class="flex items-center justify-center w-14 h-14 rounded-full mx-auto mb-5" style="background:linear-gradient(135deg, oklch(0.577 0.245 27.325), oklch(0.637 0.237 25));">
+              <span class="text-xl font-bold text-white">2</span>
+            </div>
+            <h3 class="text-lg font-bold text-neutral-900 dark:text-white mb-2">Take uGNET Exam</h3>
+            <p class="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">Appear for the upGrad National Entrance Test (uGNET) to assess your aptitude and readiness.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="relative rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 p-6 text-center">
+            <div class="flex items-center justify-center w-14 h-14 rounded-full mx-auto mb-5" style="background:linear-gradient(135deg, oklch(0.577 0.245 27.325), oklch(0.637 0.237 25));">
+              <span class="text-xl font-bold text-white">3</span>
+            </div>
+            <h3 class="text-lg font-bold text-neutral-900 dark:text-white mb-2">Campus Interview</h3>
+            <p class="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">Attend a personal interview to discuss your aspirations, interests, and academic goals.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="relative rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 p-6 text-center">
+            <div class="flex items-center justify-center w-14 h-14 rounded-full mx-auto mb-5" style="background:linear-gradient(135deg, oklch(0.577 0.245 27.325), oklch(0.637 0.237 25));">
+              <span class="text-xl font-bold text-white">4</span>
+            </div>
+            <h3 class="text-lg font-bold text-neutral-900 dark:text-white mb-2">Enrollment</h3>
+            <p class="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">Complete the enrollment process, submit documents, and secure your seat at SMRU.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Eligibility Section -->
+    <section class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-neutral-50 dark:bg-neutral-950">
+      <div class="max-w-7xl mx-auto">
+        <div class="max-w-4xl mx-auto">
+          <div class="rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900/50 overflow-hidden">
+            <div class="h-2" style="background:linear-gradient(90deg, oklch(0.577 0.245 27.325), oklch(0.637 0.237 25));"></div>
+            <div class="p-8 sm:p-12">
+              <h2 class="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white mb-6 text-center">Eligibility Criteria</h2>
+              <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                  <div class="flex items-center justify-center w-6 h-6 rounded-full shrink-0 mt-0.5" style="background-color:oklch(0.577 0.245 27.325);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <p class="text-neutral-700 dark:text-neutral-300 text-sm sm:text-base">Passed 10+2 (or equivalent) from a recognized board with <strong>Physics and Mathematics</strong> as compulsory subjects.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="flex items-center justify-center w-6 h-6 rounded-full shrink-0 mt-0.5" style="background-color:oklch(0.577 0.245 27.325);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <p class="text-neutral-700 dark:text-neutral-300 text-sm sm:text-base">Minimum <strong>50% aggregate marks</strong> in 10+2 (45% for reserved categories).</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="flex items-center justify-center w-6 h-6 rounded-full shrink-0 mt-0.5" style="background-color:oklch(0.577 0.245 27.325);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <p class="text-neutral-700 dark:text-neutral-300 text-sm sm:text-base">Valid <strong>uGNET score</strong> or equivalent national entrance exam scores (JEE Main, State CET, etc.) accepted.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="flex items-center justify-center w-6 h-6 rounded-full shrink-0 mt-0.5" style="background-color:oklch(0.577 0.245 27.325);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <p class="text-neutral-700 dark:text-neutral-300 text-sm sm:text-base">Students appearing for 12th board exams in the current academic year are also eligible to apply.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-white mb-4">Campus Location</h2>
+        </div>
+        <div class="max-w-2xl mx-auto">
+          <div class="rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 p-8 sm:p-10 text-center">
+            <div class="flex items-center justify-center w-16 h-16 rounded-full mx-auto mb-6 bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-red-500/20">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-red-500"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-3">St. Mary's Rehabilitation University</h3>
+            <p class="text-neutral-600 dark:text-neutral-400 text-base mb-6">Hyderabad, Telangana, India</p>
+            <a href="https://maps.app.goo.gl/YaND7BrtcqZWjJrW7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold border border-neutral-300 dark:border-neutral-600 text-neutral-900 dark:text-white hover:border-primary hover:text-primary transition-all duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              View on Google Maps
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA Section -->
+    <section class="relative overflow-hidden py-16 sm:py-24">
+      <div class="absolute inset-0 bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 dark:from-black dark:via-neutral-950 dark:to-black"></div>
+      <div class="absolute inset-0 opacity-10" style="background-image:radial-gradient(circle at 50% 50%, oklch(0.577 0.245 27.325 / 0.4) 0%, transparent 60%);"></div>
+      <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">Begin your journey at SMRU</h2>
+        <p class="text-neutral-400 text-base sm:text-lg mb-10 max-w-xl mx-auto">Apply now to join St. Mary's Rehabilitation University and experience world-class tech education powered by upGrad School of Technology.</p>
+        <a href="https://apply.niatindia.com/login?utm_source=apply+button&utm_medium=website&utm_campaign=cta-apply-now-variant" class="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl" style="background:linear-gradient(135deg, oklch(0.577 0.245 27.325), oklch(0.637 0.237 25));">
+          Apply Now
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-neutral-700 dark:text-white pb-8 pt-6 relative">
+    <div class="max-w-full mx-4 sm:mx-6 py-8 px-4 sm:px-6 rounded-2xl bg-neutral-100 dark:bg-[#18191A] border border-neutral-300 dark:border-neutral-800 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto relative z-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+          <div>
+            <h3 class="text-base sm:text-lg font-semibold mb-5">Quick Links</h3>
+            <ul class="space-y-2 sm:space-y-3">
+              <li><a href="/#admission-process" class="text-neutral-600 dark:text-neutral-300 hover:text-red-600 transition-colors text-sm sm:text-base">Admissions</a></li>
+              <li><a href="/#scholarships" class="text-neutral-600 dark:text-neutral-300 hover:text-red-600 transition-colors text-sm sm:text-base">Scholarships</a></li>
+              <li><a href="/allfaqs/" class="text-neutral-600 dark:text-neutral-300 hover:text-red-600 transition-colors text-sm sm:text-base">FAQs</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-base sm:text-lg font-semibold mb-5">Contact</h3>
+            <div class="space-y-3">
+              <div class="flex items-center space-x-3"><a href="tel:18002108080" class="text-neutral-600 dark:text-neutral-300 hover:text-red-600 transition-colors text-sm sm:text-base">1800 210 8080</a></div>
+              <div class="flex items-center space-x-3"><a href="mailto:admission@sot.upgrad.com" class="text-neutral-600 dark:text-neutral-300 hover:text-red-600 transition-colors text-sm sm:text-base">admission@sot.upgrad.com</a></div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-base sm:text-lg font-semibold mb-5">Address</h3>
+            <p class="text-neutral-600 dark:text-neutral-300 text-sm sm:text-base">AMR Tech Park, Hosur Main Rd, Bengaluru, Karnataka 560068</p>
+          </div>
+        </div>
+        <div class="border-t border-neutral-300 dark:border-neutral-700 pt-6 text-center">
+          <p class="text-neutral-500 dark:text-neutral-400 text-xs sm:text-sm">&copy; 2026 upGrad School of Technology. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Resources Mega Menu Script -->
+  <script>
+    (function() {
+      var toggle = document.getElementById('resources-toggle');
+      var menu = document.getElementById('resources-mega-menu');
+      var chevron = document.getElementById('resources-chevron');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var isOpen = !menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        chevron && chevron.classList.toggle('rotate-180');
+        toggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      });
+      document.addEventListener('click', function(e) {
+        var item = document.getElementById('resources-menu-item');
+        if (item && !item.contains(e.target)) {
+          menu.classList.add('hidden');
+          chevron && chevron.classList.remove('rotate-180');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

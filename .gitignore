@@ -5,6 +5,11 @@ university-collabrations.html
 mrdus.png
 remove_noida.js
 
+# Dependencies and build artifacts
+node_modules/
+package.json
+package-lock.json
+
 # OS files
 .DS_Store
 Thumbs.db

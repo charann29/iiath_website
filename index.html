@@ -48,11 +48,11 @@
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "name": "IIAT - Indian Institute of Advanced Technologies",
-    "alternateName": "IIAT",
+    "alternateName": ["IIAT", "Indian Institute of Advanced Technologies", "IIAT Hyderabad"],
     "url": "https://iiath.com",
     "logo": "https://iiath.com/assets/new/IIAT_logo.png",
     "image": "https://iiath.com/assets/new/IIAT_logo.png",
-    "description": "IIAT (Indian Institute of Advanced Technologies) offers B.Tech CSE programs with specializations in AI & Data Science, FinTech & AI, Core CSE, AI & ML, Cyber Security, and Biomedical Engineering at its Hyderabad campus.",
+    "description": "IIAT (Indian Institute of Advanced Technologies) is a premier B.Tech engineering college in Hyderabad offering CSE programs with specializations in AI & Data Science, FinTech & AI, Core CSE, AI & Machine Learning, Cyber Security with AI/ML, and Biomedical Engineering with AI & Medical Robotics. Affiliated with St. Mary's Rehabilitation University.",
     "telephone": "+918688664337",
     "email": "info@iiath.com",
     "address": {
@@ -63,13 +63,26 @@
       "postalCode": "500038",
       "addressCountry": "IN"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "17.4375",
+      "longitude": "78.4483"
+    },
     "parentOrganization": {
       "@type": "Organization",
-      "name": "InnoFutureTech Private Limited"
+      "name": "InnoFutureTech Private Limited",
+      "url": "https://iiath.com"
     },
-    "sameAs": [],
+    "sameAs": [
+      "https://www.linkedin.com/company/iiat-hyderabad",
+      "https://www.instagram.com/iiat_hyderabad"
+    ],
     "foundingDate": "2024",
     "slogan": "Where Curiosity Becomes Capability",
+    "areaServed": {
+      "@type": "Country",
+      "name": "India"
+    },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "B.Tech CSE Programs",
@@ -77,44 +90,62 @@
         {
           "@type": "Course",
           "name": "B.Tech CSE (AI & Data Science)",
-          "description": "4-year undergraduate program in Computer Science with specialization in Artificial Intelligence and Data Science",
+          "description": "4-year undergraduate B.Tech program in Computer Science with specialization in Artificial Intelligence and Data Science. 180 seats available.",
           "provider": { "@type": "EducationalOrganization", "name": "IIAT" },
-          "numberOfCredits": "180 Seats"
+          "educationalLevel": "Undergraduate",
+          "timeRequired": "P4Y",
+          "maximumEnrollment": 180,
+          "courseCode": "CSE-AIDS"
         },
         {
           "@type": "Course",
           "name": "B.Tech CSE (FinTech & Artificial Intelligence)",
-          "description": "4-year undergraduate program in Computer Science with specialization in FinTech and AI",
+          "description": "4-year undergraduate B.Tech program in Computer Science with specialization in FinTech and Artificial Intelligence. 60 seats available.",
           "provider": { "@type": "EducationalOrganization", "name": "IIAT" },
-          "numberOfCredits": "60 Seats"
+          "educationalLevel": "Undergraduate",
+          "timeRequired": "P4Y",
+          "maximumEnrollment": 60,
+          "courseCode": "CSE-FTAI"
         },
         {
           "@type": "Course",
           "name": "B.Tech CSE (Core)",
-          "description": "4-year undergraduate program in core Computer Science and Engineering",
+          "description": "4-year undergraduate B.Tech program in core Computer Science and Engineering. 180 seats available.",
           "provider": { "@type": "EducationalOrganization", "name": "IIAT" },
-          "numberOfCredits": "180 Seats"
+          "educationalLevel": "Undergraduate",
+          "timeRequired": "P4Y",
+          "maximumEnrollment": 180,
+          "courseCode": "CSE-CORE"
         },
         {
           "@type": "Course",
           "name": "B.Tech CSE (AI & Machine Learning)",
-          "description": "4-year undergraduate program in Computer Science with specialization in AI and Machine Learning",
+          "description": "4-year undergraduate B.Tech program in Computer Science with specialization in AI and Machine Learning. 180 seats available.",
           "provider": { "@type": "EducationalOrganization", "name": "IIAT" },
-          "numberOfCredits": "180 Seats"
+          "educationalLevel": "Undergraduate",
+          "timeRequired": "P4Y",
+          "maximumEnrollment": 180,
+          "courseCode": "CSE-AIML"
         },
         {
           "@type": "Course",
           "name": "B.Tech CSE (Cyber Security with AI/ML)",
-          "description": "4-year undergraduate program in Computer Science with specialization in Cyber Security with AI/ML",
+          "description": "4-year undergraduate B.Tech program in Computer Science with specialization in Cyber Security enhanced by AI and ML. 60 seats available.",
           "provider": { "@type": "EducationalOrganization", "name": "IIAT" },
-          "numberOfCredits": "60 Seats"
+          "educationalLevel": "Undergraduate",
+          "timeRequired": "P4Y",
+          "maximumEnrollment": 60,
+          "courseCode": "CSE-CSAI"
         },
         {
           "@type": "Course",
-          "name": "B.Tech Biomedical Engineering, AI and Medical Robotics",
-          "description": "4-year undergraduate program in Biomedical Engineering with AI and Medical Robotics",
+          "name": "B.Tech Biomedical Engineering, AI & Medical Robotics",
+          "description": "4-year undergraduate B.Tech program in Biomedical Engineering with AI and Medical Robotics. 60 seats available.",
           "provider": { "@type": "EducationalOrganization", "name": "IIAT" },
-          "numberOfCredits": "60 Seats"
+          "educationalLevel": "Undergraduate",
+          "timeRequired": "P4Y",
+          "maximumEnrollment": 60,
+          "courseCode": "BME-AIMR"
         }
       ]
     }
@@ -739,7 +770,7 @@
       }
     }
 
-    /* --- Preserve white text inside bg-red-700 (uGNET banner) --- */
+    /* --- Preserve white text inside bg-red-700 (IIAT SAT banner) --- */
     .bg-red-700,
     .bg-red-700 * {
       color: #fff !important;

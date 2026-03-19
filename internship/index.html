@@ -7,8 +7,21 @@
   <link rel="preload" href="../_next/static/media/93f479601ee12b01-s.p.woff2" as="font" crossorigin="" type="font/woff2">
   <link rel="stylesheet" href="../_next/static/css/de70bee13400563f.css">
   <link rel="stylesheet" href="../_next/static/css/7bfa864fea7726bd.css">
-  <link rel="icon" type="image/svg+xml" href="../assets/faviconD.svg">
-  <title>IGNITE Internship Challenge - upGrad School of Technology</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/new/faviconD.svg">
+  <title>IGNITE Internship Challenge - IIAT</title>
+  <meta name="description" content="IIAT IGNITE Internship Challenge — real-world industry internships for B.Tech students. Gain hands-on experience with leading tech companies from Year 2.">
+  <meta name="keywords" content="IIAT internship, IGNITE internship challenge, B.Tech internship Hyderabad, tech internship, IIAT industry partnership">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://iiath.com/internship/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="IGNITE Internship Challenge - IIAT">
+  <meta property="og:description" content="IIAT IGNITE Internship Challenge — real-world industry internships for B.Tech students. Gain hands-on experience with leading tech companies from Year 2.">
+  <meta property="og:image" content="https://iiath.com/assets/new/IIAT_logo.png">
+  <meta property="og:url" content="https://iiath.com/internship/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IGNITE Internship Challenge - IIAT">
+  <meta name="twitter:description" content="IIAT IGNITE Internship Challenge — real-world industry internships for B.Tech students. Gain hands-on experience with leading tech companies from Year 2.">
+  <meta name="twitter:image" content="https://iiath.com/assets/new/IIAT_logo.png">
   <script>
     (function () {
       const root = document.documentElement;
@@ -29,6 +42,12 @@
     .dark .hero-gradient { background: linear-gradient(135deg, #fef6e8 0%, #f7e8ca 40%, #fedfb9 100%); }
     .light .hero-gradient, :not(.dark) .hero-gradient { background: linear-gradient(135deg, #fef6e8 0%, #f7e8ca 40%, #fedfb9 100%); }
     .glow-ring { box-shadow: 0 0 40px rgba(227,70,20,0.1), 0 0 80px rgba(227,70,20,0.05); }
+  
+    /* --- Fix missing Tailwind translate-x-full utility --- */
+    .translate-x-full {
+      --tw-translate-x: 100%;
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
   </style>
     <style>
     /* ===== WARM WHEAT + ORANGE THEME ===== */
@@ -106,8 +125,8 @@
     [style*="background-color:var(--primary)"],
     [style*="background-color: var(--primary)"],
     .bg-primary, .bg-red-600,
-    a[href*="apply.niatindia.com"],
-    a[href*="apply.niatindia.com"] * { color: #fff !important; }
+    a[href*="/apply/"],
+    a[href*="/apply/"] * { color: #fff !important; }
 
     /* --- Primary accent (orange-red) --- */
     .text-\[var\(--primary\)\], .text-primary { color: #e34614 !important; }
@@ -130,22 +149,27 @@
       box-shadow: 0 1px 3px rgba(45,26,14,0.08) !important;
       backdrop-filter: blur(20px) !important;
     }
+    @media (max-width: 1023px) {
+      #resources-mega-menu { display: none !important; }
+    }
     header nav ul a .leading-none,
-    header nav ul div .leading-none { color: #3b2314 !important; }
+    header nav ul div .leading-none,
+    header nav ul button .leading-none { color: #3b2314 !important; }
     header nav ul a.text-primary .leading-none,
     header nav ul a[href="/"] .leading-none { color: #e34614 !important; }
     header nav ul a:hover .leading-none,
-    header nav ul div:hover .leading-none { color: #e34614 !important; }
-    header nav ul a::after, header nav ul div::after { background: #e34614 !important; }
+    header nav ul div:hover .leading-none,
+    header nav ul button:hover .leading-none { color: #e34614 !important; }
+    header nav ul a::after, header nav ul div::after, header nav ul button::after { background: #e34614 !important; }
 
     /* --- CTA buttons (primary orange-red) --- */
-    a[href*="apply.niatindia.com"] {
+    a[href*="/apply/"] {
       background: linear-gradient(135deg, #e34614, #cc5227) !important;
       color: #fff !important;
       border-color: #e34614 !important;
       font-weight: 600 !important;
     }
-    a[href*="apply.niatindia.com"]:hover {
+    a[href*="/apply/"]:hover {
       background: linear-gradient(135deg, #cc5227, #da8159) !important;
       box-shadow: 0 0 20px rgba(227, 70, 20, 0.25) !important;
     }
@@ -186,11 +210,40 @@
     #resources-mega-menu {
       background: rgba(254, 246, 232, 0.98) !important;
       border-color: #e8d5b5 !important;
-      box-shadow: 0 20px 40px rgba(45,26,14,0.1) !important;
+      box-shadow: 0 25px 60px rgba(45, 26, 14, 0.12) !important;
+      backdrop-filter: blur(20px) !important;
     }
-    #resources-mega-menu h4 { color: #e34614 !important; border-bottom-color: #e8d5b5 !important; }
-    #resources-mega-menu a { color: #5c4033 !important; }
-    #resources-mega-menu a:hover { color: #e34614 !important; }
+    #resources-mega-menu .mega-col-title {
+      color: #e34614 !important;
+      font-size: 1.1rem;
+      font-weight: 600;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+    #resources-mega-menu .mega-col-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 100%;
+      background: rgba(227, 70, 20, 0.5);
+      border-radius: 2px;
+    }
+    #resources-mega-menu a {
+      color: #3b2314 !important;
+      transition: color 0.15s ease;
+    }
+    #resources-mega-menu a:hover {
+      color: #e34614 !important;
+    }
+    #resources-mega-menu .mega-sub-link {
+      color: #7a6352 !important;
+    }
+    #resources-mega-menu .mega-sub-link:hover {
+      color: #e34614 !important;
+    }
 
     /* --- Dropdowns --- */
     .group\/item .absolute {
@@ -236,26 +289,151 @@
     /* --- Ring / focus --- */
     .ring-neutral-200 { --tw-ring-color: #e8d5b5 !important; }
 
+    /* --- Missing Tailwind utility fallbacks (navbar logo) --- */
+    .max-w-\[140px\] { max-width: 140px; }
+    @media (min-width: 640px) { .sm\:max-w-\[160px\] { max-width: 160px; } }
+    @media (min-width: 1024px) { .lg\:max-w-\[220px\] { max-width: 220px; } }
+
+    @media (max-width: 639px) {
+      header nav { padding-top: 0.35rem; }
+      header nav > div { border-radius: 0.6rem; margin-left: 0.35rem; margin-right: 0.35rem; }
+    }
+
   </style>
 </head>
 <body class="antialiased bg-background">
   <!-- Navbar -->
   <header>
-    <nav class="fixed z-[10000] w-full pt-2 transition-all duration-300" style="top:0">
+    <nav data-state="false" class="group fixed z-10000 w-full pt-2 transition-all duration-300" style="top:0">
       <div class="mx-auto max-w-7xl rounded-xl border px-4 sm:px-6 lg:px-12 duration-300 relative overflow-visible backdrop-blur-xl shadow-lg bg-background/50" style="border-color:rgba(255,255,255,0.1);border-bottom-width:1px;border-radius:1rem;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06),0 0 20px rgba(227,70,20,0.1)">
-        <div class="relative flex items-center justify-between py-3 sm:py-4 lg:py-6">
-          <a href="/" class="flex items-center"><img alt="upGrad School of Technology" width="120" height="40" class="h-8 sm:h-10 w-auto" src="../_next/image/url=%2Fassets%2FU_light_logo.png&w=256&q=75"></a>
+        <div class="relative flex flex-wrap items-center justify-between gap-4 py-2.5 sm:py-4 lg:gap-0 transition-all duration-300 lg:py-6" style="z-index:1">
+          <div class="flex w-full items-center justify-between gap-3 sm:gap-4 lg:w-auto">
+            <a href="/" class="flex items-center space-x-2 relative" aria-label="home">
+              <img alt="IIAT logo" width="200" height="86" decoding="async" class="h-10 sm:h-12 lg:h-16 w-auto max-w-[200px] sm:max-w-[260px] lg:max-w-[340px] object-contain shrink-0 relative" style="color:transparent" src="../assets/new/IIAT_logo.png">
+            </a>
+            <div class="flex items-center gap-2 lg:hidden">
+              <button aria-label="Open Menu" id="mobile-menu-btn" class="z-20 p-2 sm:p-2.5 relative" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu size-5 sm:size-6 text-white" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+              </button>
+            </div>
+          </div>
           <div class="hidden lg:flex items-center gap-8 xl:gap-10">
             <ul class="flex items-center gap-8 xl:gap-10 text-sm sm:text-base font-medium relative">
-              <li><a class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full text-white" href="/"><span class="leading-none">Home</span></a></li>
-              <li class="relative group/item"><div class="relative inline-flex items-center gap-1.5 duration-150 cursor-pointer after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full text-white"><span class="leading-none">University Collaborations</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 shrink-0 transition-transform group-hover/item:rotate-180 duration-300"><path d="m6 9 6 6 6-6"></path></svg></div><div class="absolute left-0 top-full pt-2 hidden group-hover/item:block"><ul class="w-80 rounded-xl backdrop-blur-xl shadow-2xl border overflow-hidden bg-background/90 border-border"><li><a class="group/card block px-5 py-4 text-sm text-foreground hover:text-primary" href="/university/smru/"><div class="flex items-start gap-3"><div class="flex-1"><div class="font-semibold text-white group-hover/card:text-primary group-hover/card:underline">SMRU</div><p class="text-xs text-neutral-400 mt-1">St. Mary's Rehabilitation University, Hyderabad</p></div></div></a></li></ul></div></li>
-              <li class="relative" id="resources-menu-item"><button type="button" id="resources-toggle" class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-primary after:transition-all after:duration-300 after:w-full text-primary"><span class="leading-none">Resources</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 shrink-0 transition-transform duration-300" id="resources-chevron"><path d="m6 9 6 6 6-6"></path></svg></button><div id="resources-mega-menu" class="absolute right-0 top-full pt-2 hidden" style="width:720px;transform:translateX(40%);"><div class="rounded-xl backdrop-blur-xl shadow-2xl border overflow-hidden bg-background/90 border-border p-6"><div class="grid grid-cols-4 gap-6"><div><h4 class="text-xs font-bold uppercase tracking-wider text-primary mb-3">AI Playground</h4><ul class="space-y-2"><li><a href="/Playground/" class="block text-sm text-white hover:text-primary font-semibold">Agentic Multiverse</a></li></ul></div><div><h4 class="text-xs font-bold uppercase tracking-wider text-primary mb-3">For Students</h4><ul class="space-y-2"><li><a href="/internship/" class="block text-sm text-white hover:text-primary font-semibold">Ignite Internship</a></li><li><a href="/uGNET/" class="block text-sm text-white hover:text-primary font-semibold">uGNET</a></li></ul></div><div><h4 class="text-xs font-bold uppercase tracking-wider text-primary mb-3">For Faculty</h4><ul class="space-y-2"><li><a href="/edp/" class="block text-sm text-white hover:text-primary font-semibold">EDP</a></li></ul></div><div><h4 class="text-xs font-bold uppercase tracking-wider text-primary mb-3">Others</h4><ul class="space-y-2"><li><a href="/contactus/" class="block text-sm text-white hover:text-primary font-semibold">Contact Us</a></li><li><a href="/admission/" class="block text-sm text-white hover:text-primary font-semibold">Admissions</a></li></ul></div></div></div></div></li>
-              <li><a class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full text-white" href="/allfaqs/"><span class="leading-none">FAQs</span></a></li>
+              <li class="relative group/item"><a class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full focus:outline-none text-white" href="/"><span class="leading-none">Home</span></a></li>
+              <li class="relative group/item">
+                <div class="relative inline-flex items-center gap-1.5 duration-150 cursor-pointer after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full focus:outline-none text-white">
+                  <span class="leading-none">Campuses</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-4 h-4 shrink-0 leading-none transition-transform group-hover/item:rotate-180 duration-300" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                </div>
+                <div class="absolute left-0 top-full pt-2 hidden group-hover/item:block">
+                  <ul class="w-80 rounded-xl backdrop-blur-xl shadow-2xl border overflow-hidden bg-background/90 border-border" style="will-change:opacity,transform;opacity:1;transform:none">
+                    <li><a class="resource-link group/card block px-5 py-4 text-sm transition-all duration-200 border-b last:border-b-0 bg-transparent hover:bg-transparent text-foreground border-border hover:text-primary" href="/university/smru/">
+                      <div class="flex items-start gap-3"><div class="flex-1 min-w-0">
+                        <div class="font-semibold transition-colors text-white group-hover/card:text-primary group-hover/card:underline group-hover/card:decoration-2 group-hover/card:underline-offset-4 group-hover/card:decoration-primary"><span>SMRU</span></div>
+                        <p class="text-xs text-neutral-400 mt-1">St. Mary's Rehabilitation University, Hyderabad</p>
+                      </div></div>
+                    </a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="relative" id="resources-menu-item">
+                <button type="button" aria-expanded="false" id="resources-toggle" class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full focus:outline-none text-white">
+                  <span class="leading-none">Resources</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-4 h-4 shrink-0 leading-none transition-transform duration-300" aria-hidden="true" id="resources-chevron"><path d="m6 9 6 6 6-6"></path></svg>
+                </button>
+
+              </li>
+              <li class="relative group/item"><a class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full focus:outline-none text-white" href="/allfaqs/"><span class="leading-none">FAQs</span></a></li>
             </ul>
+            <div class="flex items-center gap-3">
+              <a href="/apply/" class="inline-flex items-center justify-center whitespace-nowrap rounded-full px-5 h-10 text-sm font-semibold text-white bg-[var(--primary)] hover:bg-[var(--primary)]/90 transition-colors shadow-md">Apply Now</a>
+            </div>
           </div>
         </div>
       </div>
+        <!-- Resources Mega Menu (full-width, below nav bar) -->
+        <div id="resources-mega-menu" class="hidden border-t transition-all duration-200"
+          style="border-color:#e8d5b5; border-bottom-left-radius:1rem; border-bottom-right-radius:1rem; padding:2rem 2.5rem 2.5rem;">
+          <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:2rem;">
+            <div>
+              <span class="mega-col-title">AI Playground</span>
+              <div style="margin-top:1.25rem; display:flex; flex-direction:column; gap:1.25rem;">
+                <a href="/Playground/" class="text-base font-semibold" style="text-decoration:none;">Agentic Multiverse</a>
+                <div style="padding-left:1rem; display:flex; flex-direction:column; gap:0.75rem;">
+                  <a href="/Playground/resumecraft/" class="mega-sub-link text-sm" style="text-decoration:none;">ResumeCraft Agent</a>
+                  <a href="/Playground/collegepredict/" class="mega-sub-link text-sm" style="text-decoration:none;">CollegePredict Agent</a>
+                  <a href="/Playground/entrancepractice/" class="mega-sub-link text-sm" style="text-decoration:none;">Engg EntrancePractice Agent</a>
+                  <a href="/Playground/interviewprep/" class="mega-sub-link text-sm" style="text-decoration:none;">InterviewPrep Agent</a>
+                </div>
+              </div>
+            </div>
+            <div>
+              <span class="mega-col-title">For Students</span>
+              <div style="margin-top:1.25rem; display:flex; flex-direction:column; gap:1.25rem;">
+                <a href="/internship/" class="text-base font-semibold" style="text-decoration:none;">Ignite Internship</a>
+                <a href="/iiat-sat/" class="text-base font-semibold" style="text-decoration:none;">IIAT SAT</a>
+              </div>
+            </div>
+            <div>
+              <span class="mega-col-title">For Faculty</span>
+              <div style="margin-top:1.25rem; display:flex; flex-direction:column; gap:1.25rem;">
+                <a href="/edp/" class="text-base font-semibold" style="text-decoration:none;">EDP</a>
+              </div>
+            </div>
+            <div>
+              <span class="mega-col-title">Others</span>
+              <div style="margin-top:1.25rem; display:flex; flex-direction:column; gap:1.25rem;">
+                <a href="/contactus/" class="text-base font-semibold" style="text-decoration:none;">Contact Us</a>
+                <a href="/admission/" class="text-base font-semibold" style="text-decoration:none;">Admissions</a>
+              </div>
+            </div>
+          </div>
+        </div>
     </nav>
+    <!-- Mobile slide-out menu -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/60 z-[9999] hidden lg:hidden" style="backdrop-filter:blur(4px);"></div>
+    <div id="mobile-menu-panel" class="fixed top-0 right-0 h-full w-80 max-w-[85vw] z-[10001] bg-neutral-950 border-l border-neutral-800 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden overflow-y-auto">
+      <div class="flex items-center justify-between p-5 border-b border-neutral-800">
+        <span class="text-white font-semibold text-lg">Menu</span>
+        <button id="mobile-menu-close" class="p-2 text-white hover:text-primary" aria-label="Close Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+      <ul class="p-5 space-y-1">
+        <li><a href="/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">Home</a></li>
+        <li>
+          <button id="mob-collab-toggle" class="w-full flex items-center justify-between py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">
+            <span>Campuses</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform duration-300" id="mob-collab-chevron"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <ul id="mob-collab-sub" class="hidden pl-4 mt-1 space-y-1">
+            <li><a href="/university/smru/" class="block py-2.5 px-4 rounded-lg text-sm text-neutral-300 hover:text-primary hover:bg-neutral-900">
+              <strong class="text-white">SMRU</strong><br><span class="text-xs text-neutral-500">St. Mary's Rehabilitation University, Hyderabad</span>
+            </a></li>
+          </ul>
+        </li>
+        <li>
+          <button id="mob-resources-toggle" class="w-full flex items-center justify-between py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">
+            <span>Resources</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform duration-300" id="mob-resources-chevron"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <ul id="mob-resources-sub" class="hidden pl-4 mt-1 space-y-1">
+            <li class="pt-2 pb-1 px-4"><span class="text-xs font-bold uppercase tracking-wider text-primary">AI Playground</span></li>
+            <li><a href="/Playground/" class="block py-2 px-4 rounded-lg text-sm text-neutral-300 hover:text-primary hover:bg-neutral-900">Agentic Multiverse</a></li>
+            <li class="pt-2 pb-1 px-4"><span class="text-xs font-bold uppercase tracking-wider text-primary">For Students</span></li>
+            <li><a href="/internship/" class="block py-2 px-4 rounded-lg text-sm text-neutral-300 hover:text-primary hover:bg-neutral-900">Ignite Internship</a></li>
+            <li><a href="/iiat-sat/" class="block py-2 px-4 rounded-lg text-sm text-neutral-300 hover:text-primary hover:bg-neutral-900">IIAT SAT</a></li>
+            <li class="pt-2 pb-1 px-4"><span class="text-xs font-bold uppercase tracking-wider text-primary">For Faculty</span></li>
+            <li><a href="/edp/" class="block py-2 px-4 rounded-lg text-sm text-neutral-300 hover:text-primary hover:bg-neutral-900">EDP</a></li>
+            <li class="pt-2 pb-1 px-4"><span class="text-xs font-bold uppercase tracking-wider text-primary">Others</span></li>
+            <li><a href="/contactus/" class="block py-2 px-4 rounded-lg text-sm text-neutral-300 hover:text-primary hover:bg-neutral-900">Contact Us</a></li>
+            <li><a href="/admission/" class="block py-2 px-4 rounded-lg text-sm text-neutral-300 hover:text-primary hover:bg-neutral-900">Admissions</a></li>
+          </ul>
+        </li>
+        <li><a href="/allfaqs/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">FAQs</a></li>
+        <li class="pt-4"><a href="/apply/" class="block w-full text-center py-3 px-4 rounded-full text-white font-semibold text-base" style="background:var(--primary);">Apply Now</a></li>
+      </ul>
+    </div>
   </header>
 
   <main class="pt-28">
@@ -264,19 +442,19 @@
     <section class="hero-gradient relative overflow-hidden">
       <div class="absolute inset-0 opacity-20" style="background-image:radial-gradient(circle at 20% 50%, rgba(255,80,40,0.25) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,120,50,0.15) 0%, transparent 40%);"></div>
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36 text-center">
-        <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs sm:text-sm font-medium text-neutral-300 mb-8 backdrop-blur-sm">
+        <div class="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs sm:text-sm font-medium mb-8 backdrop-blur-sm" style="border-color:#e8d5b5; background:rgba(247,232,202,0.6); color:#5c4033;">
           <span class="inline-block w-2 h-2 rounded-full animate-pulse" style="background:var(--primary);"></span>
           8 Weeks &nbsp;|&nbsp; Grades 9-12 &nbsp;|&nbsp; AI Workshop
         </div>
-        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1] mb-6">
-          <span class="bg-gradient-to-r from-white via-white to-neutral-400 bg-clip-text text-transparent">IGNITE</span>
+        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] mb-6" style="color:#2d1a0e;">
+          <span style="color:#2d1a0e;">IGNITE</span>
           <br class="sm:hidden">
           <span class="block sm:inline" style="color:var(--primary);"> Internship Challenge</span>
         </h1>
-        <p class="max-w-2xl mx-auto text-lg sm:text-xl text-neutral-400 mb-10 leading-relaxed">
+        <p class="max-w-2xl mx-auto text-lg sm:text-xl mb-10 leading-relaxed" style="color:#5c4033;">
           An 8-week hands-on internship program for Grades 9-12 students. Dive into real-world projects, master AI fundamentals, and launch your tech career early.
         </p>
-        <a href="https://apply.niatindia.com/login?utm_source=apply+button&utm_medium=website&utm_campaign=cta-apply-now-variant"
+        <a href="/apply/"
            class="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base sm:text-lg font-semibold text-white transition-all duration-300 hover:scale-105 glow-ring"
            style="background:var(--primary);">
           Register Now
@@ -455,7 +633,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary);"><rect width="18" height="14" x="3" y="5" rx="2"/><path d="M3 10h18"/><path d="M7 15h.01"/><path d="M11 15h2"/></svg>
             </div>
             <h3 class="text-xl font-bold text-foreground mb-3">Certificates of Completion</h3>
-            <p class="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">Every participant receives an official upGrad School of Technology certificate, validating your internship experience and AI workshop completion.</p>
+            <p class="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">Every participant receives an official IIAT certificate, validating your internship experience and AI workshop completion.</p>
           </div>
           <!-- Reward 2 -->
           <div class="relative rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900/60 p-8 text-center">
@@ -472,7 +650,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary);"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
             </div>
             <h3 class="text-xl font-bold text-foreground mb-3">Internship Offers</h3>
-            <p class="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">Top performers in the challenge receive exclusive internship offers with upGrad's partner companies, giving you a head-start in your professional career.</p>
+            <p class="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">Top performers in the challenge receive exclusive internship offers with IIAT's partner companies, giving you a head-start in your professional career.</p>
           </div>
         </div>
       </div>
@@ -538,7 +716,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-chevron shrink-0 text-neutral-400"><path d="m6 9 6 6 6-6"></path></svg>
             </button>
             <div class="faq-answer px-6">
-              <p class="text-sm text-neutral-500 dark:text-neutral-400 pb-5 leading-relaxed">All participants receive a certificate of completion. Outstanding performers earn recommendation letters and may be offered extended internships with upGrad's industry partners. You'll also join an alumni network of young technologists for ongoing mentorship and opportunities.</p>
+              <p class="text-sm text-neutral-500 dark:text-neutral-400 pb-5 leading-relaxed">All participants receive a certificate of completion. Outstanding performers earn recommendation letters and may be offered extended internships with IIAT's industry partners. You'll also join an alumni network of young technologists for ongoing mentorship and opportunities.</p>
             </div>
           </div>
         </div>
@@ -551,7 +729,7 @@
       <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">Ready to Ignite Your Career?</h2>
         <p class="text-neutral-500 dark:text-neutral-400 text-base sm:text-lg mb-10 max-w-xl mx-auto">Join hundreds of young innovators and take the first step toward a future in technology and artificial intelligence.</p>
-        <a href="https://apply.niatindia.com/login?utm_source=apply+button&utm_medium=website&utm_campaign=cta-apply-now-variant"
+        <a href="/apply/"
            class="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base sm:text-lg font-semibold text-white transition-all duration-300 hover:scale-105 glow-ring"
            style="background:var(--primary);">
           Register Now
@@ -568,24 +746,29 @@
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
           <div><h3 class="text-base sm:text-lg font-semibold mb-5">Quick Links</h3><ul class="space-y-2"><li><a href="/#admission-process" class="text-neutral-600 dark:text-neutral-300 hover:text-red-600 text-sm">Admissions</a></li><li><a href="/#scholarships" class="text-neutral-600 dark:text-neutral-300 hover:text-red-600 text-sm">Scholarships</a></li><li><a href="/allfaqs/" class="text-neutral-600 dark:text-neutral-300 hover:text-red-600 text-sm">FAQs</a></li></ul></div>
-          <div><h3 class="text-base sm:text-lg font-semibold mb-5">Contact</h3><div class="space-y-3"><p class="text-neutral-600 dark:text-neutral-300 text-sm">1800 210 8080</p><p class="text-neutral-600 dark:text-neutral-300 text-sm">admission@sot.upgrad.com</p></div></div>
-          <div><h3 class="text-base sm:text-lg font-semibold mb-5">Address</h3><p class="text-neutral-600 dark:text-neutral-300 text-sm">AMR Tech Park, Hosur Main Rd, Bengaluru, Karnataka 560068</p></div>
+          <div><h3 class="text-base sm:text-lg font-semibold mb-5">Contact</h3><div class="space-y-3"><p class="text-neutral-600 dark:text-neutral-300 text-sm">+918688664337</p><p class="text-neutral-600 dark:text-neutral-300 text-sm">info@iiath.com</p></div></div>
+          <div><h3 class="text-base sm:text-lg font-semibold mb-5">Address</h3><p class="text-neutral-600 dark:text-neutral-300 text-sm">Manjeera Square &amp; OT, Plot No. 6 &amp; 7, Flat No. 02, Sanjeev Reddy Nagar, Ameerpet, Hyderabad - 500038, Telangana</p></div>
         </div>
-        <div class="border-t border-neutral-300 dark:border-neutral-700 pt-6 text-center"><p class="text-neutral-500 dark:text-neutral-400 text-xs">&copy; 2026 upGrad School of Technology. All rights reserved.</p></div>
+        <div class="border-t border-neutral-300 dark:border-neutral-700 pt-6 text-center"><p class="text-neutral-500 dark:text-neutral-400 text-xs">&copy; 2026 InnoFutureTech Private Limited. All rights reserved.</p></div>
       </div>
     </div>
   </footer>
 
-  <!-- Resources menu toggle -->
+  <script>(function(){var t=document.getElementById('resources-toggle'),m=document.getElementById('resources-mega-menu'),c=document.getElementById('resources-chevron');if(!t||!m)return;t.addEventListener('click',function(e){e.stopPropagation();m.classList.toggle('hidden');c&&c.classList.toggle('rotate-180');});document.addEventListener('click',function(e){var i=document.getElementById('resources-menu-item');var mp=document.getElementById('resources-mega-menu');if(i&&!i.contains(e.target)&&mp&&!mp.contains(e.target)){m.classList.add('hidden');c&&c.classList.remove('rotate-180');}});})();</script>
   <script>
-    (function() {
-      var toggle = document.getElementById('resources-toggle');
-      var menu = document.getElementById('resources-mega-menu');
-      var chevron = document.getElementById('resources-chevron');
-      if (!toggle || !menu) return;
-      toggle.addEventListener('click', function(e) { e.stopPropagation(); menu.classList.toggle('hidden'); chevron && chevron.classList.toggle('rotate-180'); });
-      document.addEventListener('click', function(e) { var item = document.getElementById('resources-menu-item'); if (item && !item.contains(e.target)) { menu.classList.add('hidden'); chevron && chevron.classList.remove('rotate-180'); } });
-    })();
+  // Mobile menu toggle
+  (function(){
+    var btn=document.getElementById('mobile-menu-btn'),panel=document.getElementById('mobile-menu-panel'),overlay=document.getElementById('mobile-menu-overlay'),closeBtn=document.getElementById('mobile-menu-close');
+    if(!btn||!panel||!overlay)return;
+    function openMenu(){panel.classList.remove('translate-x-full');panel.classList.add('translate-x-0');overlay.classList.remove('hidden');document.body.style.overflow='hidden';}
+    function closeMenu(){panel.classList.add('translate-x-full');panel.classList.remove('translate-x-0');overlay.classList.add('hidden');document.body.style.overflow='';}
+    btn.addEventListener('click',openMenu);
+    if(closeBtn)closeBtn.addEventListener('click',closeMenu);
+    overlay.addEventListener('click',closeMenu);
+    function setupToggle(tId,sId,cId){var t=document.getElementById(tId),s=document.getElementById(sId),ch=document.getElementById(cId);if(!t||!s)return;t.addEventListener('click',function(){s.classList.toggle('hidden');if(ch)ch.classList.toggle('rotate-180');});}
+    setupToggle('mob-collab-toggle','mob-collab-sub','mob-collab-chevron');
+    setupToggle('mob-resources-toggle','mob-resources-sub','mob-resources-chevron');
+  })();
   </script>
 
   <!-- FAQ toggle -->

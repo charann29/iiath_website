@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="../../_next/static/media/4cf2300e9c8272f7-s.p.woff2" as="font" crossorigin="" type="font/woff2">
+  <link rel="preload" href="../../_next/static/media/93f479601ee12b01-s.p.woff2" as="font" crossorigin="" type="font/woff2">
+  <link rel="stylesheet" href="../../_next/static/css/de70bee13400563f.css">
+  <link rel="stylesheet" href="../../_next/static/css/7bfa864fea7726bd.css">
+  <link rel="icon" type="image/svg+xml" href="../../assets/new/faviconD.svg">
+  <title>CollegePredict Agent - IIAT AI Playground</title>
+  <meta name="description" content="Try the IIAT CollegePredict AI Agent — discover your admission chances for top colleges based on your entrance exam marks. Register for access.">
+  <meta name="keywords" content="IIAT CollegePredict, college admission predictor, AI college predictor, entrance exam chances, IIAT AI Playground">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://iiath.com/Playground/collegepredict/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CollegePredict Agent - IIAT AI Playground">
+  <meta property="og:description" content="Try the IIAT CollegePredict AI Agent — discover your admission chances for top colleges based on your entrance exam marks. Register for access.">
+  <meta property="og:image" content="https://iiath.com/assets/new/IIAT_logo.png">
+  <meta property="og:url" content="https://iiath.com/Playground/collegepredict/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CollegePredict Agent - IIAT AI Playground">
+  <meta name="twitter:description" content="Try the IIAT CollegePredict AI Agent — discover your admission chances for top colleges based on your entrance exam marks. Register for access.">
+  <meta name="twitter:image" content="https://iiath.com/assets/new/IIAT_logo.png">
+  <script>
+    (function () {
+      const root = document.documentElement;
+      root.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+      root.style.setProperty('--primary', '#e34614');
+    })();
+  </script>
+  <style>
+    :root { --primary:#e34614;--primary-dark:#cc5227;--wheat-light:#fedfb9;--wheat-lighter:#fef6e8; }
+    html { color-scheme:light !important; }
+    body { background:#fedfb9 !important; color:#3b2314 !important; }
+    h1,h2,h3,h4,h5,h6 { color:#2d1a0e !important; }
+    .text-white { color:#2d1a0e !important; }
+    .bg-background { background:#fedfb9 !important; }
+    header nav > div { background:rgba(254,246,232,0.9) !important; border-color:#e8d5b5 !important; box-shadow:0 1px 3px rgba(45,26,14,0.08) !important; backdrop-filter:blur(20px) !important; }
+    header nav ul a .leading-none, header nav ul div .leading-none, header nav ul button .leading-none { color:#3b2314 !important; }
+    header nav ul a:hover .leading-none, header nav ul div:hover .leading-none, header nav ul button:hover .leading-none { color:#e34614 !important; }
+    .lucide-menu { stroke:#3b2314 !important; }
+    #mobile-menu-panel { background:#fef6e8 !important; }
+    #mobile-menu-panel button, #mobile-menu-panel a, #mobile-menu-panel span { color:#3b2314 !important; }
+    .bg-primary *, .bg-primary { color:#fff !important; }
+    footer, footer > div { background:#f7e8ca !important; border-color:#e8d5b5 !important; }
+    footer a { color:#7a6352 !important; } footer a:hover { color:#e34614 !important; }
+    footer h3, footer h4 { color:#2d1a0e !important; }
+    footer p, footer span { color:#5c4033 !important; }
+    ::-webkit-scrollbar { width:6px; } ::-webkit-scrollbar-track { background:#f7e8ca; }
+    ::-webkit-scrollbar-thumb { background:#da8159; border-radius:3px; }
+    ::selection { background:rgba(227,70,20,0.2); color:#2d1a0e; }
+    .form-container { background:rgba(254,246,232,0.95); border:1px solid #e8d5b5; border-radius:1.5rem; box-shadow:0 20px 60px rgba(45,26,14,0.1); backdrop-filter:blur(12px); }
+    .form-input { width:100%; padding:0.75rem 1rem; border:1px solid #e8d5b5; border-radius:0.75rem; background:#fff; color:#2d1a0e; font-size:0.95rem; transition:border-color 0.2s,box-shadow 0.2s; outline:none; }
+    .form-input:focus { border-color:#e34614; box-shadow:0 0 0 3px rgba(227,70,20,0.1); }
+    .form-input::placeholder { color:#9a8574; }
+    .form-label { display:block; font-weight:600; font-size:0.875rem; color:#3b2314; margin-bottom:0.375rem; }
+    .form-select { width:100%; padding:0.75rem 1rem; border:1px solid #e8d5b5; border-radius:0.75rem; background:#fff; color:#2d1a0e; font-size:0.95rem; outline:none; appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235c4033' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 1rem center; transition:border-color 0.2s,box-shadow 0.2s; }
+    .form-select:focus { border-color:#e34614; box-shadow:0 0 0 3px rgba(227,70,20,0.1); }
+    .btn-submit { width:100%; padding:0.875rem 2rem; background:linear-gradient(135deg,#e34614,#cc5227); color:#fff !important; font-weight:700; font-size:1rem; border:none; border-radius:0.75rem; cursor:pointer; transition:all 0.2s; }
+    .btn-submit:hover { background:linear-gradient(135deg,#cc5227,#da8159); box-shadow:0 8px 25px rgba(227,70,20,0.3); transform:translateY(-1px); }
+    .form-success { display:none; text-align:center; padding:2rem; }
+    .form-success.active { display:block; }
+    .form-body.hidden { display:none; }
+    .agent-hero { position:relative; padding:8rem 1.5rem 3rem; text-align:center; }
+    .agent-icon { width:100px; height:100px; border-radius:1.25rem; margin:0 auto 1.5rem; overflow:hidden; border:3px solid rgba(227,70,20,0.2); box-shadow:0 8px 30px rgba(45,26,14,0.1); }
+    .agent-icon img { width:100%; height:100%; object-fit:cover; }
+    .agent-badge { display:inline-flex; align-items:center; gap:0.5rem; padding:0.375rem 1rem; border-radius:9999px; font-size:0.8rem; font-weight:600; background:rgba(227,70,20,0.08); color:#7a2f16; border:1px solid rgba(227,70,20,0.2); margin-bottom:1rem; }
+    .agent-badge .dot { width:6px; height:6px; border-radius:50%; background:#e34614; }
+    .feature-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-top:2rem; }
+    .feature-item { padding:1rem 1.25rem; border-radius:1rem; background:#fef6e8; border:1px solid #e8d5b5; }
+    .feature-item h4 { font-size:0.9rem; font-weight:700; color:#2d1a0e !important; margin-bottom:0.25rem; }
+    .feature-item p { font-size:0.8rem; color:#5c4033; }
+  
+    /* --- Fix missing Tailwind translate-x-full utility --- */
+    .translate-x-full {
+      --tw-translate-x: 100%;
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  </style>
+</head>
+<body class="__variable_188709 __variable_9a8899 antialiased bg-background">
+  <header>
+    <nav data-state="false" class="group fixed z-[10000] w-full pt-2 transition-all duration-300" style="top:0">
+      <div class="mx-auto max-w-7xl rounded-xl border px-4 sm:px-6 lg:px-12 duration-300 relative overflow-visible backdrop-blur-xl shadow-lg" style="background:rgba(254,246,232,0.9);border-color:#e8d5b5;border-bottom-width:1px;border-radius:1rem;">
+        <div class="relative flex flex-wrap items-center justify-between gap-4 py-2.5 sm:py-4 lg:gap-0 transition-all duration-300 lg:py-6" style="z-index:1">
+          <div class="flex w-full items-center justify-between gap-3 sm:gap-4 lg:w-auto">
+            <a class="flex items-center space-x-2 relative" aria-label="home" href="/">
+              <img alt="IIAT logo" width="200" height="86" class="h-10 sm:h-12 lg:h-16 w-auto max-w-[200px] sm:max-w-[260px] lg:max-w-[340px] object-contain shrink-0 relative" style="color:transparent" src="../../assets/new/IIAT_logo.png">
+            </a>
+            <div class="flex items-center gap-2 lg:hidden">
+              <button aria-label="Open Menu" id="mobile-menu-btn" class="z-20 p-2 sm:p-2.5 relative" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu size-5 sm:size-6" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="hidden lg:flex items-center gap-8 xl:gap-10">
+            <ul class="flex items-center gap-8 xl:gap-10 text-sm sm:text-base font-medium relative">
+              <li><a class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full" style="color:#3b2314;" href="/"><span class="leading-none">Home</span></a></li>
+              <li><a class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full" style="color:#e34614;font-weight:600;" href="/Playground/"><span class="leading-none">AI Playground</span></a></li>
+              <li><a class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full" style="color:#3b2314;" href="/allfaqs/"><span class="leading-none">FAQs</span></a></li>
+              <li><a class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full" style="color:#3b2314;" href="/contactus/"><span class="leading-none">Contact</span></a></li>
+            </ul>
+            <a class="inline-flex items-center justify-center whitespace-nowrap font-semibold transition-colors h-9 rounded-full px-6 text-sm shadow-lg" style="background:linear-gradient(135deg,#e34614,#cc5227);color:#fff !important;" href="/apply/">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/60 z-[9999] hidden lg:hidden" style="backdrop-filter:blur(4px);"></div>
+  <div id="mobile-menu-panel"
+    class="fixed top-0 right-0 h-full w-80 max-w-[85vw] z-[10001] bg-neutral-950 border-l border-neutral-800 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden overflow-y-auto">
+    <div class="flex items-center justify-between p-5 border-b border-neutral-800">
+      <span class="text-white font-semibold text-lg">Menu</span>
+      <button id="mobile-menu-close" class="p-2 text-white hover:text-primary" aria-label="Close Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18" /><path d="m6 6 12 12" />
+        </svg>
+      </button>
+    </div>
+    <ul class="p-5 space-y-1">
+      <li><a href="/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">Home</a></li>
+      <li><a href="/Playground/" class="block py-3 px-4 rounded-lg text-primary font-semibold text-base hover:bg-neutral-900">AI Playground</a></li>
+      <li><a href="/iiat-sat/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">IIAT SAT</a></li>
+      <li><a href="/internship/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">Ignite Internship</a></li>
+      <li><a href="/contactus/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">Contact Us</a></li>
+      <li><a href="/allfaqs/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">FAQs</a></li>
+    </ul>
+    <div class="p-5 border-t border-neutral-800">
+      <a href="/apply/" class="block w-full text-center py-3 px-6 rounded-full bg-primary text-white font-semibold text-base hover:bg-primary/90 transition-colors">Apply Now</a>
+    </div>
+  </div>
+
+  <main class="pt-20 sm:pt-24 lg:pt-28">
+    <section class="agent-hero">
+      <div class="agent-badge"><span class="dot"></span> AI-Powered Tool</div>
+      <div class="agent-icon">
+        <img alt="CollegePredict Agent" src="../../assets/new/agents/college_proctor.png">
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight" style="color:#2d1a0e !important;">
+        <span style="color:#e34614;">CollegePredict</span> Agent
+      </h1>
+      <p class="mt-4 text-base sm:text-lg max-w-2xl mx-auto" style="color:#5c4033;">
+        Discover your admission chances for top colleges and branches based on your engineering entrance exam marks or rank.
+      </p>
+      <div class="feature-list max-w-3xl mx-auto">
+        <div class="feature-item">
+          <h4>Chance Prediction</h4>
+          <p>Get probability-based admission predictions for colleges matching your rank or percentile.</p>
+        </div>
+        <div class="feature-item">
+          <h4>Branch Comparison</h4>
+          <p>Compare your chances across different branches at the same or different colleges.</p>
+        </div>
+        <div class="feature-item">
+          <h4>Cutoff Analytics</h4>
+          <p>Access historical cutoff trends and see how they apply to your profile.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20">
+      <div class="form-container p-6 sm:p-10 max-w-2xl mx-auto">
+        <div class="form-body" id="agent-form-body">
+          <h2 class="text-xl sm:text-2xl font-bold mb-2" style="color:#2d1a0e !important;">Get Early Access to CollegePredict</h2>
+          <p class="mb-6 text-sm" style="color:#5c4033;">Register below to be notified when this agent goes live. IIAT students get priority access.</p>
+          <form id="agent-form" class="space-y-5" onsubmit="handleSubmit(event)">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label class="form-label" for="full-name">Full Name *</label>
+                <input type="text" id="full-name" name="fullName" class="form-input" placeholder="Enter your full name" required>
+              </div>
+              <div>
+                <label class="form-label" for="email">Email Address *</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label class="form-label" for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+91 XXXXX XXXXX" required>
+              </div>
+              <div>
+                <label class="form-label" for="status">Current Status *</label>
+                <select id="status" name="status" class="form-select" required>
+                  <option value="" disabled selected>Select your status</option>
+                  <option value="12th-student">12th Student / Appearing</option>
+                  <option value="iiat-student">IIAT Student</option>
+                  <option value="college-student">Other College Student</option>
+                  <option value="entrance-aspirant">Entrance Exam Aspirant</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label class="form-label" for="exam">Entrance Exam of Interest (Optional)</label>
+              <input type="text" id="exam" name="exam" class="form-input" placeholder="e.g. JEE Main, AP EAPCET, TS EAMCET">
+            </div>
+            <div style="padding-top:0.5rem;">
+              <button type="submit" class="btn-submit">Register for Early Access &rarr;</button>
+            </div>
+            <p style="font-size:0.8rem;color:#9a8574;text-align:center;margin-top:0.75rem;">
+              By registering, you agree to be contacted by IIAT. Your data is secure and will not be shared.
+            </p>
+          </form>
+        </div>
+        <div class="form-success" id="agent-form-success">
+          <div style="width:64px;height:64px;border-radius:50%;background:rgba(227,70,20,0.1);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e34614" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </div>
+          <h3 class="text-2xl font-bold" style="color:#2d1a0e !important;">You're on the list!</h3>
+          <p class="mt-3" style="color:#5c4033;">We'll notify you as soon as CollegePredict Agent is live. IIAT students will get priority access.</p>
+          <a href="/Playground/" class="inline-block mt-6 px-6 py-3 rounded-full font-semibold" style="background:linear-gradient(135deg,#e34614,#cc5227);color:#fff !important;">Back to AI Playground</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="w-full border-t py-8 sm:py-12" style="border-color:#e8d5b5;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <img alt="IIAT logo" width="200" height="86" class="h-12 sm:h-14 w-auto max-w-[280px] object-contain mb-4" src="../../assets/new/IIAT_logo.png">
+          <p class="text-sm" style="color:#5c4033;">Indian Institute of Advanced Technologies<br>by InnoFutureTech Private Limited</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-sm mb-3" style="color:#2d1a0e;">Quick Links</h4>
+          <div class="space-y-2 text-sm">
+            <a href="/Playground/" class="block" style="color:#7a6352;">AI Playground</a>
+            <a href="/apply/" class="block" style="color:#7a6352;">Apply Now</a>
+            <a href="/allfaqs/" class="block" style="color:#7a6352;">FAQs</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold text-sm mb-3" style="color:#2d1a0e;">Contact</h4>
+          <div class="space-y-2 text-sm">
+            <a href="tel:+918688664337" class="block" style="color:#7a6352;">+91 868 866 4337</a>
+            <a href="mailto:info@iiath.com" class="block" style="color:#7a6352;">info@iiath.com</a>
+            <a href="https://iiath.com" target="_blank" rel="noopener noreferrer" class="block" style="color:#7a6352;">iiath.com</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold text-sm mb-3" style="color:#2d1a0e;">Other Agents</h4>
+          <div class="space-y-2 text-sm">
+            <a href="/Playground/resumecraft/" class="block" style="color:#7a6352;">ResumeCraft</a>
+            <a href="/Playground/entrancepractice/" class="block" style="color:#7a6352;">EntrancePractice</a>
+            <a href="/Playground/interviewprep/" class="block" style="color:#7a6352;">InterviewPrep</a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 pt-6 border-t text-center text-xs" style="border-color:#e8d5b5;color:#9a8574;">
+        <p>&copy; 2026 Indian Institute of Advanced Technologies (IIAT). All rights reserved. InnoFutureTech Pvt. Ltd.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function handleSubmit(e){e.preventDefault();document.getElementById('agent-form-body').classList.add('hidden');document.getElementById('agent-form-success').classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
+    var btn=document.getElementById('mobile-menu-btn'),panel=document.getElementById('mobile-menu-panel'),overlay=document.getElementById('mobile-menu-overlay'),closeBtn=document.getElementById('mobile-menu-close');
+    function openMenu(){panel.classList.remove('translate-x-full');overlay.classList.remove('hidden');document.body.style.overflow='hidden';}
+    function closeMenu(){panel.classList.add('translate-x-full');overlay.classList.add('hidden');document.body.style.overflow='';}
+    if(btn)btn.addEventListener('click',openMenu);if(closeBtn)closeBtn.addEventListener('click',closeMenu);if(overlay)overlay.addEventListener('click',closeMenu);
+    panel.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu);});
+  </script>
+</body>
+</html>

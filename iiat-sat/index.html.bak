@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="../_next/static/media/4cf2300e9c8272f7-s.p.woff2" as="font" crossorigin="" type="font/woff2">
+  <link rel="preload" href="../_next/static/media/93f479601ee12b01-s.p.woff2" as="font" crossorigin="" type="font/woff2">
+  <link rel="stylesheet" href="../_next/static/css/de70bee13400563f.css">
+  <link rel="stylesheet" href="../_next/static/css/7bfa864fea7726bd.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/new/faviconD.svg">
+  <title>IIAT SAT - Scholarship Assessment Test | Indian Institute of Advanced Technologies</title>
+  <meta name="description" content="IIAT Scholarship Assessment Test (SAT) — your gateway to up to 100% scholarship on B.Tech CSE programmes. Free registration, online exam, instant results.">
+  <meta name="keywords" content="IIAT SAT, scholarship assessment test, IIAT scholarship, B.Tech scholarship, free scholarship test, IIAT entrance exam">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://iiath.com/iiat-sat/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="IIAT SAT - Scholarship Assessment Test | Indian Institute of Advanced Technologies">
+  <meta property="og:description" content="IIAT Scholarship Assessment Test (SAT) — your gateway to up to 100% scholarship on B.Tech CSE programmes. Free registration, online exam, instant results.">
+  <meta property="og:image" content="https://iiath.com/assets/new/IIAT_logo.png">
+  <meta property="og:url" content="https://iiath.com/iiat-sat/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IIAT SAT - Scholarship Assessment Test | Indian Institute of Advanced Technologies">
+  <meta name="twitter:description" content="IIAT Scholarship Assessment Test (SAT) — your gateway to up to 100% scholarship on B.Tech CSE programmes. Free registration, online exam, instant results.">
+  <meta name="twitter:image" content="https://iiath.com/assets/new/IIAT_logo.png">
+  <script>
+    (function () {
+      const root = document.documentElement;
+      root.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+      root.style.setProperty('--primary', '#e34614');
+    })();
+  </script>
+  <style>
+    :root { --primary:#e34614;--primary-dark:#cc5227;--wheat-light:#fedfb9;--wheat-lighter:#fef6e8; }
+    html { color-scheme:light !important; }
+    body { background:#fedfb9 !important; color:#3b2314 !important; }
+    h1,h2,h3,h4,h5,h6 { color:#2d1a0e !important; }
+    .bg-background { background:#fedfb9 !important; }
+    header nav > div { background:rgba(254,246,232,0.9) !important; border-color:#e8d5b5 !important; box-shadow:0 1px 3px rgba(45,26,14,0.08) !important; backdrop-filter:blur(20px) !important; }
+    header nav ul a .leading-none, header nav ul div .leading-none, header nav ul button .leading-none { color:#3b2314 !important; }
+    header nav ul a:hover .leading-none { color:#e34614 !important; }
+    .lucide-menu { stroke:#3b2314 !important; }
+    
+    .bg-primary *, .bg-primary { color:#fff !important; }
+    footer, footer > div { background:#f7e8ca !important; border-color:#e8d5b5 !important; }
+    footer a { color:#7a6352 !important; } footer a:hover { color:#e34614 !important; }
+    footer h3, footer h4 { color:#2d1a0e !important; }
+    footer p, footer span { color:#5c4033 !important; }
+    ::-webkit-scrollbar { width:6px; } ::-webkit-scrollbar-track { background:#f7e8ca; }
+    ::-webkit-scrollbar-thumb { background:#da8159; border-radius:3px; }
+    ::selection { background:rgba(227,70,20,0.2); color:#2d1a0e; }
+
+    .hero-section { position:relative; padding:8rem 1.5rem 4rem; text-align:center; }
+    .hero-badge { display:inline-flex; align-items:center; gap:0.5rem; padding:0.375rem 1rem; border-radius:9999px; font-size:0.8rem; font-weight:600; background:rgba(227,70,20,0.08); color:#7a2f16; border:1px solid rgba(227,70,20,0.2); margin-bottom:1.5rem; }
+    .hero-badge .dot { width:6px; height:6px; border-radius:50%; background:#e34614; animation:pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.4;} }
+    .hero-icon { width:96px; height:96px; border-radius:1.5rem; margin:0 auto 2rem; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#e34614,#cc5227); box-shadow:0 12px 40px rgba(227,70,20,0.25); }
+    .btn-primary { display:inline-flex;align-items:center;justify-content:center;gap:0.5rem; padding:0.875rem 2rem; background:linear-gradient(135deg,#e34614,#cc5227); color:#fff !important; font-weight:700; font-size:1rem; border:none; border-radius:0.75rem; cursor:pointer; transition:all 0.2s; text-decoration:none; }
+    .btn-primary:hover { background:linear-gradient(135deg,#cc5227,#da8159); box-shadow:0 8px 25px rgba(227,70,20,0.3); transform:translateY(-1px); }
+    .btn-secondary { display:inline-flex;align-items:center;justify-content:center;gap:0.5rem; padding:0.875rem 2rem; background:#fff; color:#2d1a0e !important; font-weight:700; font-size:1rem; border:2px solid #e8d5b5; border-radius:0.75rem; cursor:pointer; transition:all 0.2s; text-decoration:none; }
+    .btn-secondary:hover { border-color:#e34614; color:#e34614 !important; box-shadow:0 4px 15px rgba(227,70,20,0.1); }
+
+    /* Stats bar */
+    .stats-bar { display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; margin-top:3rem; padding:1.5rem; border-radius:1rem; background:rgba(254,246,232,0.95); border:1px solid #e8d5b5; }
+    .stat-item { text-align:center; min-width:100px; }
+    .stat-val { font-size:1.5rem; font-weight:900; color:#e34614; }
+    .stat-lbl { font-size:0.78rem; color:#5c4033; margin-top:0.125rem; }
+
+    /* Tool cards grid */
+    .tools-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.5rem; max-width:1000px; margin:0 auto; }
+    @media (max-width:639px) { .tools-grid { grid-template-columns:1fr; } }
+    .tool-card { position:relative; padding:2rem; border-radius:1.25rem; background:rgba(254,246,232,0.95); border:1px solid #e8d5b5; transition:all 0.3s; text-decoration:none; display:block; overflow:hidden; }
+    .tool-card:hover { border-color:#e34614; box-shadow:0 12px 40px rgba(227,70,20,0.12); transform:translateY(-4px); }
+    .tool-card::after { content:''; position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg,var(--card-color,#e34614),transparent); opacity:0; transition:opacity 0.3s; }
+    .tool-card:hover::after { opacity:1; }
+    .tc-icon { width:56px; height:56px; border-radius:1rem; display:flex; align-items:center; justify-content:center; margin-bottom:1.25rem; }
+    .tc-title { font-size:1.15rem; font-weight:800; color:#2d1a0e; margin-bottom:0.375rem; }
+    .tc-desc { font-size:0.875rem; color:#5c4033; line-height:1.6; margin-bottom:1rem; }
+    .tc-cta { font-size:0.85rem; font-weight:700; color:#e34614; display:inline-flex; align-items:center; gap:0.375rem; }
+    .tc-cta svg { transition:transform 0.2s; }
+    .tool-card:hover .tc-cta svg { transform:translateX(4px); }
+    .tc-badge { position:absolute; top:1rem; right:1rem; font-size:0.7rem; font-weight:700; padding:0.2rem 0.6rem; border-radius:0.5rem; }
+
+    /* How it works */
+    .hiw-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1.25rem; max-width:800px; margin:2rem auto 0; }
+    .hiw-card { padding:1.5rem 1.25rem; border-radius:1rem; background:#fef6e8; border:1px solid #e8d5b5; text-align:center; position:relative; }
+    .hiw-num { width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,#e34614,#cc5227); color:#fff !important; font-size:0.85rem; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 1rem; }
+    .hiw-title { font-size:0.95rem; font-weight:700; color:#2d1a0e; margin-bottom:0.25rem; }
+    .hiw-desc { font-size:0.8rem; color:#5c4033; line-height:1.5; }
+
+    /* Branches */
+    .branch-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:1rem; max-width:1000px; margin:2rem auto 0; }
+    .branch-chip { padding:1rem 1.25rem; border-radius:0.75rem; background:#fef6e8; border:1px solid #e8d5b5; display:flex; align-items:center; justify-content:space-between; gap:1rem; transition:border-color 0.2s; }
+    .branch-chip:hover { border-color:rgba(227,70,20,0.3); }
+    .branch-name { font-size:0.9rem; font-weight:700; color:#2d1a0e; }
+    .branch-seats { font-size:0.75rem; font-weight:600; color:#e34614; background:rgba(227,70,20,0.08); padding:0.2rem 0.6rem; border-radius:0.375rem; white-space:nowrap; }
+
+    .translate-x-full { --tw-translate-x:100%; translate:var(--tw-translate-x) var(--tw-translate-y); }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "IIAT SAT - Scholarship Assessment Test 2026",
+    "description": "Free 60-minute online scholarship assessment test for B.Tech CSE admissions at IIAT. Score well to earn up to 100% scholarship.",
+    "url": "https://iiath.com/iiat-sat/",
+    "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "organizer": {
+      "@type": "EducationalOrganization",
+      "name": "IIAT - Indian Institute of Advanced Technologies",
+      "url": "https://iiath.com"
+    },
+    "location": {
+      "@type": "VirtualLocation",
+      "url": "https://iiath.com/iiat-sat/"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock",
+      "url": "https://iiath.com/apply/"
+    },
+    "isAccessibleForFree": true
+  }
+  </script>
+</head>
+<body class="__variable_188709 __variable_9a8899 antialiased bg-background">
+  <header>
+    <nav data-state="false" class="group fixed z-[10000] w-full pt-2 transition-all duration-300" style="top:0">
+      <div class="mx-auto max-w-7xl rounded-xl border px-4 sm:px-6 lg:px-12 duration-300 relative overflow-visible backdrop-blur-xl shadow-lg" style="background:rgba(254,246,232,0.9);border-color:#e8d5b5;border-bottom-width:1px;border-radius:1rem;">
+        <div class="relative flex flex-wrap items-center justify-between gap-4 py-2.5 sm:py-4 lg:gap-0 transition-all duration-300 lg:py-6" style="z-index:1">
+          <div class="flex w-full items-center justify-between gap-3 sm:gap-4 lg:w-auto">
+            <a class="flex items-center space-x-2 relative" aria-label="home" href="/">
+              <img alt="IIAT logo" width="200" height="86" class="h-10 sm:h-12 lg:h-16 w-auto max-w-[200px] sm:max-w-[260px] lg:max-w-[340px] object-contain shrink-0 relative" style="color:transparent" src="../assets/new/IIAT_logo.png">
+            </a>
+            <div class="flex items-center gap-2 lg:hidden">
+              <button aria-label="Open Menu" id="mobile-menu-btn" class="z-20 p-2 sm:p-2.5 relative" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu size-5 sm:size-6" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="hidden lg:flex items-center gap-8 xl:gap-10">
+            <ul class="flex items-center gap-8 xl:gap-10 text-sm sm:text-base font-medium relative">
+              <li><a class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full" style="color:#3b2314;" href="/"><span class="leading-none">Home</span></a></li>
+              <li><a class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:bg-primary" style="color:#e34614;font-weight:600;" href="/iiat-sat/"><span class="leading-none">IIAT SAT</span></a></li>
+              <li><a class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full" style="color:#3b2314;" href="/Playground/"><span class="leading-none">AI Playground</span></a></li>
+              <li><a class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full" style="color:#3b2314;" href="/contactus/"><span class="leading-none">Contact</span></a></li>
+            </ul>
+            <a class="inline-flex items-center justify-center whitespace-nowrap font-semibold transition-colors h-9 rounded-full px-6 text-sm shadow-lg" style="background:linear-gradient(135deg,#e34614,#cc5227);color:#fff !important;" href="/apply/">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/60 z-[9999] hidden lg:hidden" style="backdrop-filter:blur(4px);"></div>
+  <div id="mobile-menu-panel"
+    class="fixed top-0 right-0 h-full w-80 max-w-[85vw] z-[10001] bg-neutral-950 border-l border-neutral-800 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden overflow-y-auto">
+    <div class="flex items-center justify-between p-5 border-b border-neutral-800">
+      <span class="text-white font-semibold text-lg">Menu</span>
+      <button id="mobile-menu-close" class="p-2 text-white hover:text-primary" aria-label="Close Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18" /><path d="m6 6 12 12" />
+        </svg>
+      </button>
+    </div>
+    <ul class="p-5 space-y-1">
+      <li><a href="/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">Home</a></li>
+      <li><a href="/iiat-sat/" class="block py-3 px-4 rounded-lg text-primary font-semibold text-base hover:bg-neutral-900">IIAT SAT</a></li>
+      <li><a href="/Playground/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">AI Playground</a></li>
+      <li><a href="/contactus/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">Contact Us</a></li>
+      <li><a href="/allfaqs/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">FAQs</a></li>
+    </ul>
+    <div class="p-5 border-t border-neutral-800">
+      <a href="/apply/" class="block w-full text-center py-3 px-6 rounded-full bg-primary text-white font-semibold text-base hover:bg-primary/90 transition-colors">Apply Now</a>
+    </div>
+  </div>
+
+  <main class="pt-20 sm:pt-24 lg:pt-28">
+
+    <!-- Hero -->
+    <section class="hero-section">
+      <div class="hero-badge"><span class="dot"></span> Admissions Open 2026</div>
+      <div class="hero-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight" style="color:#2d1a0e !important;">
+        IIAT Scholarship<br><span style="color:#e34614;">Assessment Test</span>
+      </h1>
+      <p class="mt-4 text-base sm:text-lg max-w-2xl mx-auto" style="color:#5c4033;">
+        Your gateway to a world-class B.Tech CSE education with scholarships up to 100%. Free registration, online exam, and instant scholarship allocation based on your score.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;margin-top:2rem;">
+        <a href="/apply/" class="btn-primary">Register Free &rarr;</a>
+        <a href="/iiat-sat/mock-test/" class="btn-secondary">Try Mock Test</a>
+      </div>
+
+      <div class="stats-bar" style="max-width:700px;margin:3rem auto 0;">
+        <div class="stat-item">
+          <div class="stat-val">Free</div>
+          <div class="stat-lbl">Registration</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">50</div>
+          <div class="stat-lbl">MCQ Questions</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">60 min</div>
+          <div class="stat-lbl">Duration</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">100%</div>
+          <div class="stat-lbl">Max Scholarship</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">720</div>
+          <div class="stat-lbl">Total Seats</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+      <h2 class="text-2xl sm:text-3xl font-black text-center mb-2" style="color:#2d1a0e !important;">IIAT SAT Tools</h2>
+      <p class="text-center text-sm mb-10" style="color:#5c4033;">Everything you need to prepare, predict, and apply</p>
+
+      <div class="tools-grid">
+        <!-- Mock Test -->
+        <a href="/iiat-sat/mock-test/" class="tool-card" style="--card-color:#3b82f6;">
+          <span class="tc-badge" style="background:rgba(59,130,246,0.1);color:#2563eb;">Practice</span>
+          <div class="tc-icon" style="background:rgba(59,130,246,0.1);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="tc-title">Mock Test</div>
+          <div class="tc-desc">25 MCQs across 4 subjects with a 30-minute timer. Simulate the real exam experience with instant scoring and detailed review.</div>
+          <span class="tc-cta">Start Practice <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </a>
+
+        <!-- Syllabus -->
+        <a href="/iiat-sat/syllabus/" class="tool-card" style="--card-color:#8b5cf6;">
+          <span class="tc-badge" style="background:rgba(139,92,246,0.1);color:#7c3aed;">Study</span>
+          <div class="tc-icon" style="background:rgba(139,92,246,0.1);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg>
+          </div>
+          <div class="tc-title">Complete Syllabus</div>
+          <div class="tc-desc">Topic-by-topic breakdown for Maths, Physics, Logical Reasoning, and English with weightage badges and preparation tips.</div>
+          <span class="tc-cta">View Syllabus <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </a>
+
+        <!-- Branch Finder -->
+        <a href="/iiat-sat/branch-finder/" class="tool-card" style="--card-color:#10b981;">
+          <span class="tc-badge" style="background:rgba(16,185,129,0.1);color:#059669;">Discover</span>
+          <div class="tc-icon" style="background:rgba(16,185,129,0.1);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </div>
+          <div class="tc-title">Branch Finder</div>
+          <div class="tc-desc">Not sure which B.Tech CSE branch suits you? Answer 6 quick questions and get a personalised recommendation with match percentage.</div>
+          <span class="tc-cta">Find My Branch <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </a>
+
+        <!-- Rank Predictor -->
+        <a href="/iiat-sat/rank-predictor/" class="tool-card" style="--card-color:#f59e0b;">
+          <span class="tc-badge" style="background:rgba(245,158,11,0.1);color:#d97706;">Predict</span>
+          <div class="tc-icon" style="background:rgba(245,158,11,0.1);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+          </div>
+          <div class="tc-title">Rank Predictor</div>
+          <div class="tc-desc">Enter your expected IIAT SAT score to see your predicted rank, scholarship tier, and estimated fee after discount.</div>
+          <span class="tc-cta">Predict My Rank <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </a>
+
+        <!-- College Predictor -->
+        <a href="/iiat-sat/college-predictor/" class="tool-card" style="--card-color:#ec4899;">
+          <span class="tc-badge" style="background:rgba(236,72,153,0.1);color:#db2777;">Compare</span>
+          <div class="tc-icon" style="background:rgba(236,72,153,0.1);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#db2777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
+          </div>
+          <div class="tc-title">College Predictor</div>
+          <div class="tc-desc">See your admission chances across multiple entrance exams and compare how IIAT stacks up against other engineering institutions.</div>
+          <span class="tc-cta">Check Chances <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </a>
+
+        <!-- Application Process -->
+        <a href="/iiat-sat/application-process/" class="tool-card" style="--card-color:#e34614;">
+          <span class="tc-badge" style="background:rgba(227,70,20,0.1);color:#e34614;">Apply</span>
+          <div class="tc-icon" style="background:rgba(227,70,20,0.1);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e34614" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+          </div>
+          <div class="tc-title">Application Process</div>
+          <div class="tc-desc">Step-by-step guide covering eligibility, registration, documents needed, important dates, and the complete admission timeline.</div>
+          <span class="tc-cta">View Steps <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+      <h2 class="text-2xl sm:text-3xl font-black text-center mb-2" style="color:#2d1a0e !important;">How It Works</h2>
+      <p class="text-center text-sm mb-2" style="color:#5c4033;">From registration to admission in 4 steps</p>
+      <div class="hiw-grid">
+        <div class="hiw-card">
+          <div class="hiw-num">1</div>
+          <div class="hiw-title">Register</div>
+          <div class="hiw-desc">Fill the free online application form with your basic details and preferred branch.</div>
+        </div>
+        <div class="hiw-card">
+          <div class="hiw-num">2</div>
+          <div class="hiw-title">Prepare</div>
+          <div class="hiw-desc">Use our syllabus guide and mock test to practise. Focus on Maths, Physics, Reasoning &amp; English.</div>
+        </div>
+        <div class="hiw-card">
+          <div class="hiw-num">3</div>
+          <div class="hiw-title">Take Exam</div>
+          <div class="hiw-desc">Appear for the online proctored IIAT SAT. 50 MCQs, 60 minutes, from the comfort of your home.</div>
+        </div>
+        <div class="hiw-card">
+          <div class="hiw-num">4</div>
+          <div class="hiw-title">Get Scholarship</div>
+          <div class="hiw-desc">Receive results within 7 days with your scholarship percentage and admission offer letter.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Available Branches -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+      <h2 class="text-2xl sm:text-3xl font-black text-center mb-2" style="color:#2d1a0e !important;">Available B.Tech Programmes</h2>
+      <p class="text-center text-sm mb-2" style="color:#5c4033;">6 cutting-edge specialisations at IIAT Hyderabad &mdash; 720 total seats</p>
+      <div class="branch-grid">
+        <div class="branch-chip">
+          <span class="branch-name">B.Tech CSE (AI &amp; Data Science)</span>
+          <span class="branch-seats">180 Seats</span>
+        </div>
+        <div class="branch-chip">
+          <span class="branch-name">B.Tech CSE (AI &amp; Machine Learning)</span>
+          <span class="branch-seats">180 Seats</span>
+        </div>
+        <div class="branch-chip">
+          <span class="branch-name">B.Tech CSE (Core)</span>
+          <span class="branch-seats">180 Seats</span>
+        </div>
+        <div class="branch-chip">
+          <span class="branch-name">B.Tech CSE (FinTech &amp; AI)</span>
+          <span class="branch-seats">60 Seats</span>
+        </div>
+        <div class="branch-chip">
+          <span class="branch-name">B.Tech CSE (Cyber Security with AI/ML)</span>
+          <span class="branch-seats">60 Seats</span>
+        </div>
+        <div class="branch-chip">
+          <span class="branch-name">B.Tech Biomedical Engg, AI &amp; Medical Robotics</span>
+          <span class="branch-seats">60 Seats</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20">
+      <div style="text-align:center;padding:3rem 2rem;border-radius:1.5rem;background:linear-gradient(135deg,#e34614,#cc5227);box-shadow:0 20px 60px rgba(227,70,20,0.25);">
+        <h2 class="text-2xl sm:text-3xl font-black mb-3" style="color:#fff !important;">Ready to Earn Your Scholarship?</h2>
+        <p class="text-base mb-6" style="color:rgba(255,255,255,0.85) !important;">Register for IIAT SAT today. It's free, it's online, and it could change your career trajectory.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;">
+          <a href="/apply/" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.875rem 2rem;background:#fff;color:#e34614 !important;font-weight:800;font-size:1rem;border-radius:0.75rem;text-decoration:none;transition:all 0.2s;">Register Now &rarr;</a>
+          <a href="tel:+918688664337" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.875rem 2rem;background:rgba(255,255,255,0.15);color:#fff !important;font-weight:700;font-size:1rem;border:2px solid rgba(255,255,255,0.3);border-radius:0.75rem;text-decoration:none;">Call +91 868 866 4337</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="w-full border-t py-8 sm:py-12" style="border-color:#e8d5b5;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <img alt="IIAT logo" width="200" height="86" class="h-12 sm:h-14 w-auto max-w-[280px] object-contain mb-4" src="../assets/new/IIAT_logo.png">
+          <p class="text-sm" style="color:#5c4033;">Indian Institute of Advanced Technologies<br>by InnoFutureTech Private Limited</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-sm mb-3" style="color:#2d1a0e;">IIAT SAT Tools</h4>
+          <div class="space-y-2 text-sm">
+            <a href="/iiat-sat/branch-finder/" class="block" style="color:#7a6352;">Branch Finder</a>
+            <a href="/iiat-sat/rank-predictor/" class="block" style="color:#7a6352;">Rank Predictor</a>
+            <a href="/iiat-sat/college-predictor/" class="block" style="color:#7a6352;">College Predictor</a>
+            <a href="/iiat-sat/mock-test/" class="block" style="color:#7a6352;">Mock Test</a>
+            <a href="/iiat-sat/syllabus/" class="block" style="color:#7a6352;">Syllabus</a>
+            <a href="/iiat-sat/application-process/" class="block" style="color:#7a6352;">Application Process</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold text-sm mb-3" style="color:#2d1a0e;">Quick Links</h4>
+          <div class="space-y-2 text-sm">
+            <a href="/" class="block" style="color:#7a6352;">Home</a>
+            <a href="/Playground/" class="block" style="color:#7a6352;">AI Playground</a>
+            <a href="/apply/" class="block" style="color:#7a6352;">Apply Now</a>
+            <a href="/allfaqs/" class="block" style="color:#7a6352;">FAQs</a>
+            <a href="/contactus/" class="block" style="color:#7a6352;">Contact Us</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold text-sm mb-3" style="color:#2d1a0e;">Contact</h4>
+          <div class="space-y-2 text-sm">
+            <a href="tel:+918688664337" class="block" style="color:#7a6352;">+91 868 866 4337</a>
+            <a href="mailto:info@iiath.com" class="block" style="color:#7a6352;">info@iiath.com</a>
+            <p style="color:#7a6352;font-size:0.8rem;line-height:1.4;margin-top:0.5rem;">Manjeera Square & OT, Plot No. 6 & 7, Flat No. 02, Sanjeev Reddy Nagar, Ameerpet, Hyderabad - 500038</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 pt-6 border-t text-center text-xs" style="border-color:#e8d5b5;color:#9a8574;">
+        <p>&copy; 2026 Indian Institute of Advanced Technologies (IIAT). All rights reserved. InnoFutureTech Pvt. Ltd.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    // Mobile menu
+    var btn=document.getElementById('mobile-menu-btn'),panel=document.getElementById('mobile-menu-panel'),overlay=document.getElementById('mobile-menu-overlay'),closeBtn=document.getElementById('mobile-menu-close');
+if(btn&&panel){
+  btn.addEventListener('click',function(){if(overlay)overlay.classList.remove('hidden');panel.classList.remove('translate-x-full');document.body.style.overflow='hidden';});
+  function cl(){panel.classList.add('translate-x-full');if(overlay)overlay.classList.add('hidden');document.body.style.overflow='';}
+  if(closeBtn)closeBtn.addEventListener('click',cl);
+  if(overlay)overlay.addEventListener('click',cl);
+  panel.querySelectorAll('a').forEach(function(a){a.addEventListener('click',cl);});
+}
+  })();
+  </script>
+</body>
+</html>

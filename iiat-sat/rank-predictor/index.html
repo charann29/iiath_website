@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="../../_next/static/media/4cf2300e9c8272f7-s.p.woff2" as="font" crossorigin="" type="font/woff2">
+  <link rel="preload" href="../../_next/static/media/93f479601ee12b01-s.p.woff2" as="font" crossorigin="" type="font/woff2">
+  <link rel="stylesheet" href="../../_next/static/css/de70bee13400563f.css">
+  <link rel="stylesheet" href="../../_next/static/css/7bfa864fea7726bd.css">
+  <link rel="icon" type="image/svg+xml" href="../../assets/new/faviconD.svg">
+  <title>IIAT SAT Rank Predictor — Check Your Predicted Rank & Scholarship | IIAT</title>
+  <meta name="description" content="Predict your IIAT SAT rank based on your expected score. Estimate your scholarship tier and branch eligibility.">
+  <meta name="keywords" content="IIAT SAT rank predictor, scholarship tier estimator, IIAT rank calculator, IIAT SAT score">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://iiath.com/iiat-sat/rank-predictor/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rank Predictor - IIAT Scholarship Assessment Test">
+  <meta property="og:description" content="Predict your IIAT SAT rank based on your expected score. Estimate your scholarship tier and branch eligibility.">
+  <meta property="og:image" content="https://iiath.com/assets/new/IIAT_logo.png">
+  <meta property="og:url" content="https://iiath.com/iiat-sat/rank-predictor/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rank Predictor - IIAT Scholarship Assessment Test">
+  <meta name="twitter:description" content="Predict your IIAT SAT rank based on your expected score. Estimate your scholarship tier and branch eligibility.">
+  <meta name="twitter:image" content="https://iiath.com/assets/new/IIAT_logo.png">
+  <script>
+    (function(){var r=document.documentElement;r.classList.remove('dark');localStorage.setItem('theme','light');r.style.setProperty('--primary','#e34614');})();
+  </script>
+  <style>
+    :root { --primary:#e34614;--primary-dark:#cc5227;--wheat-light:#fedfb9;--wheat-lighter:#fef6e8; }
+    html { color-scheme:light !important; }
+    body { background:#fedfb9 !important; color:#3b2314 !important; }
+    h1,h2,h3,h4,h5,h6 { color:#2d1a0e !important; }
+    .bg-background { background:#fedfb9 !important; }
+    header nav > div { background:rgba(254,246,232,0.9) !important; border-color:#e8d5b5 !important; box-shadow:0 1px 3px rgba(45,26,14,0.08) !important; backdrop-filter:blur(20px) !important; }
+    header nav ul a .leading-none { color:#3b2314 !important; }
+    header nav ul a:hover .leading-none { color:#e34614 !important; }
+    .lucide-menu { stroke:#3b2314 !important; }
+    
+    footer, footer > div { background:#f7e8ca !important; border-color:#e8d5b5 !important; }
+    footer a { color:#7a6352 !important; } footer a:hover { color:#e34614 !important; }
+    footer h3, footer h4 { color:#2d1a0e !important; }
+    footer p, footer span { color:#5c4033 !important; }
+    ::-webkit-scrollbar { width:6px; } ::-webkit-scrollbar-track { background:#f7e8ca; }
+    ::-webkit-scrollbar-thumb { background:#da8159; border-radius:3px; }
+    ::selection { background:rgba(227,70,20,0.2); color:#2d1a0e; }
+    .hero-section { position:relative; padding:8rem 1.5rem 3rem; text-align:center; }
+    .hero-badge { display:inline-flex; align-items:center; gap:0.5rem; padding:0.375rem 1rem; border-radius:9999px; font-size:0.8rem; font-weight:600; background:rgba(227,70,20,0.08); color:#7a2f16; border:1px solid rgba(227,70,20,0.2); margin-bottom:1.5rem; }
+    .hero-badge .dot { width:6px; height:6px; border-radius:50%; background:#e34614; }
+    .hero-icon { width:80px; height:80px; border-radius:1.25rem; margin:0 auto 1.5rem; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#e34614,#cc5227); box-shadow:0 8px 30px rgba(227,70,20,0.2); }
+    .feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-top:2rem; }
+    .feature-card { padding:1.25rem; border-radius:1rem; background:#fef6e8; border:1px solid #e8d5b5; text-align:left; }
+    .feature-card h4 { font-size:0.95rem; font-weight:700; color:#2d1a0e !important; margin-bottom:0.375rem; }
+    .feature-card p { font-size:0.82rem; color:#5c4033; line-height:1.5; }
+    .calc-container { background:rgba(254,246,232,0.95); border:1px solid #e8d5b5; border-radius:1.5rem; box-shadow:0 20px 60px rgba(45,26,14,0.1); padding:2rem; }
+    .form-label { display:block; font-weight:600; font-size:0.875rem; color:#3b2314; margin-bottom:0.375rem; }
+    .form-input { width:100%; padding:0.75rem 1rem; border:1px solid #e8d5b5; border-radius:0.75rem; background:#fff; color:#2d1a0e; font-size:0.95rem; transition:border-color 0.2s,box-shadow 0.2s; outline:none; }
+    .form-input:focus { border-color:#e34614; box-shadow:0 0 0 3px rgba(227,70,20,0.1); }
+    .form-input::placeholder { color:#9a8574; }
+    .form-select { width:100%; padding:0.75rem 1rem; border:1px solid #e8d5b5; border-radius:0.75rem; background:#fff; color:#2d1a0e; font-size:0.95rem; outline:none; appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235c4033' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 1rem center; transition:border-color 0.2s,box-shadow 0.2s; }
+    .form-select:focus { border-color:#e34614; box-shadow:0 0 0 3px rgba(227,70,20,0.1); }
+    .btn-submit { width:100%; padding:0.875rem 2rem; background:linear-gradient(135deg,#e34614,#cc5227); color:#fff !important; font-weight:700; font-size:1rem; border:none; border-radius:0.75rem; cursor:pointer; transition:all 0.2s; }
+    .btn-submit:hover { background:linear-gradient(135deg,#cc5227,#da8159); box-shadow:0 8px 25px rgba(227,70,20,0.3); transform:translateY(-1px); }
+    .result-box { background:#fef6e8; border:2px solid #e34614; border-radius:1rem; padding:1.5rem; text-align:center; margin-top:1.5rem; display:none; }
+    .result-box .rank-num { font-size:2.5rem; font-weight:900; color:#e34614; }
+    .result-box .rank-label { font-size:0.9rem; color:#5c4033; margin-top:0.25rem; }
+    .tier-badge { display:inline-block; padding:0.4rem 1rem; border-radius:9999px; font-weight:700; font-size:0.85rem; margin-top:0.75rem; }
+    .tier-gold { background:rgba(255,193,7,0.15); color:#b8860b; border:1px solid rgba(255,193,7,0.3); }
+    .tier-silver { background:rgba(192,192,192,0.15); color:#666; border:1px solid rgba(192,192,192,0.3); }
+    .tier-bronze { background:rgba(205,127,50,0.15); color:#8B4513; border:1px solid rgba(205,127,50,0.3); }
+    .tier-eligible { background:rgba(227,70,20,0.08); color:#7a2f16; border:1px solid rgba(227,70,20,0.2); }
+    .branch-list { margin-top:1rem; text-align:left; }
+    .branch-item { padding:0.75rem 1rem; border:1px solid #e8d5b5; border-radius:0.75rem; margin-bottom:0.5rem; display:flex; justify-content:space-between; align-items:center; background:#fff; }
+    .branch-item .name { font-weight:600; color:#2d1a0e; font-size:0.9rem; }
+    .branch-item .status { font-size:0.8rem; font-weight:600; padding:0.2rem 0.6rem; border-radius:0.5rem; }
+    .status-eligible { background:rgba(34,197,94,0.1); color:#16a34a; }
+    .status-borderline { background:rgba(234,179,8,0.1); color:#ca8a04; }
+    .status-unlikely { background:rgba(239,68,68,0.1); color:#dc2626; }
+    .translate-x-full { --tw-translate-x:100%; translate:var(--tw-translate-x) var(--tw-translate-y); }
+
+    /* Lead capture modal */
+    .lead-modal-overlay { position:fixed; inset:0; background:rgba(45,26,14,0.6); backdrop-filter:blur(6px); z-index:50000; display:none; align-items:center; justify-content:center; padding:1rem; }
+    .lead-modal-overlay.active { display:flex; }
+    .lead-modal { background:#fef6e8; border:1px solid #e8d5b5; border-radius:1.5rem; padding:2rem; max-width:480px; width:100%; box-shadow:0 25px 60px rgba(45,26,14,0.25); max-height:90vh; overflow-y:auto; }
+    .lead-modal h3 { font-size:1.5rem; font-weight:800; color:#2d1a0e; text-align:center; margin-bottom:0.25rem; }
+    .lead-modal .subtitle { font-size:0.9rem; color:#5c4033; text-align:center; margin-bottom:1.5rem; line-height:1.5; }
+    .lead-form-group { margin-bottom:1rem; }
+    .lead-modal .privacy-note { font-size:0.75rem; color:#9a8574; text-align:center; margin-top:1rem; line-height:1.5; }
+    .branch-item.preferred { border-color:#e34614; background:rgba(227,70,20,0.04); }
+    .branch-item.preferred .name { color:#e34614; }
+  </style>
+</head>
+<body class="__variable_188709 __variable_9a8899 antialiased bg-background">
+  <header>
+    <nav data-state="false" class="group fixed z-[10000] w-full pt-2 transition-all duration-300" style="top:0">
+      <div class="mx-auto max-w-7xl rounded-xl border px-4 sm:px-6 lg:px-12 duration-300 relative overflow-visible backdrop-blur-xl shadow-lg" style="background:rgba(254,246,232,0.9);border-color:#e8d5b5;border-bottom-width:1px;border-radius:1rem;">
+        <div class="relative flex flex-wrap items-center justify-between gap-4 py-2.5 sm:py-4 lg:gap-0 transition-all duration-300 lg:py-6" style="z-index:1">
+          <div class="flex w-full items-center justify-between gap-3 sm:gap-4 lg:w-auto">
+            <a class="flex items-center space-x-2 relative" aria-label="home" href="/"><img alt="IIAT logo" width="200" height="86" class="h-10 sm:h-12 lg:h-16 w-auto max-w-[200px] sm:max-w-[260px] lg:max-w-[340px] object-contain shrink-0 relative" style="color:transparent" src="../../assets/new/IIAT_logo.png"></a>
+            <div class="flex items-center gap-2 lg:hidden"><button aria-label="Open Menu" id="mobile-menu-btn" class="z-20 p-2 sm:p-2.5 relative" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu size-5 sm:size-6"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg></button></div>
+          </div>
+          <div class="hidden lg:flex items-center gap-8 xl:gap-10">
+            <ul class="flex items-center gap-8 xl:gap-10 text-sm sm:text-base font-medium relative">
+              <li><a style="color:#3b2314;" href="/"><span class="leading-none">Home</span></a></li>
+              <li><a style="color:#e34614;font-weight:600;" href="/iiat-sat/"><span class="leading-none">IIAT SAT</span></a></li>
+              <li><a style="color:#3b2314;" href="/Playground/"><span class="leading-none">AI Playground</span></a></li>
+              <li><a style="color:#3b2314;" href="/contactus/"><span class="leading-none">Contact</span></a></li>
+            </ul>
+            <a class="inline-flex items-center justify-center whitespace-nowrap font-semibold transition-colors h-9 rounded-full px-6 text-sm shadow-lg" style="background:linear-gradient(135deg,#e34614,#cc5227);color:#fff !important;" href="/apply/">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/60 z-[9999] hidden lg:hidden" style="backdrop-filter:blur(4px);"></div>
+  <div id="mobile-menu-panel"
+    class="fixed top-0 right-0 h-full w-80 max-w-[85vw] z-[10001] bg-neutral-950 border-l border-neutral-800 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden overflow-y-auto">
+    <div class="flex items-center justify-between p-5 border-b border-neutral-800">
+      <span class="text-white font-semibold text-lg">Menu</span>
+      <button id="mobile-menu-close" class="p-2 text-white hover:text-primary" aria-label="Close Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18" /><path d="m6 6 12 12" />
+        </svg>
+      </button>
+    </div>
+    <ul class="p-5 space-y-1">
+      <li><a href="/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">Home</a></li>
+      <li><a href="/iiat-sat/" class="block py-3 px-4 rounded-lg text-primary font-semibold text-base hover:bg-neutral-900">IIAT SAT</a></li>
+      <li><a href="/Playground/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">AI Playground</a></li>
+      <li><a href="/contactus/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">Contact Us</a></li>
+      <li><a href="/allfaqs/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">FAQs</a></li>
+    </ul>
+    <div class="p-5 border-t border-neutral-800">
+      <a href="/apply/" class="block w-full text-center py-3 px-6 rounded-full bg-primary text-white font-semibold text-base hover:bg-primary/90 transition-colors">Apply Now</a>
+    </div>
+  </div>
+
+  <main class="pt-20 sm:pt-24 lg:pt-28">
+    <section class="hero-section">
+      <div class="hero-badge"><span class="dot"></span> IIAT Scholarship Assessment Test</div>
+      <div class="hero-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg>
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight" style="color:#2d1a0e !important;">
+        <span style="color:#e34614;">Rank</span> Predictor
+      </h1>
+      <p class="mt-4 text-base sm:text-lg max-w-2xl mx-auto" style="color:#5c4033;">
+        Enter your expected IIAT SAT score to predict your rank, scholarship tier, and branch eligibility. Our predictor uses scoring models and seat matrix analysis.
+      </p>
+      <div class="feature-grid max-w-3xl mx-auto">
+        <div class="feature-card">
+          <h4>Rank Estimation</h4>
+          <p>Get an estimated rank range based on your score and the expected number of test-takers.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Scholarship Tiers</h4>
+          <p>See which scholarship tier you qualify for: Gold (100%), Silver (75%), Bronze (50%), or Merit.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Branch Eligibility</h4>
+          <p>Find out which of the 6 B.Tech specializations are open at your predicted rank.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20">
+      <div class="calc-container">
+        <h2 class="text-xl font-bold mb-1" style="color:#2d1a0e !important;">Predict Your Rank</h2>
+        <p class="mb-6 text-sm" style="color:#5c4033;">Enter your expected score (out of 200) to get your predicted rank and scholarship eligibility.</p>
+        <form id="rank-form" onsubmit="predictRank(event)" class="space-y-5">
+          <div>
+            <label class="form-label" for="score">Expected IIAT SAT Score (0-200) *</label>
+            <input type="number" id="score" name="score" class="form-input" placeholder="e.g. 145" min="0" max="200" required>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="form-label" for="category">Category</label>
+              <select id="category" name="category" class="form-select">
+                <option value="general">General</option>
+                <option value="obc">OBC</option>
+                <option value="sc">SC</option>
+                <option value="st">ST</option>
+                <option value="ews">EWS</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label" for="pref-branch">Preferred Branch</label>
+              <select id="pref-branch" name="prefBranch" class="form-select">
+                <option value="any">Any / All Branches</option>
+                <option value="ai-ds">CSE (AI & Data Science)</option>
+                <option value="fintech">CSE (FinTech & AI)</option>
+                <option value="core">CSE (Core)</option>
+                <option value="ai-ml">CSE (AI & Machine Learning)</option>
+                <option value="cyber">CSE (Cyber Security with AI/ML)</option>
+                <option value="biomed">Biomedical Engineering, AI & Medical Robotics</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn-submit">Predict My Rank &rarr;</button>
+        </form>
+
+        <div class="result-box" id="result-box">
+          <p class="rank-label">Your Predicted Rank</p>
+          <div class="rank-num" id="rank-num"></div>
+          <div id="tier-badge"></div>
+          <div class="branch-list" id="branch-list"></div>
+          <div style="margin-top:1.5rem;display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;">
+            <a href="/apply/" class="btn-submit" style="width:auto;display:inline-flex;padding:0.75rem 2rem;">Apply Now &rarr;</a>
+            <a href="/iiat-sat/mock-test/" style="padding:0.75rem 2rem;border:1px solid #e8d5b5;border-radius:0.75rem;background:#fff;color:#2d1a0e;font-weight:600;text-decoration:none;display:inline-block;">Take Mock Test</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lead Capture Modal -->
+    <div class="lead-modal-overlay" id="lead-modal-overlay">
+      <div class="lead-modal">
+        <h3>See Your Predicted Rank</h3>
+        <p class="subtitle">Enter your details to unlock your rank prediction, scholarship tier, and branch eligibility.</p>
+        <form id="lead-capture-form" autocomplete="on">
+          <div class="lead-form-group">
+            <label class="form-label" for="lead-name">Full Name <span style="color:#e34614;">*</span></label>
+            <input class="form-input" type="text" id="lead-name" name="full_name" placeholder="Enter your full name" required>
+          </div>
+          <div class="lead-form-group">
+            <label class="form-label" for="lead-phone">Phone <span style="color:#e34614;">*</span></label>
+            <input class="form-input" type="tel" id="lead-phone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" maxlength="10">
+          </div>
+          <div class="lead-form-group">
+            <label class="form-label" for="lead-email">Email <span style="color:#e34614;">*</span></label>
+            <input class="form-input" type="email" id="lead-email" name="email" placeholder="Enter your email address" required>
+          </div>
+          <div class="lead-form-group">
+            <label class="form-label" for="lead-city">City</label>
+            <input class="form-input" type="text" id="lead-city" name="city" placeholder="Enter your city (optional)">
+          </div>
+          <button type="submit" class="btn-submit" id="lead-submit-btn">Unlock My Rank &rarr;</button>
+          <p class="privacy-note">Your information is secure and will only be used to personalize your experience. We respect your privacy.</p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="w-full border-t py-8 sm:py-12" style="border-color:#e8d5b5;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div><img alt="IIAT logo" width="200" height="86" class="h-12 sm:h-14 w-auto max-w-[280px] object-contain mb-4" src="../../assets/new/IIAT_logo.png"><p class="text-sm" style="color:#5c4033;">Indian Institute of Advanced Technologies<br>by InnoFutureTech Private Limited</p></div>
+        <div><h4 class="font-bold text-sm mb-3" style="color:#2d1a0e;">IIAT SAT Tools</h4><div class="space-y-2 text-sm"><a href="/iiat-sat/branch-finder/" class="block" style="color:#7a6352;">Branch Finder</a><a href="/iiat-sat/rank-predictor/" class="block" style="color:#e34614;font-weight:600;">Rank Predictor</a><a href="/iiat-sat/college-predictor/" class="block" style="color:#7a6352;">College Predictor</a><a href="/iiat-sat/mock-test/" class="block" style="color:#7a6352;">Mock Test</a><a href="/iiat-sat/syllabus/" class="block" style="color:#7a6352;">Syllabus</a><a href="/iiat-sat/application-process/" class="block" style="color:#7a6352;">Application Process</a></div></div>
+        <div><h4 class="font-bold text-sm mb-3" style="color:#2d1a0e;">Quick Links</h4><div class="space-y-2 text-sm"><a href="/Playground/" class="block" style="color:#7a6352;">AI Playground</a><a href="/apply/" class="block" style="color:#7a6352;">Apply Now</a><a href="/allfaqs/" class="block" style="color:#7a6352;">FAQs</a></div></div>
+        <div><h4 class="font-bold text-sm mb-3" style="color:#2d1a0e;">Contact</h4><div class="space-y-2 text-sm"><a href="tel:+918688664337" class="block" style="color:#7a6352;">+91 868 866 4337</a><a href="mailto:info@iiath.com" class="block" style="color:#7a6352;">info@iiath.com</a><p style="color:#7a6352;font-size:0.8rem;line-height:1.4;margin-top:0.5rem;">Manjeera Square & OT, Plot No. 6 & 7, Flat No. 02, Sanjeev Reddy Nagar, Ameerpet, Hyderabad - 500038</p></div></div>
+      </div>
+      <div class="mt-8 pt-6 border-t text-center text-xs" style="border-color:#e8d5b5;color:#9a8574;"><p>&copy; 2026 Indian Institute of Advanced Technologies (IIAT). All rights reserved. InnoFutureTech Pvt. Ltd.</p></div>
+    </div>
+  </footer>
+
+  <script>
+    // Supabase config
+    var SUPABASE_URL = 'https://diacczkzcxylmlvysqar.supabase.co';
+    var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRpYWNjemt6Y3h5bG1sdnlzcWFyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA2OTYyODQsImV4cCI6MjA4NjI3MjI4NH0.4e1ayR8Nu_laj0Ne6mSGVZTV6nLCmLHWs16ekN1n70E';
+
+    function predictRank(e) {
+      e.preventDefault();
+      var score = parseInt(document.getElementById('score').value);
+      var category = document.getElementById('category').value;
+      var prefBranch = document.getElementById('pref-branch').value;
+      if (isNaN(score) || score < 0 || score > 200) {
+        document.getElementById('score').setCustomValidity('Please enter a score between 0 and 200.');
+        document.getElementById('score').reportValidity();
+        return;
+      }
+      document.getElementById('score').setCustomValidity('');
+
+      // Deterministic rank prediction
+      var totalStudents = 5000;
+      var rank;
+      if (score >= 190) rank = Math.max(1, Math.round((200 - score) * 1.5) + 1);
+      else if (score >= 180) rank = Math.round(16 + (190 - score) * 3);
+      else if (score >= 160) rank = Math.round(46 + (180 - score) * 5);
+      else if (score >= 140) rank = Math.round(146 + (160 - score) * 15);
+      else if (score >= 120) rank = Math.round(446 + (140 - score) * 30);
+      else if (score >= 100) rank = Math.round(1046 + (120 - score) * 50);
+      else if (score >= 80) rank = Math.round(2046 + (100 - score) * 60);
+      else rank = Math.round(3246 + (80 - score) * 25);
+
+      // Category adjustment (reserved categories get slight rank benefit)
+      if (category === 'obc') rank = Math.max(1, Math.round(rank * 0.92));
+      else if (category === 'sc') rank = Math.max(1, Math.round(rank * 0.85));
+      else if (category === 'st') rank = Math.max(1, Math.round(rank * 0.82));
+      else if (category === 'ews') rank = Math.max(1, Math.round(rank * 0.90));
+
+      // Store computed values for after lead capture
+      window._rankResult = { score: score, rank: rank, category: category, prefBranch: prefBranch };
+
+      // Show lead capture modal
+      document.getElementById('lead-modal-overlay').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function displayRankResult() {
+      var r = window._rankResult;
+      if (!r) return;
+
+      document.getElementById('rank-num').textContent = r.rank <= 50 ? 'Top ' + r.rank : r.rank + ' / ~5000';
+
+      var tierHtml = '';
+      if (r.score >= 180) tierHtml = '<span class="tier-badge tier-gold">Gold Scholarship (100% Tuition Waiver)</span>';
+      else if (r.score >= 160) tierHtml = '<span class="tier-badge tier-silver">Silver Scholarship (75% Tuition Waiver)</span>';
+      else if (r.score >= 140) tierHtml = '<span class="tier-badge tier-bronze">Bronze Scholarship (50% Tuition Waiver)</span>';
+      else if (r.score >= 100) tierHtml = '<span class="tier-badge tier-eligible">Merit Scholarship Eligible</span>';
+      else tierHtml = '<span class="tier-badge tier-eligible">Standard Admission</span>';
+      document.getElementById('tier-badge').innerHTML = tierHtml;
+
+      var branchKeyMap = {
+        'ai-ds': 'CSE (AI & Data Science)',
+        'fintech': 'CSE (FinTech & AI)',
+        'core': 'CSE (Core)',
+        'ai-ml': 'CSE (AI & Machine Learning)',
+        'cyber': 'CSE (Cyber Security with AI/ML)',
+        'biomed': 'Biomedical Engineering, AI & Medical Robotics'
+      };
+
+      var branches = [
+        { key: 'ai-ds', name: 'CSE (AI & Data Science)', seats: 180, cutoff: 90 },
+        { key: 'ai-ml', name: 'CSE (AI & Machine Learning)', seats: 180, cutoff: 85 },
+        { key: 'core', name: 'CSE (Core)', seats: 180, cutoff: 80 },
+        { key: 'fintech', name: 'CSE (FinTech & AI)', seats: 60, cutoff: 100 },
+        { key: 'cyber', name: 'CSE (Cyber Security with AI/ML)', seats: 60, cutoff: 95 },
+        { key: 'biomed', name: 'Biomedical Engineering, AI & Medical Robotics', seats: 60, cutoff: 75 }
+      ];
+
+      var html = '<p style="font-weight:700;color:#2d1a0e;margin-bottom:0.75rem;font-size:0.95rem;">Branch Eligibility</p>';
+      branches.forEach(function(b) {
+        var status, cls;
+        if (r.score >= b.cutoff + 20) { status = 'Eligible'; cls = 'status-eligible'; }
+        else if (r.score >= b.cutoff) { status = 'Borderline'; cls = 'status-borderline'; }
+        else { status = 'Below Cutoff'; cls = 'status-unlikely'; }
+        var isPreferred = (r.prefBranch !== 'any' && r.prefBranch === b.key);
+        var prefClass = isPreferred ? ' preferred' : '';
+        var prefLabel = isPreferred ? ' <span style="font-size:0.7rem;color:#e34614;font-weight:600;margin-left:0.5rem;">&#9733; YOUR PICK</span>' : '';
+        html += '<div class="branch-item' + prefClass + '"><span class="name">' + b.name + prefLabel + '</span><span class="status ' + cls + '">' + status + '</span></div>';
+      });
+      document.getElementById('branch-list').innerHTML = html;
+      document.getElementById('result-box').style.display = 'block';
+      document.getElementById('result-box').scrollIntoView({behavior:'smooth'});
+    }
+
+    function hideLeadModal() {
+      document.getElementById('lead-modal-overlay').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Lead capture form submission
+    document.getElementById('lead-capture-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var submitBtn = document.getElementById('lead-submit-btn');
+      var fullName = document.getElementById('lead-name').value.trim();
+      var phone = document.getElementById('lead-phone').value.trim();
+      var email = document.getElementById('lead-email').value.trim();
+      var city = document.getElementById('lead-city').value.trim() || null;
+
+      if (!fullName || !phone || !email) return;
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Processing...';
+
+      // Only send columns that exist in Supabase leads table
+      var leadData = {
+        user_id: crypto.randomUUID(),
+        email: email,
+        name: fullName,
+        phone: phone,
+        source: 'iiat-sat-rank-predictor'
+      };
+
+      // Store full data in localStorage (including extra fields)
+      try {
+        localStorage.setItem('rank-predictor-lead', JSON.stringify(Object.assign({}, leadData, {
+          city: city,
+          predicted_rank: window._rankResult ? window._rankResult.rank : null
+        })));
+      } catch(ex) {}
+
+      // Send to Supabase
+      fetch(SUPABASE_URL + '/rest/v1/leads', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_ANON_KEY,
+          'Authorization': 'Bearer ' + SUPABASE_ANON_KEY,
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify(leadData)
+      }).then(function() {
+        hideLeadModal();
+        displayRankResult();
+      }).catch(function() {
+        // Always show result even if Supabase fails
+        hideLeadModal();
+        displayRankResult();
+      });
+    });
+
+    // Mobile menu
+    var btn=document.getElementById('mobile-menu-btn'),panel=document.getElementById('mobile-menu-panel'),overlay=document.getElementById('mobile-menu-overlay'),closeBtn=document.getElementById('mobile-menu-close');
+if(btn&&panel){
+  btn.addEventListener('click',function(){if(overlay)overlay.classList.remove('hidden');panel.classList.remove('translate-x-full');document.body.style.overflow='hidden';});
+  function cl(){panel.classList.add('translate-x-full');if(overlay)overlay.classList.add('hidden');document.body.style.overflow='';}
+  if(closeBtn)closeBtn.addEventListener('click',cl);
+  if(overlay)overlay.addEventListener('click',cl);
+  panel.querySelectorAll('a').forEach(function(a){a.addEventListener('click',cl);});
+}
+  </script>
+</body>
+</html>

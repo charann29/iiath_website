@@ -7,8 +7,21 @@
   <link rel="preload" href="../_next/static/media/93f479601ee12b01-s.p.woff2" as="font" crossorigin="" type="font/woff2">
   <link rel="stylesheet" href="../_next/static/css/de70bee13400563f.css">
   <link rel="stylesheet" href="../_next/static/css/7bfa864fea7726bd.css">
-  <link rel="icon" type="image/svg+xml" href="../assets/faviconD.svg">
-  <title>FAQs - upGrad School of Technology</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/new/faviconD.svg">
+  <title>FAQs - IIAT — Indian Institute of Advanced Technologies</title>
+  <meta name="description" content="Frequently asked questions about IIAT admissions, IIAT SAT, B.Tech CSE programs, scholarships, eligibility, fees, placements, and campus life.">
+  <meta name="keywords" content="IIAT FAQ, IIAT admission questions, IIAT SAT FAQ, B.Tech CSE FAQ, IIAT scholarship FAQ">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://iiath.com/allfaqs/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FAQs - IIAT — Indian Institute of Advanced Technologies">
+  <meta property="og:description" content="Frequently asked questions about IIAT admissions, IIAT SAT, B.Tech CSE programs, scholarships, eligibility, fees, placements, and campus life.">
+  <meta property="og:image" content="https://iiath.com/assets/new/IIAT_logo.png">
+  <meta property="og:url" content="https://iiath.com/allfaqs/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FAQs - IIAT — Indian Institute of Advanced Technologies">
+  <meta name="twitter:description" content="Frequently asked questions about IIAT admissions, IIAT SAT, B.Tech CSE programs, scholarships, eligibility, fees, placements, and campus life.">
+  <meta name="twitter:image" content="https://iiath.com/assets/new/IIAT_logo.png">
   <script>
     (function () {
       const root = document.documentElement;
@@ -18,55 +31,244 @@
     })();
   </script>
   <style>
+    /* ===== WARM WHEAT + ORANGE THEME ===== */
     :root {
       --primary: #e34614;
       --primary-dark: #cc5227;
+      --primary-light: #da8159;
+      --accent: #f5b891;
       --wheat: #f7e8ca;
       --wheat-light: #fedfb9;
       --wheat-lighter: #fef6e8;
     }
-    html, body { color-scheme: light !important; }
-    body { background: #fedfb9 !important; color: #3b2314 !important; }
+
+    html { color-scheme: light !important; }
+    html.dark { color-scheme: light !important; }
+
+    /* --- Base --- */
+    body {
+      background: #fedfb9 !important;
+      color: #3b2314 !important;
+    }
+    .bg-background { background: #fedfb9 !important; }
+
+    /* --- Backgrounds: force warm light --- */
+    .bg-white { background: #fef6e8 !important; }
+    .bg-neutral-50 { background: #fef6e8 !important; }
+    .bg-neutral-100 { background: #f7e8ca !important; }
+    .bg-neutral-200 { background: #fedfb9 !important; }
+    .bg-neutral-900 { background: #fef6e8 !important; }
+    .bg-black { background: #fedfb9 !important; }
+
+    /* Override ALL dark: bg classes to warm light */
+    .dark\:bg-black { background: #fedfb9 !important; }
+    .dark\:bg-\[\#0a0a0a\] { background: #fedfb9 !important; }
+    .dark\:bg-\[\#1a1a1a\] { background: #f7e8ca !important; }
+    .dark\:bg-\[\#222222\] { background: #f7e8ca !important; }
+    .dark\:bg-\[\#111111\] { background: #fef6e8 !important; }
+    .dark\:bg-\[\#18191A\] { background: #fef6e8 !important; }
+    .dark\:bg-neutral-800 { background: #f7e8ca !important; }
+    .dark\:bg-neutral-800\/50 { background: #fef6e8 !important; }
+    .dark\:bg-neutral-900 { background: #fedfb9 !important; }
+    .dark\:bg-neutral-900\/50 { background: #fef6e8 !important; }
+    .dark\:bg-neutral-950 { background: #fedfb9 !important; }
+    .dark\:bg-zinc-800\/50 { background: #fef6e8 !important; }
+
+    /* --- Text: dark brown on warm bg --- */
     h1, h2, h3, h4, h5, h6 { color: #2d1a0e !important; }
+    p { color: #3b2314; }
     .text-white { color: #2d1a0e !important; }
-    .text-primary, .text-red-600 { color: #e34614 !important; }
-    .border-neutral-200, .border-neutral-300, .dark\:border-neutral-700, .dark\:border-neutral-800 { border-color: #e8d5b5 !important; }
-    .bg-background, .bg-black, .dark\:bg-black, .dark\:bg-neutral-900, .dark\:bg-neutral-950 { background: #fedfb9 !important; }
-    .bg-white, .bg-neutral-50, .dark\:bg-\[\#111111\], .dark\:bg-\[\#18191A\] { background: #fef6e8 !important; }
-    .bg-neutral-100, .dark\:bg-neutral-800, .dark\:bg-\[\#1a1a1a\], .dark\:bg-\[\#222222\] { background: #f7e8ca !important; }
-    .dark\:text-white, .dark\:text-neutral-100 { color: #2d1a0e !important; }
-    .dark\:text-neutral-300, .text-neutral-700 { color: #4a3222 !important; }
-    .dark\:text-neutral-400, .text-neutral-600 { color: #5c4033 !important; }
-    a[href*="apply.niatindia.com"], a[href*="apply.niatindia.com"] * { color: #fff !important; }
-    a[href*="apply.niatindia.com"] { background: linear-gradient(135deg, #e34614, #cc5227) !important; }
+    .text-neutral-900, .text-black { color: #2d1a0e !important; }
+    .text-neutral-800 { color: #3b2314 !important; }
+    .text-neutral-700, .text-gray-700 { color: #4a3222 !important; }
+    .text-neutral-600, .text-gray-600 { color: #5c4033 !important; }
+    .text-neutral-500, .text-gray-500 { color: #7a6352 !important; }
+    .text-neutral-400, .text-gray-400 { color: #9a8574 !important; }
+    .text-neutral-300, .text-gray-300 { color: #9a8574 !important; }
+    .dark\:text-white { color: #2d1a0e !important; }
+    .dark\:text-neutral-100 { color: #2d1a0e !important; }
+    .dark\:text-neutral-200 { color: #3b2314 !important; }
+    .dark\:text-neutral-300 { color: #4a3222 !important; }
+    .dark\:text-neutral-400 { color: #5c4033 !important; }
+    .dark\:text-gray-300 { color: #4a3222 !important; }
+
+    /* Keep white text inside ALL primary-bg elements and CTA buttons */
+    .bg-\[var\(--primary\)\] *,
+    [style*="background-color: var(--primary)"] *,
+    [style*="background-color:var(--primary)"] *,
+    [style*="background:var(--primary)"] *,
+    [style*="background: var(--primary)"] *,
+    [style*="background:linear-gradient"][style*="var(--primary)"] *,
+    .bg-primary *, .bg-red-600 *,
+    .bg-\[var\(--primary\)\],
+    [style*="background:var(--primary)"],
+    [style*="background: var(--primary)"],
+    [style*="background-color:var(--primary)"],
+    [style*="background-color: var(--primary)"],
+    .bg-primary, .bg-red-600,
+    a[href*="/apply/"],
+    a[href*="/apply/"] * { color: #fff !important; }
+
+    /* --- Primary accent (orange-red) --- */
+    .text-\[var\(--primary\)\], .text-primary { color: #e34614 !important; }
+    span.text-\[var\(--primary\)\] { color: #e34614 !important; }
+    .text-red-600 { color: #e34614 !important; }
+    .text-red-500 { color: #e34614 !important; }
+    .text-orange-600 { color: #e34614 !important; }
+
+    /* --- Borders: warm mode --- */
+    .border-neutral-200, .border-neutral-300 { border-color: #e8d5b5 !important; }
+    .border-neutral-700 { border-color: #e8d5b5 !important; }
+    .dark\:border-neutral-700, .dark\:border-neutral-800 { border-color: #e8d5b5 !important; }
+    .border-gray-200, .border-gray-800, .dark\:border-gray-800 { border-color: #e8d5b5 !important; }
+    .border-\[var\(--primary\)\], .dark\:border-\[var\(--primary\)\] { border-color: rgba(227, 70, 20, 0.3) !important; }
+
+    /* --- Navbar --- */
     header nav > div {
       background: rgba(254, 246, 232, 0.9) !important;
       border-color: #e8d5b5 !important;
-      box-shadow: 0 1px 3px rgba(45, 26, 14, 0.08) !important;
+      box-shadow: 0 1px 3px rgba(45,26,14,0.08) !important;
       backdrop-filter: blur(20px) !important;
     }
-    header nav ul a .leading-none, header nav ul div .leading-none { color: #3b2314 !important; }
-    header nav ul a:hover .leading-none, header nav ul div:hover .leading-none { color: #e34614 !important; }
-    header nav ul a::after, header nav ul div::after { background: #e34614 !important; }
-    #resources-mega-menu {
-      background: rgba(254, 246, 232, 0.98) !important;
-      border-color: #e8d5b5 !important;
-      box-shadow: 0 20px 40px rgba(45, 26, 14, 0.1) !important;
+    header nav ul a .leading-none,
+    header nav ul div .leading-none,
+    header nav ul button .leading-none { color: #3b2314 !important; }
+    header nav ul a.text-primary .leading-none,
+    header nav ul a[href="/"] .leading-none { color: #e34614 !important; }
+    header nav ul a:hover .leading-none,
+    header nav ul div:hover .leading-none,
+    header nav ul button:hover .leading-none { color: #e34614 !important; }
+    header nav ul a::after, header nav ul div::after, header nav ul button::after { background: #e34614 !important; }
+
+    /* --- CTA buttons (primary orange-red) --- */
+    a[href*="/apply/"] {
+      background: linear-gradient(135deg, #e34614, #cc5227) !important;
+      color: #fff !important;
+      border-color: #e34614 !important;
+      font-weight: 600 !important;
     }
-    #resources-mega-menu h4 { color: #e34614 !important; }
-    #resources-mega-menu a { color: #5c4033 !important; }
-    #resources-mega-menu a:hover { color: #e34614 !important; }
-    .group\/item .absolute {
-      background: rgba(254, 246, 232, 0.98) !important;
-      border-color: #e8d5b5 !important;
-      box-shadow: 0 10px 25px rgba(45, 26, 14, 0.08) !important;
+    a[href*="/apply/"]:hover {
+      background: linear-gradient(135deg, #cc5227, #da8159) !important;
+      box-shadow: 0 0 20px rgba(227, 70, 20, 0.25) !important;
     }
-    #mobile-menu-panel { background: #fef6e8 !important; }
-    #mobile-menu-panel button, #mobile-menu-panel a, .lucide-menu { color: #3b2314 !important; stroke: #3b2314 !important; }
+    button.bg-primary { background: #e34614 !important; color: #fff !important; }
+
+    /* --- Active tabs / primary bg elements --- */
+    .bg-\[var\(--primary\)\],
+    [style*="background-color: var(--primary)"] {
+      background-color: #e34614 !important;
+      color: #fff !important;
+    }
+    .bg-primary { background-color: #e34614 !important; }
+    .bg-primary\/10 { background-color: rgba(227, 70, 20, 0.1) !important; }
+    .bg-red-600 { background-color: #e34614 !important; }
+
+    /* --- Cards --- */
+    .bg-neutral-200.rounded-xl, .bg-neutral-200.rounded-2xl {
+      background: #fef6e8 !important;
+      border-color: #e8d5b5 !important;
+    }
+    .bg-neutral-200.rounded-xl:hover, .bg-neutral-200.rounded-2xl:hover {
+      border-color: rgba(227, 70, 20, 0.4) !important;
+    }
+    .bg-neutral-100.rounded-2xl, .bg-neutral-100.rounded-3xl { background: #f7e8ca !important; }
+
+    /* --- Stats section --- */
+    .bg-neutral-50.rounded-2xl { background: #fef6e8 !important; border: 1px solid #e8d5b5 !important; }
+
+    /* --- Footer --- */
     footer, footer > div { background: #f7e8ca !important; border-color: #e8d5b5 !important; }
     footer a { color: #7a6352 !important; }
     footer a:hover { color: #e34614 !important; }
+    footer h3, footer h4 { color: #2d1a0e !important; }
     footer p, footer span { color: #5c4033 !important; }
+    footer .text-white { color: #2d1a0e !important; }
+
+    /* --- Mega menu --- */
+    #resources-mega-menu {
+      background: rgba(254, 246, 232, 0.98) !important;
+      border-color: #e8d5b5 !important;
+      box-shadow: 0 25px 60px rgba(45, 26, 14, 0.12) !important;
+      backdrop-filter: blur(20px) !important;
+    }
+    #resources-mega-menu .mega-col-title {
+      color: #e34614 !important;
+      font-size: 1.1rem;
+      font-weight: 600;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+    #resources-mega-menu .mega-col-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 100%;
+      background: rgba(227, 70, 20, 0.5);
+      border-radius: 2px;
+    }
+    #resources-mega-menu a {
+      color: #3b2314 !important;
+      transition: color 0.15s ease;
+    }
+    #resources-mega-menu a:hover {
+      color: #e34614 !important;
+    }
+    #resources-mega-menu .mega-sub-link {
+      color: #7a6352 !important;
+    }
+    #resources-mega-menu .mega-sub-link:hover {
+      color: #e34614 !important;
+    }
+    @media (max-width: 1023px) {
+      #resources-mega-menu { display: none !important; }
+    }
+
+    /* --- Dropdowns --- */
+    .group\/item .absolute {
+      background: rgba(254, 246, 232, 0.98) !important;
+      border-color: #e8d5b5 !important;
+      box-shadow: 0 10px 25px rgba(45,26,14,0.08) !important;
+    }
+
+    /* --- Mobile menu --- */
+    #mobile-menu-panel { background: #fef6e8 !important; }
+    #mobile-menu-panel button, #mobile-menu-panel a { color: #3b2314 !important; }
+    .lucide-menu { stroke: #3b2314 !important; }
+
+    /* --- Dark-mode gradient overrides for warm bg --- */
+    .dark\:from-black { --tw-gradient-from: #fedfb9 !important; }
+    .dark\:from-black\/70 { --tw-gradient-from: rgba(254,223,185,0.7) !important; }
+    .bg-white\/70, .dark\:bg-black\/70 { background: rgba(254,246,232,0.7) !important; }
+
+    /* --- Decorative blurs --- */
+    .blur-3xl { opacity: 0.2 !important; }
+
+    /* --- Scrollbar --- */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #f7e8ca; }
+    ::-webkit-scrollbar-thumb { background: #da8159; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #e34614; }
+
+    /* --- Selection --- */
+    ::selection { background: rgba(227, 70, 20, 0.2); color: #2d1a0e; }
+
+    /* --- Shadows --- */
+    .shadow-lg { box-shadow: 0 1px 3px rgba(45,26,14,0.08), 0 1px 2px rgba(45,26,14,0.04) !important; }
+    .dark\:shadow-neutral-900\/50 { --tw-shadow-color: rgba(45,26,14,0.05) !important; }
+
+    /* --- Ensure dark: text overrides don't break warm mode --- */
+    .dark\:text-neutral-100, .dark\:text-white { color: #2d1a0e !important; }
+
+    /* --- Gradient fade edges (scrolling sections) --- */
+    .bg-gradient-to-r.from-white, .bg-gradient-to-l.from-white { from: #fedfb9 !important; }
+
+    /* --- Ring / focus --- */
+    .ring-neutral-200 { --tw-ring-color: #e8d5b5 !important; }
+
+    /* ===== FAQs-specific styles ===== */
     .faq-tab-active { background: linear-gradient(to bottom right, #e34614, #cc5227) !important; color: #fff !important; border-color: rgba(227, 70, 20, 0.5) !important; box-shadow: 0 10px 15px -3px rgba(227, 70, 20, 0.3) !important; transform: scale(1); }
     .faq-tab-active * { color: #fff !important; }
     .faq-tab-inactive { background: rgba(254, 246, 232, 0.7) !important; color: #5c4033 !important; border-color: rgba(232, 213, 181, 0.5) !important; transform: scale(0.95); }
@@ -74,90 +276,262 @@
     .faq-icon.rotated { transform: rotate(180deg); }
     .hide-scrollbar::-webkit-scrollbar { display: none; }
     .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    /* --- Missing Tailwind utility fallbacks (navbar logo) --- */
+    .max-w-\[140px\] { max-width: 140px; }
+    @media (min-width: 640px) { .sm\:max-w-\[160px\] { max-width: 160px; } }
+    @media (min-width: 1024px) { .lg\:max-w-\[220px\] { max-width: 220px; } }
+
+    @media (max-width: 639px) {
+      header nav { padding-top: 0.35rem; }
+      header nav > div { border-radius: 0.6rem; margin-left: 0.35rem; margin-right: 0.35rem; }
+    }
+  
+    /* --- Fix missing Tailwind translate-x-full utility --- */
+    .translate-x-full {
+      --tw-translate-x: 100%;
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is IIAT — Indian Institute of Advanced Technologies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "IIAT — Indian Institute of Advanced Technologies is a pioneering institution offering a 4-year B.Tech program in Computer Science & Engineering, enriched by IIAT's industry partnerships and AI-powered learning tools. It blends academic rigor with real-world skills to prepare students for the tech industry."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What programs does IIAT offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Currently, IIAT offers a 4-year B.Tech in Computer Science & Engineering with specializations such as AI & Machine Learning, Data Science, Cybersecurity, Cloud Computing, and Full-Stack Development."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the degree valid and recognized?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the B.Tech degree is awarded by UGC-recognized partner universities. It is a fully valid degree accepted by employers and for higher education in India and abroad."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the eligibility criteria for the B.Tech program?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Candidates must have passed 10+2 (or equivalent) with Physics, Chemistry, and Mathematics as compulsory subjects with a minimum of 60% aggregate marks (50% for reserved categories as per government norms)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is IIAT SAT?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "IIAT SAT (IIAT Scholarship Test) is the entrance examination conducted by IIAT for admission to the B.Tech program. It assesses students' aptitude in mathematics, physics, logical reasoning, and English."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are there any scholarships available?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, IIAT offers merit-based scholarships covering up to 100% of tuition fees. Scholarships are awarded based on IIAT SAT score, 12th marks, JEE/CET ranks, and financial need. Special scholarships are available for women in tech and students from underrepresented backgrounds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the fee structure for the B.Tech program?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The fee structure varies by partner university campus. Typically, the annual tuition fee ranges from Rs. 3.5 lakhs to Rs. 5 lakhs per year. Detailed fee breakdowns are shared during the admission offer stage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the placement assistance provided?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "IIAT provides comprehensive placement assistance including resume building, mock interviews, soft skills training, and direct access to IIAT's network of 100+ hiring partners. Placement drives are conducted from the 7th semester onwards."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes IIAT different from other engineering colleges?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "IIAT integrates AI-driven personalized learning, industry mentorship, dedicated placement support, and a curriculum co-designed with tech leaders. Students get hands-on experience from Year 1 and access to IIAT's placement network of 100+ companies."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I get admission without IIAT SAT?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, candidates with valid JEE Main scores, state CET scores, or other recognized engineering entrance exam scores can apply directly. However, appearing for IIAT SAT provides additional scholarship opportunities."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="antialiased bg-background">
   <header>
-    <nav class="fixed z-[10000] w-full pt-2 transition-all duration-300" style="top:0">
+    <nav data-state="false" class="group fixed z-10000 w-full pt-2 transition-all duration-300" style="top:0">
       <div class="mx-auto max-w-7xl rounded-xl border px-4 sm:px-6 lg:px-12 duration-300 relative overflow-visible backdrop-blur-xl shadow-lg bg-background/50" style="border-color:rgba(255,255,255,0.1);border-bottom-width:1px;border-radius:1rem;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06),0 0 20px rgba(227,70,20,0.1)">
-        <div class="relative flex items-center justify-between py-3 sm:py-4 lg:py-6">
-          <a href="/" class="flex items-center">
-            <img alt="upGrad School of Technology" loading="eager" width="120" height="40" class="h-8 sm:h-10 w-auto" src="../_next/image/url=%2Fassets%2FU_light_logo.png&w=256&q=75">
-          </a>
-          <button id="mobile-menu-btn" class="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg" aria-label="Open menu">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-          </button>
+        <div class="relative flex flex-wrap items-center justify-between gap-4 py-2.5 sm:py-4 lg:gap-0 transition-all duration-300 lg:py-6" style="z-index:1">
+          <div class="flex w-full items-center justify-between gap-3 sm:gap-4 lg:w-auto">
+            <a href="/" class="flex items-center space-x-2 relative" aria-label="home">
+              <img alt="IIAT logo" width="200" height="86" decoding="async" class="h-10 sm:h-12 lg:h-16 w-auto max-w-[200px] sm:max-w-[260px] lg:max-w-[340px] object-contain shrink-0 relative" style="color:transparent" src="../assets/new/IIAT_logo.png">
+            </a>
+            <div class="flex items-center gap-2 lg:hidden">
+              <button aria-label="Open Menu" id="mobile-menu-btn" class="z-20 p-2 sm:p-2.5 relative" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu size-5 sm:size-6 text-white" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+              </button>
+            </div>
+          </div>
           <div class="hidden lg:flex items-center gap-8 xl:gap-10">
             <ul class="flex items-center gap-8 xl:gap-10 text-sm sm:text-base font-medium relative">
-              <li><a class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full text-white" href="/"><span class="leading-none">Home</span></a></li>
+              <li class="relative group/item"><a class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full focus:outline-none text-white" href="/"><span class="leading-none">Home</span></a></li>
               <li class="relative group/item">
-                <div class="relative inline-flex items-center gap-1.5 duration-150 cursor-pointer after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full text-white">
-                  <span class="leading-none">University Collaborations</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-4 h-4 shrink-0 transition-transform group-hover/item:rotate-180 duration-300"><path d="m6 9 6 6 6-6"></path></svg>
+                <div class="relative inline-flex items-center gap-1.5 duration-150 cursor-pointer after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full focus:outline-none text-white">
+                  <span class="leading-none">Campuses</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-4 h-4 shrink-0 leading-none transition-transform group-hover/item:rotate-180 duration-300" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
                 </div>
                 <div class="absolute left-0 top-full pt-2 hidden group-hover/item:block">
-                  <ul class="w-80 rounded-xl backdrop-blur-xl shadow-2xl border overflow-hidden bg-background/90 border-border">
-                    <li><a class="group/card block px-5 py-4 text-sm transition-all duration-200 text-foreground hover:text-primary" href="/university/smru/"><div class="flex items-start gap-3"><div class="flex-1 min-w-0"><div class="font-semibold text-white group-hover/card:text-primary group-hover/card:underline group-hover/card:decoration-2 group-hover/card:underline-offset-4">SMRU</div><p class="text-xs text-neutral-400 mt-1">St. Mary's Rehabilitation University, Hyderabad</p></div></div></a></li>
+                  <ul class="w-80 rounded-xl backdrop-blur-xl shadow-2xl border overflow-hidden bg-background/90 border-border" style="will-change:opacity,transform;opacity:1;transform:none">
+                    <li><a class="resource-link group/card block px-5 py-4 text-sm transition-all duration-200 border-b last:border-b-0 bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent text-foreground border-border hover:text-primary" href="/university/smru/">
+                      <div class="flex items-start gap-3"><div class="flex-1 min-w-0">
+                        <div class="font-semibold transition-colors text-white group-hover/card:text-primary group-hover/card:underline group-hover/card:decoration-2 group-hover/card:underline-offset-4 group-hover/card:decoration-primary"><span>SMRU</span></div>
+                        <p class="text-xs text-neutral-400 mt-1">St. Mary's Rehabilitation University, Hyderabad</p>
+                      </div></div>
+                    </a></li>
                   </ul>
                 </div>
               </li>
               <li class="relative" id="resources-menu-item">
-                <button type="button" id="resources-toggle" class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-primary after:transition-all after:duration-300 after:w-0 text-white">
+                <button type="button" aria-expanded="false" id="resources-toggle" class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full focus:outline-none text-white">
                   <span class="leading-none">Resources</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-4 h-4 shrink-0 transition-transform duration-300" id="resources-chevron"><path d="m6 9 6 6 6-6"></path></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-4 h-4 shrink-0 leading-none transition-transform duration-300" aria-hidden="true" id="resources-chevron"><path d="m6 9 6 6 6-6"></path></svg>
                 </button>
-                <div id="resources-mega-menu" class="absolute right-0 top-full pt-2 hidden" style="width:720px;transform:translateX(40%);">
-                  <div class="rounded-xl backdrop-blur-xl shadow-2xl border overflow-hidden bg-background/90 border-border p-6">
-                    <div class="grid grid-cols-4 gap-6">
-                      <div><h4 class="text-xs font-bold uppercase tracking-wider text-primary mb-3">AI Playground</h4><ul class="space-y-2"><li><a href="/Playground/" class="block text-sm text-white hover:text-primary font-semibold">Agentic Multiverse</a></li><li class="pl-3"><a href="/Playground/" class="block text-xs text-neutral-400 hover:text-primary">ResumeCraft Agent</a></li><li class="pl-3"><a href="/Playground/" class="block text-xs text-neutral-400 hover:text-primary">CollegePredict Agent</a></li><li class="pl-3"><a href="/Playground/" class="block text-xs text-neutral-400 hover:text-primary">EntrancePractice Agent</a></li><li class="pl-3"><a href="/Playground/" class="block text-xs text-neutral-400 hover:text-primary">InterviewPrep Agent</a></li></ul></div>
-                      <div><h4 class="text-xs font-bold uppercase tracking-wider text-primary mb-3">For Students</h4><ul class="space-y-2"><li><a href="/internship/" class="block text-sm text-white hover:text-primary font-semibold">Ignite Internship</a></li><li><a href="/uGNET/" class="block text-sm text-white hover:text-primary font-semibold">uGNET</a></li></ul></div>
-                      <div><h4 class="text-xs font-bold uppercase tracking-wider text-primary mb-3">For Faculty</h4><ul class="space-y-2"><li><a href="/edp/" class="block text-sm text-white hover:text-primary font-semibold">EDP</a></li></ul></div>
-                      <div><h4 class="text-xs font-bold uppercase tracking-wider text-primary mb-3">Others</h4><ul class="space-y-2"><li><a href="/contactus/" class="block text-sm text-white hover:text-primary font-semibold">Contact Us</a></li><li><a href="/admission/" class="block text-sm text-white hover:text-primary font-semibold">Admissions</a></li></ul></div>
-                    </div>
-                  </div>
-                </div>
+
               </li>
-              <li><a class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-primary after:transition-all after:duration-300 after:w-full text-primary" href="/allfaqs/"><span class="leading-none">FAQs</span></a></li>
+              <li class="relative group/item"><a class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full focus:outline-none text-white" href="/allfaqs/"><span class="leading-none">FAQs</span></a></li>
             </ul>
+            <div class="flex items-center gap-3">
+              <a href="/apply/" class="inline-flex items-center justify-center whitespace-nowrap rounded-full px-5 h-10 text-sm font-semibold text-white bg-[var(--primary)] hover:bg-[var(--primary)]/90 transition-colors shadow-md">Apply Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- Resources Mega Menu (full-width, below nav bar) -->
+        <div id="resources-mega-menu" class="hidden border-t transition-all duration-200"
+          style="border-color:#e8d5b5; border-bottom-left-radius:1rem; border-bottom-right-radius:1rem; padding:2rem 2.5rem 2.5rem;">
+          <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:2rem;">
+            <div>
+              <span class="mega-col-title">AI Playground</span>
+              <div style="margin-top:1.25rem; display:flex; flex-direction:column; gap:1.25rem;">
+                <a href="/Playground/" class="text-base font-semibold" style="text-decoration:none;">Agentic Multiverse</a>
+                <div style="padding-left:1rem; display:flex; flex-direction:column; gap:0.75rem;">
+                  <a href="/Playground/resumecraft/" class="mega-sub-link text-sm" style="text-decoration:none;">ResumeCraft Agent</a>
+                  <a href="/Playground/collegepredict/" class="mega-sub-link text-sm" style="text-decoration:none;">CollegePredict Agent</a>
+                  <a href="/Playground/entrancepractice/" class="mega-sub-link text-sm" style="text-decoration:none;">Engg EntrancePractice Agent</a>
+                  <a href="/Playground/interviewprep/" class="mega-sub-link text-sm" style="text-decoration:none;">InterviewPrep Agent</a>
+                </div>
+              </div>
+            </div>
+            <div>
+              <span class="mega-col-title">For Students</span>
+              <div style="margin-top:1.25rem; display:flex; flex-direction:column; gap:1.25rem;">
+                <a href="/internship/" class="text-base font-semibold" style="text-decoration:none;">Ignite Internship</a>
+                <a href="/iiat-sat/" class="text-base font-semibold" style="text-decoration:none;">IIAT SAT</a>
+              </div>
+            </div>
+            <div>
+              <span class="mega-col-title">For Faculty</span>
+              <div style="margin-top:1.25rem; display:flex; flex-direction:column; gap:1.25rem;">
+                <a href="/edp/" class="text-base font-semibold" style="text-decoration:none;">EDP</a>
+              </div>
+            </div>
+            <div>
+              <span class="mega-col-title">Others</span>
+              <div style="margin-top:1.25rem; display:flex; flex-direction:column; gap:1.25rem;">
+                <a href="/contactus/" class="text-base font-semibold" style="text-decoration:none;">Contact Us</a>
+                <a href="/admission/" class="text-base font-semibold" style="text-decoration:none;">Admissions</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </nav>
+    <!-- Mobile slide-out menu -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/60 z-[9999] hidden lg:hidden" style="backdrop-filter:blur(4px);"></div>
+    <div id="mobile-menu-panel" class="fixed top-0 right-0 h-full w-80 max-w-[85vw] z-[10001] bg-neutral-950 border-l border-neutral-800 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden overflow-y-auto">
+      <div class="flex items-center justify-between p-5 border-b border-neutral-800">
+        <span class="text-white font-semibold text-lg">Menu</span>
+        <button id="mobile-menu-close" class="p-2 text-white hover:text-primary" aria-label="Close Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+      <ul class="p-5 space-y-1">
+        <li><a href="/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">Home</a></li>
+        <li>
+          <button id="mob-collab-toggle" class="w-full flex items-center justify-between py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">
+            <span>Campuses</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform duration-300" id="mob-collab-chevron"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <ul id="mob-collab-sub" class="hidden pl-4 mt-1 space-y-1">
+            <li><a href="/university/smru/" class="block py-2.5 px-4 rounded-lg text-sm text-neutral-300 hover:text-primary hover:bg-neutral-900">
+              <strong class="text-white">SMRU</strong><br><span class="text-xs text-neutral-500">St. Mary's Rehabilitation University, Hyderabad</span>
+            </a></li>
+          </ul>
+        </li>
+        <li>
+          <button id="mob-resources-toggle" class="w-full flex items-center justify-between py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">
+            <span>Resources</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform duration-300" id="mob-resources-chevron"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <ul id="mob-resources-sub" class="hidden pl-4 mt-1 space-y-1">
+            <li class="pt-2 pb-1 px-4"><span class="text-xs font-bold uppercase tracking-wider text-primary">AI Playground</span></li>
+            <li><a href="/Playground/" class="block py-2 px-4 rounded-lg text-sm text-neutral-300 hover:text-primary hover:bg-neutral-900">Agentic Multiverse</a></li>
+            <li class="pt-2 pb-1 px-4"><span class="text-xs font-bold uppercase tracking-wider text-primary">For Students</span></li>
+            <li><a href="/internship/" class="block py-2 px-4 rounded-lg text-sm text-neutral-300 hover:text-primary hover:bg-neutral-900">Ignite Internship</a></li>
+            <li><a href="/iiat-sat/" class="block py-2 px-4 rounded-lg text-sm text-neutral-300 hover:text-primary hover:bg-neutral-900">IIAT SAT</a></li>
+            <li class="pt-2 pb-1 px-4"><span class="text-xs font-bold uppercase tracking-wider text-primary">For Faculty</span></li>
+            <li><a href="/edp/" class="block py-2 px-4 rounded-lg text-sm text-neutral-300 hover:text-primary hover:bg-neutral-900">EDP</a></li>
+            <li class="pt-2 pb-1 px-4"><span class="text-xs font-bold uppercase tracking-wider text-primary">Others</span></li>
+            <li><a href="/contactus/" class="block py-2 px-4 rounded-lg text-sm text-neutral-300 hover:text-primary hover:bg-neutral-900">Contact Us</a></li>
+            <li><a href="/admission/" class="block py-2 px-4 rounded-lg text-sm text-neutral-300 hover:text-primary hover:bg-neutral-900">Admissions</a></li>
+          </ul>
+        </li>
+        <li><a href="/allfaqs/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">FAQs</a></li>
+        <li class="pt-4"><a href="/apply/" class="block w-full text-center py-3 px-4 rounded-full text-white font-semibold text-base" style="background:var(--primary);">Apply Now</a></li>
+      </ul>
+    </div>
   </header>
-
-  <div id="mobile-menu-panel" class="fixed inset-0 z-[10002] hidden flex-col bg-background p-6 pt-20 overflow-y-auto">
-    <button id="mobile-menu-close" class="absolute top-5 right-5 w-10 h-10 flex items-center justify-center rounded-lg" aria-label="Close menu">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
-    </button>
-    <nav class="flex flex-col gap-6 text-lg font-medium">
-      <a href="/" class="py-2 border-b border-neutral-200">Home</a>
-      <a href="/university/smru/" class="py-2 border-b border-neutral-200">SMRU</a>
-      <a href="/Playground/" class="py-2 border-b border-neutral-200">AI Playground</a>
-      <a href="/internship/" class="py-2 border-b border-neutral-200">Ignite Internship</a>
-      <a href="/uGNET/" class="py-2 border-b border-neutral-200">uGNET</a>
-      <a href="/edp/" class="py-2 border-b border-neutral-200">EDP</a>
-      <a href="/allfaqs/" class="py-2 border-b border-neutral-200" style="color:#e34614 !important;font-weight:700;">FAQs</a>
-      <a href="/contactus/" class="py-2 border-b border-neutral-200">Contact Us</a>
-      <a href="https://apply.niatindia.com/login?utm_source=apply+button&utm_medium=website&utm_campaign=cta-apply-now-variant" class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold text-white mt-4" style="background:linear-gradient(135deg, #e34614, #da8159);color:#fff !important;">Apply Now</a>
-    </nav>
-  </div>
 
   <main style="padding-top: 100px;">
     <section class="relative py-16 sm:py-20 lg:py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">Frequently Asked <span style="color:#e34614;">Questions</span></h1>
-        <p class="text-lg sm:text-xl max-w-2xl mx-auto" style="color:#5c4033;">Find answers to all your queries about upGrad School of Technology</p>
+        <p class="text-lg sm:text-xl max-w-2xl mx-auto" style="color:#5c4033;">Find answers to all your queries about IIAT — Indian Institute of Advanced Technologies</p>
       </div>
     </section>
 
     <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
       <div class="mb-10 overflow-x-auto hide-scrollbar -mx-4 px-4">
         <div class="flex gap-2 sm:gap-3 min-w-max pb-2" id="faq-tabs">
-          <button class="faq-tab faq-tab-active px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-xl sm:rounded-2xl text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap border transition-all duration-300" data-tab="sot">upGrad School of Technology</button>
+          <button class="faq-tab faq-tab-active px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-xl sm:rounded-2xl text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap border transition-all duration-300" data-tab="sot">IIAT</button>
           <button class="faq-tab faq-tab-inactive px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-xl sm:rounded-2xl text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap border transition-all duration-300" data-tab="program">Program</button>
           <button class="faq-tab faq-tab-inactive px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-xl sm:rounded-2xl text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap border transition-all duration-300" data-tab="admission">Admission</button>
           <button class="faq-tab faq-tab-inactive px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-xl sm:rounded-2xl text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap border transition-all duration-300" data-tab="interview">Interview</button>
-          <button class="faq-tab faq-tab-inactive px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-xl sm:rounded-2xl text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap border transition-all duration-300" data-tab="ugnet">uGNET</button>
+          <button class="faq-tab faq-tab-inactive px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-xl sm:rounded-2xl text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap border transition-all duration-300" data-tab="ugnet">IIAT SAT</button>
           <button class="faq-tab faq-tab-inactive px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-xl sm:rounded-2xl text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap border transition-all duration-300" data-tab="fee">Fee and Funding</button>
           <button class="faq-tab faq-tab-inactive px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-xl sm:rounded-2xl text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap border transition-all duration-300" data-tab="outcomes">Outcomes and Placements</button>
           <button class="faq-tab faq-tab-inactive px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-xl sm:rounded-2xl text-xs sm:text-sm md:text-base font-semibold whitespace-nowrap border transition-all duration-300" data-tab="resumecraft">ResumeCraft Agent</button>
@@ -174,7 +548,7 @@
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Curiosity Leads to <span style="color:#e34614;">Success</span></h2>
         <p class="text-base sm:text-lg mb-8 max-w-2xl mx-auto" style="color:#5c4033;">Still have questions? Our admissions team is here to help you every step of the way.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="https://apply.niatindia.com/login?utm_source=apply+button&utm_medium=website&utm_campaign=cta-apply-now-variant" class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold text-white" style="background:linear-gradient(135deg,#e34614,#cc5227);color:#fff !important;">Apply Now<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          <a href="/apply/" class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold text-white" style="background:linear-gradient(135deg,#e34614,#cc5227);color:#fff !important;">Apply Now<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
           <a href="/contactus/" class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold border-2 transition-colors duration-300" style="border-color:#e34614;color:#e34614;">Contact Us</a>
         </div>
       </div>
@@ -196,81 +570,51 @@
           <div>
             <h3 class="text-base sm:text-lg font-semibold mb-5">Contact</h3>
             <div class="space-y-3">
-              <div class="flex items-center space-x-3"><a href="tel:18002108080" class="text-neutral-600 dark:text-neutral-300 hover:text-red-600 transition-colors text-sm sm:text-base">1800 210 8080</a></div>
-              <div class="flex items-center space-x-3"><a href="mailto:admission@sot.upgrad.com" class="text-neutral-600 dark:text-neutral-300 hover:text-red-600 transition-colors text-sm sm:text-base">admission@sot.upgrad.com</a></div>
+              <div class="flex items-center space-x-3"><a href="tel:+918688664337" class="text-neutral-600 dark:text-neutral-300 hover:text-red-600 transition-colors text-sm sm:text-base">+918688664337</a></div>
+              <div class="flex items-center space-x-3"><a href="mailto:info@iiath.com" class="text-neutral-600 dark:text-neutral-300 hover:text-red-600 transition-colors text-sm sm:text-base">info@iiath.com</a></div>
             </div>
           </div>
           <div>
             <h3 class="text-base sm:text-lg font-semibold mb-5">Address</h3>
-            <p class="text-neutral-600 dark:text-neutral-300 text-sm sm:text-base">AMR Tech Park, Hosur Main Rd, Bengaluru, Karnataka 560068</p>
+            <p class="text-neutral-600 dark:text-neutral-300 text-sm sm:text-base">Manjeera Square &amp; OT, Plot No. 6 &amp; 7, Flat No. 02, Sanjeev Reddy Nagar, Ameerpet, Hyderabad - 500038, Telangana</p>
           </div>
         </div>
         <div class="border-t border-neutral-300 dark:border-neutral-700 pt-6 text-center">
-          <p class="text-neutral-500 dark:text-neutral-400 text-xs sm:text-sm">&copy; 2026 upGrad School of Technology. All rights reserved.</p>
+          <p class="text-neutral-500 dark:text-neutral-400 text-xs sm:text-sm">&copy; 2026 InnoFutureTech Private Limited. All rights reserved.</p>
         </div>
       </div>
     </div>
   </footer>
 
+  <script>(function(){var t=document.getElementById('resources-toggle'),m=document.getElementById('resources-mega-menu'),c=document.getElementById('resources-chevron');if(!t||!m)return;t.addEventListener('click',function(e){e.stopPropagation();m.classList.toggle('hidden');c&&c.classList.toggle('rotate-180');});document.addEventListener('click',function(e){var i=document.getElementById('resources-menu-item');var mp=document.getElementById('resources-mega-menu');if(i&&!i.contains(e.target)&&mp&&!mp.contains(e.target)){m.classList.add('hidden');c&&c.classList.remove('rotate-180');}});})();</script>
   <script>
-    (function() {
-      var toggle = document.getElementById("resources-toggle");
-      var menu = document.getElementById("resources-mega-menu");
-      var chevron = document.getElementById("resources-chevron");
-      if (!toggle || !menu) return;
-      toggle.addEventListener("click", function(e) {
-        e.stopPropagation();
-        var isOpen = !menu.classList.contains("hidden");
-        menu.classList.toggle("hidden");
-        chevron && chevron.classList.toggle("rotate-180");
-        toggle.setAttribute("aria-expanded", isOpen ? "false" : "true");
-      });
-      document.addEventListener("click", function(e) {
-        var item = document.getElementById("resources-menu-item");
-        if (item && !item.contains(e.target)) {
-          menu.classList.add("hidden");
-          chevron && chevron.classList.remove("rotate-180");
-          toggle.setAttribute("aria-expanded", "false");
-        }
-      });
-    })();
-  </script>
-
-  <script>
-    (function() {
-      var btn = document.getElementById("mobile-menu-btn");
-      var panel = document.getElementById("mobile-menu-panel");
-      var close = document.getElementById("mobile-menu-close");
-      if (!btn || !panel) return;
-      btn.addEventListener("click", function() {
-        panel.classList.remove("hidden");
-        panel.classList.add("flex");
-        document.body.style.overflow = "hidden";
-      });
-      function closeMenu() {
-        panel.classList.add("hidden");
-        panel.classList.remove("flex");
-        document.body.style.overflow = "";
-      }
-      if (close) close.addEventListener("click", closeMenu);
-      panel.querySelectorAll("a").forEach(function(a) {
-        a.addEventListener("click", closeMenu);
-      });
-    })();
+  // Mobile menu toggle
+  (function(){
+    var btn=document.getElementById('mobile-menu-btn'),panel=document.getElementById('mobile-menu-panel'),overlay=document.getElementById('mobile-menu-overlay'),closeBtn=document.getElementById('mobile-menu-close');
+    if(!btn||!panel||!overlay)return;
+    function openMenu(){panel.classList.remove('translate-x-full');panel.classList.add('translate-x-0');overlay.classList.remove('hidden');document.body.style.overflow='hidden';}
+    function closeMenu(){panel.classList.add('translate-x-full');panel.classList.remove('translate-x-0');overlay.classList.add('hidden');document.body.style.overflow='';}
+    btn.addEventListener('click',openMenu);
+    if(closeBtn)closeBtn.addEventListener('click',closeMenu);
+    overlay.addEventListener('click',closeMenu);
+    function setupToggle(tId,sId,cId){var t=document.getElementById(tId),s=document.getElementById(sId),ch=document.getElementById(cId);if(!t||!s)return;t.addEventListener('click',function(){s.classList.toggle('hidden');if(ch)ch.classList.toggle('rotate-180');});}
+    setupToggle('mob-collab-toggle','mob-collab-sub','mob-collab-chevron');
+    setupToggle('mob-resources-toggle','mob-resources-sub','mob-resources-chevron');
+  })();
   </script>
 
   <script>
     (function() {
       var FAQ_DATA = {
         sot: [
-          ["What is upGrad School of Technology (upGrad SoT)?", "upGrad School of Technology is a pioneering institution offering a 4-year B.Tech program in Computer Science & Engineering, enriched by upGrad's industry partnerships and AI-powered learning tools. It blends academic rigor with real-world skills to prepare students for the tech industry."],
-          ["Is upGrad School of Technology a university?", "No, upGrad School of Technology partners with UGC-recognized universities. The degree is awarded by the partner university, while upGrad SoT provides the curriculum enhancement, teaching methods, and industry connections."],
+          ["What is IIAT — Indian Institute of Advanced Technologies?", "IIAT — Indian Institute of Advanced Technologies is a pioneering institution offering a 4-year B.Tech program in Computer Science & Engineering, enriched by IIAT's industry partnerships and AI-powered learning tools. It blends academic rigor with real-world skills to prepare students for the tech industry."],
+          ["Is IIAT a university?", "No, IIAT partners with UGC-recognized universities. The degree is awarded by the partner university, while IIAT provides the curriculum enhancement, teaching methods, and industry connections."],
           ["Is the degree valid and recognized?", "Yes, the B.Tech degree is awarded by UGC-recognized partner universities. It is a fully valid degree accepted by employers and for higher education in India and abroad."],
-          ["What programs does upGrad School of Technology offer?", "Currently, upGrad SoT offers a 4-year B.Tech in Computer Science & Engineering with specializations such as AI & Machine Learning, Data Science, Cybersecurity, Cloud Computing, and Full-Stack Development."],
-          ["Where are the campuses located?", "upGrad School of Technology operates through partner university campuses. Students attend classes at the partner university campus and benefit from upGrad's enhanced curriculum and industry connections."],
-          ["What makes upGrad School of Technology different from other engineering colleges?", "upGrad SoT integrates AI-driven personalized learning, industry mentorship, guaranteed internship opportunities, and a curriculum co-designed with tech leaders. Students get hands-on experience from Year 1 and access to upGrad's placement network of 300+ companies."],
+          ["What programs does IIAT offer?", "Currently, IIAT offers a 4-year B.Tech in Computer Science & Engineering with specializations such as AI & Machine Learning, Data Science, Cybersecurity, Cloud Computing, and Full-Stack Development."],
+          ["Where are the campuses located?", "IIAT operates through partner university campuses. Students attend classes at the partner university campus and benefit from IIAT's enhanced curriculum and industry connections."],
+          ["What makes IIAT different from other engineering colleges?", "IIAT integrates AI-driven personalized learning, industry mentorship, dedicated placement support, and a curriculum co-designed with tech leaders. Students get hands-on experience from Year 1 and access to IIAT's placement network of 100+ companies."],
           ["Is there a hostel facility available?", "Hostel facilities depend on the partner university campus. Most partner campuses offer on-campus or nearby hostel accommodations. Details are shared during the admission process."],
-          ["Can I visit the campus before applying?", "Yes, campus visits can be arranged. Contact our admissions team at 1800 210 8080 or admission@sot.upgrad.com to schedule a visit to the partner university campus."]
+          ["Can I visit the campus before applying?", "Yes, campus visits can be arranged. Contact our admissions team at +918688664337 or info@iiath.com to schedule a visit to the partner university campus."]
         ],
         program: [
           ["What is the duration of the B.Tech program?", "The B.Tech in Computer Science & Engineering is a 4-year (8-semester) full-time program."],
@@ -285,15 +629,15 @@
         ],
         admission: [
           ["What is the eligibility criteria for the B.Tech program?", "Candidates must have passed 10+2 (or equivalent) with Physics, Chemistry, and Mathematics as compulsory subjects with a minimum of 60% aggregate marks (50% for reserved categories as per government norms)."],
-          ["How do I apply for admission?", "You can apply online through our application portal. Fill out the application form, upload required documents, pay the application fee, and register for the uGNET entrance exam."],
-          ["What is the application fee?", "The application fee is Rs. 1,500 (non-refundable). This covers your uGNET exam registration and application processing."],
-          ["What entrance exams are accepted?", "upGrad SoT primarily conducts its own entrance exam called uGNET (upGrad National Entrance Test). Additionally, valid JEE Main, state CET scores, and other recognized engineering entrance exam scores are also considered."],
+          ["How do I apply for admission?", "You can apply online through our application portal. Fill out the application form, upload required documents, pay the application fee, and register for the IIAT SAT entrance exam."],
+          ["What is the application fee?", "The application fee is Rs. 1,500 (non-refundable). This covers your IIAT SAT exam registration and application processing."],
+          ["What entrance exams are accepted?", "IIAT primarily conducts its own entrance exam called IIAT SAT (IIAT Scholarship Test). Additionally, valid JEE Main, state CET scores, and other recognized engineering entrance exam scores are also considered."],
           ["Is there any age limit for admission?", "There is no upper age limit for admission. However, candidates must have completed their 10+2 examination."],
           ["Can I apply if I'm appearing for 12th board exams this year?", "Yes, students currently appearing for their 12th board exams can apply. Admission will be provisional and confirmed upon meeting the minimum eligibility criteria when results are declared."],
           ["What documents are required for admission?", "Required documents include 10th and 12th mark sheets, transfer certificate, migration certificate (if applicable), Aadhaar card, passport-size photographs, category certificate (if applicable), and entrance exam scorecard."],
           ["Is there a personal interview as part of admission?", "Yes, shortlisted candidates after the entrance exam are invited for a personal interview. This helps assess the candidate's motivation, communication skills, and aptitude for engineering."],
-          ["What is the selection process?", "Selection is based on a combination of entrance exam score (uGNET/JEE/CET), 12th standard marks, personal interview performance, and overall profile evaluation."],
-          ["Can I get admission without uGNET?", "Yes, candidates with valid JEE Main scores, state CET scores, or other recognized engineering entrance exam scores can apply directly. However, appearing for uGNET provides additional scholarship opportunities."],
+          ["What is the selection process?", "Selection is based on a combination of entrance exam score (IIAT SAT/JEE/CET), 12th standard marks, personal interview performance, and overall profile evaluation."],
+          ["Can I get admission without IIAT SAT?", "Yes, candidates with valid JEE Main scores, state CET scores, or other recognized engineering entrance exam scores can apply directly. However, appearing for IIAT SAT provides additional scholarship opportunities."],
           ["When does the admission cycle start?", "The admission cycle typically opens in January and continues till seats are filled. Early applicants get priority for scholarship consideration."],
           ["Is there a lateral entry option for diploma holders?", "Currently, the program is designed as a 4-year full-time B.Tech. Lateral entry options may be introduced in the future based on partner university policies."],
           ["Can NRI/international students apply?", "Yes, NRI and international students can apply. Special provisions and fee structures are available for international applicants. Contact our admissions team for details."],
@@ -312,58 +656,58 @@
           ["Can parents attend the interview?", "The interview is for the candidate only. However, a separate parent interaction session may be arranged after the candidate's interview if needed."]
         ],
         ugnet: [
-          ["What is uGNET?", "uGNET (upGrad National Entrance Test) is the entrance examination conducted by upGrad School of Technology for admission to the B.Tech program. It assesses students' aptitude in mathematics, physics, logical reasoning, and English."],
-          ["When is the uGNET exam conducted?", "uGNET is conducted in multiple sessions throughout the admission season (typically March to June). Exact dates are announced on the website and communicated to registered applicants."],
-          ["What is the exam pattern for uGNET?", "uGNET consists of 90 questions to be completed in 120 minutes. The sections include Mathematics (40 questions), Physics (25 questions), Logical Reasoning (15 questions), and English & General Knowledge (10 questions). Total marks: 160."],
-          ["Is there negative marking in uGNET?", "Yes, there is negative marking for incorrect answers in the MCQ section. For every wrong answer, 1 mark is deducted. There is no negative marking for unanswered questions."],
-          ["How can I register for uGNET?", "You can register for uGNET through the application portal when you apply for admission. The uGNET registration fee is included in the application fee."],
-          ["Is uGNET conducted online or offline?", "uGNET is conducted online (computer-based test) at designated test centers across India. Remote proctored options may also be available for select locations."],
-          ["What is the difficulty level of uGNET?", "uGNET is designed to be at a moderate difficulty level, comparable to state-level engineering entrance exams. It tests conceptual understanding rather than rote memorization."],
-          ["How should I prepare for uGNET?", "Focus on NCERT textbooks for Physics and Mathematics (Class 11 & 12), practice logical reasoning puzzles, and brush up on English grammar and comprehension. Sample papers and preparation materials are available on our website."],
-          ["Can I take uGNET multiple times?", "Yes, candidates can appear for multiple uGNET sessions within the same admission cycle. The best score will be considered for admission."],
-          ["When are uGNET results declared?", "Results are typically declared within 7-10 days after each exam session. Candidates are notified via email and can check results on the application portal."],
-          ["Is uGNET score valid for one year?", "uGNET scores are valid for the current admission cycle only. Candidates need to reappear if they wish to apply in the next academic year."]
+          ["What is IIAT SAT?", "IIAT SAT (IIAT Scholarship Test) is the entrance examination conducted by IIAT for admission to the B.Tech program. It assesses students' aptitude in mathematics, physics, logical reasoning, and English."],
+          ["When is the IIAT SAT exam conducted?", "IIAT SAT is conducted in multiple sessions throughout the admission season (typically March to June). Exact dates are announced on the website and communicated to registered applicants."],
+          ["What is the exam pattern for IIAT SAT?", "IIAT SAT consists of 90 questions to be completed in 120 minutes. The sections include Mathematics (40 questions), Physics (25 questions), Logical Reasoning (15 questions), and English & General Knowledge (10 questions). Total marks: 160."],
+          ["Is there negative marking in IIAT SAT?", "Yes, there is negative marking for incorrect answers in the MCQ section. For every wrong answer, 1 mark is deducted. There is no negative marking for unanswered questions."],
+          ["How can I register for IIAT SAT?", "You can register for IIAT SAT through the application portal when you apply for admission. The IIAT SAT registration fee is included in the application fee."],
+          ["Is IIAT SAT conducted online or offline?", "IIAT SAT is conducted online (computer-based test) at designated test centers across India. Remote proctored options may also be available for select locations."],
+          ["What is the difficulty level of IIAT SAT?", "IIAT SAT is designed to be at a moderate difficulty level, comparable to state-level engineering entrance exams. It tests conceptual understanding rather than rote memorization."],
+          ["How should I prepare for IIAT SAT?", "Focus on NCERT textbooks for Physics and Mathematics (Class 11 & 12), practice logical reasoning puzzles, and brush up on English grammar and comprehension. Sample papers and preparation materials are available on our website."],
+          ["Can I take IIAT SAT multiple times?", "Yes, candidates can appear for multiple IIAT SAT sessions within the same admission cycle. The best score will be considered for admission."],
+          ["When are IIAT SAT results declared?", "Results are typically declared within 7-10 days after each exam session. Candidates are notified via email and can check results on the application portal."],
+          ["Is IIAT SAT score valid for one year?", "IIAT SAT scores are valid for the current admission cycle only. Candidates need to reappear if they wish to apply in the next academic year."]
         ],
         fee: [
           ["What is the fee structure for the B.Tech program?", "The fee structure varies by partner university campus. Typically, the annual tuition fee ranges from Rs. 3.5 lakhs to Rs. 5 lakhs per year. Detailed fee breakdowns are shared during the admission offer stage."],
-          ["Are there any scholarships available?", "Yes, upGrad SoT offers merit-based scholarships covering up to 100% of tuition fees. Scholarships are awarded based on uGNET score, 12th marks, JEE/CET ranks, and financial need. Special scholarships are available for women in tech and students from underrepresented backgrounds."],
+          ["Are there any scholarships available?", "Yes, IIAT offers merit-based scholarships covering up to 100% of tuition fees. Scholarships are awarded based on IIAT SAT score, 12th marks, JEE/CET ranks, and financial need. Special scholarships are available for women in tech and students from underrepresented backgrounds."],
           ["Is there an EMI or installment payment option?", "Yes, flexible payment options are available including semester-wise payments and EMI plans through partner banks and NBFCs. Zero-interest EMI options are also available for select tenures."],
-          ["Are education loans available?", "Yes, upGrad SoT has tie-ups with leading banks and financial institutions for education loans. The admissions team assists students with the loan application process and documentation."],
-          ["What does the fee cover?", "The fee covers tuition, access to upGrad's learning platform, industry certifications, lab and library access, placement assistance, and examination fees. Hostel and mess charges are separate and vary by campus."],
+          ["Are education loans available?", "Yes, IIAT has tie-ups with leading banks and financial institutions for education loans. The admissions team assists students with the loan application process and documentation."],
+          ["What does the fee cover?", "The fee covers tuition, access to IIAT's learning platform, industry certifications, lab and library access, placement assistance, and examination fees. Hostel and mess charges are separate and vary by campus."],
           ["Is there a refund policy?", "Yes, there is a refund policy in compliance with UGC/AICTE guidelines. Refund amounts depend on the date of withdrawal relative to the program start date. Full details are provided in the admission offer letter."]
         ],
         outcomes: [
-          ["What is the placement assistance provided?", "upGrad SoT provides comprehensive placement assistance including resume building, mock interviews, soft skills training, and direct access to upGrad's network of 300+ hiring partners. Placement drives are conducted from the 7th semester onwards."],
-          ["Which companies hire from upGrad School of Technology?", "Our hiring partners include top tech companies and startups such as Google, Microsoft, Amazon, Flipkart, Infosys, TCS, Wipro, Accenture, and many more across various sectors."],
-          ["What is the expected salary range for graduates?", "Based on industry trends and our partner network, graduates can expect starting packages ranging from Rs. 5 LPA to Rs. 15 LPA depending on skills, specialization, and performance. Top performers may receive higher packages."],
-          ["Are internships guaranteed?", "Yes, every student gets a guaranteed internship opportunity through upGrad's Ignite Internship Program. Internships begin from Year 2 and continue through the program, providing substantial industry experience."],
-          ["What kind of career support is provided after graduation?", "Alumni receive continued access to upGrad's career services for 2 years post-graduation, including job listings, networking events, and skill upgrade programs."],
+          ["What is the placement assistance provided?", "IIAT provides comprehensive placement assistance including resume building, mock interviews, soft skills training, and direct access to IIAT's network of 100+ hiring partners. Placement drives are conducted from the 7th semester onwards."],
+          ["Which companies hire from IIAT?", "Our hiring partners include top tech companies and startups such as Google, Microsoft, Amazon, Flipkart, Infosys, TCS, Wipro, Accenture, and many more across various sectors."],
+          ["What is the expected salary range for graduates?", "Based on industry trends and our partner network, graduates can expect competitive packages based on skills, specialization, and market conditions. Compensation varies by role, company, and individual performance."],
+          ["Are internships part of the program?", "Yes, every student receives strong placement assistance and internship opportunities through IIAT's Ignite Internship Program. Internships begin from Year 2 and continue through the program, providing substantial industry experience."],
+          ["What kind of career support is provided after graduation?", "Alumni receive continued access to IIAT's career services for 2 years post-graduation, including job listings, networking events, and skill upgrade programs."],
           ["Can I pursue higher education after the B.Tech program?", "Absolutely. The B.Tech degree from our partner universities is recognized for higher education admission in India and abroad, including top universities for M.Tech, MS, MBA, and research programs."],
-          ["What is the role of industry mentors in placement preparation?", "Industry mentors guide students on career choices, help with resume building, conduct mock interviews, share industry insights, and provide networking opportunities through upGrad's professional community."],
+          ["What is the role of industry mentors in placement preparation?", "Industry mentors guide students on career choices, help with resume building, conduct mock interviews, share industry insights, and provide networking opportunities through IIAT's professional community."],
           ["Is there a minimum CGPA required for placement eligibility?", "While there is no strict minimum CGPA for placement assistance, most hiring partners prefer candidates with a CGPA of 6.5 or above. Students are encouraged to maintain strong academic performance."]
         ],
         resumecraft: [
           ["What is the ResumeCraft Agent?", "ResumeCraft Agent is an AI-powered tool that helps students create professional, ATS-friendly resumes. It analyzes your profile, skills, and experiences to generate optimized resumes tailored for specific job roles and industries."],
           ["How does the ResumeCraft Agent work?", "Simply input your educational background, skills, projects, and career preferences. The AI agent generates a professionally formatted resume, provides a compatibility score, and suggests improvements to maximize your chances of getting shortlisted."],
-          ["Is ResumeCraft Agent free for students?", "Yes, ResumeCraft Agent is available free of charge to all enrolled upGrad SoT students as part of the learning platform."],
+          ["Is ResumeCraft Agent free for students?", "Yes, ResumeCraft Agent is available free of charge to all enrolled IIAT students as part of the learning platform."],
           ["Can I customize the resume generated by the AI?", "Yes, you can fully customize the generated resume. The agent provides a base template that you can edit, rearrange, and personalize while keeping the ATS-optimized formatting."],
           ["What resume formats are supported?", "ResumeCraft Agent supports multiple formats including chronological, functional, and combination resume styles. It generates output in PDF format optimized for ATS (Applicant Tracking Systems)."],
           ["How accurate is the resume scoring feature?", "The scoring feature uses industry-standard ATS algorithms to evaluate your resume against job descriptions. While no automated tool is 100% accurate, our scoring provides reliable guidance for improvement."],
           ["Can I use ResumeCraft Agent for different job applications?", "Yes, you can create multiple resume versions tailored to different job roles and companies. The agent helps optimize each version for specific job descriptions."]
         ],
         entrancepractice: [
-          ["What is the Engg EntrancePractice Agent?", "The Engineering Entrance Practice Agent is an AI-powered exam preparation tool that generates practice questions based on past engineering entrance exam patterns including JEE Main, state CETs, and uGNET."],
+          ["What is the Engg EntrancePractice Agent?", "The Engineering Entrance Practice Agent is an AI-powered exam preparation tool that generates practice questions based on past engineering entrance exam patterns including JEE Main, state CETs, and IIAT SAT."],
           ["How does the practice agent generate questions?", "The agent uses AI to analyze years of past exam papers, identify patterns, and generate new questions of similar difficulty and topic distribution. Each question set mimics the actual exam experience."],
-          ["Which entrance exams does it cover?", "Currently, it covers JEE Main, JEE Advanced, major state CETs (MH-CET, KCET, AP EAMCET, TS EAMCET, WBJEE), and uGNET. More exams are being added regularly."],
+          ["Which entrance exams does it cover?", "Currently, it covers JEE Main, JEE Advanced, major state CETs (MH-CET, KCET, AP EAMCET, TS EAMCET, WBJEE), and IIAT SAT. More exams are being added regularly."],
           ["Can I take timed mock tests?", "Yes, the agent offers full-length timed mock tests that simulate the actual exam environment, including time limits, question distribution, and marking schemes."],
           ["Does it provide detailed solutions?", "Yes, every practice question comes with detailed step-by-step solutions and explanations to help you understand the concept and approach."],
-          ["Is the practice agent available on mobile?", "Yes, the agent is accessible on both desktop and mobile devices through the upGrad learning platform."],
+          ["Is the practice agent available on mobile?", "Yes, the agent is accessible on both desktop and mobile devices through the IIAT learning platform."],
           ["How often is the question bank updated?", "The question bank is continuously updated by AI and reviewed by subject matter experts. New questions are added after every major exam season to keep the content current."]
         ],
         collegepredict: [
           ["What is the CollegePredict Agent?", "CollegePredict Agent is an AI tool that helps you discover your admission chances at top engineering colleges based on your entrance exam marks or rank. It analyzes historical cutoff data to provide personalized predictions."],
           ["How does the prediction algorithm work?", "The agent uses machine learning models trained on years of historical admission data, cutoff trends, seat matrices, and category-wise data to estimate your probability of admission at various colleges and branches."],
-          ["Which exams and colleges does it cover?", "It covers predictions for colleges accepting JEE Main, JEE Advanced, state CET scores, and uGNET. The database includes IITs, NITs, IIITs, GFTIs, state engineering colleges, and top private universities."],
+          ["Which exams and colleges does it cover?", "It covers predictions for colleges accepting JEE Main, JEE Advanced, state CET scores, and IIAT SAT. The database includes IITs, NITs, IIITs, GFTIs, state engineering colleges, and top private universities."],
           ["How accurate are the predictions?", "Predictions are based on historical data and trends, providing a directional estimate. While actual cutoffs may vary year to year, the agent provides a reliable probability range based on past patterns."],
           ["Can I filter predictions by location or branch?", "Yes, you can filter predictions by state, city, college type, branch/specialization, and category to get targeted recommendations."],
           ["Is the data updated for the current admission year?", "Yes, the data is updated annually with the latest cutoff trends, seat matrix changes, and new participating colleges."],

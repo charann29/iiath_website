@@ -2,542 +2,668 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
   <link rel="preload" href="../_next/static/media/4cf2300e9c8272f7-s.p.woff2" as="font" crossorigin="" type="font/woff2">
   <link rel="preload" href="../_next/static/media/93f479601ee12b01-s.p.woff2" as="font" crossorigin="" type="font/woff2">
   <link rel="stylesheet" href="../_next/static/css/de70bee13400563f.css">
   <link rel="stylesheet" href="../_next/static/css/7bfa864fea7726bd.css">
-  <link rel="icon" type="image/svg+xml" href="../assets/faviconD.svg">
-  <title>AI Playground - upGrad School of Technology</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/new/faviconD.svg">
+  <link rel="icon" type="image/x-icon" href="../assets/new/faviconD.svg">
+  <link rel="apple-touch-icon" href="../assets/new/faviconD.svg">
+  <title>AI Playground - IIAT - Indian Institute of Advanced Technologies</title>
+  <meta name="description" content="IIAT - Indian Institute of Advanced Technologies - Agentic Multiverse AI Playground">
+  <meta name="keywords" content="IIAT AI Playground, AI agents, resume builder AI, college predictor, interview prep AI, entrance practice">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://iiath.com/Playground/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Playground - IIAT - Indian Institute of Advanced Technologies">
+  <meta property="og:description" content="IIAT - Indian Institute of Advanced Technologies - Agentic Multiverse AI Playground">
+  <meta property="og:image" content="https://iiath.com/assets/new/IIAT_logo.png">
+  <meta property="og:url" content="https://iiath.com/Playground/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Playground - IIAT - Indian Institute of Advanced Technologies">
+  <meta name="twitter:description" content="IIAT - Indian Institute of Advanced Technologies - Agentic Multiverse AI Playground">
+  <meta name="twitter:image" content="https://iiath.com/assets/new/IIAT_logo.png">
   <script>
-    (function () {
+    (function() {
       const root = document.documentElement;
-      root.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-      root.style.setProperty('--primary', '#e34614');
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'auto';
+      }
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        root.classList.add('dark');
+      } else if (savedTheme === 'light') {
+        root.classList.remove('dark');
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        root.classList.add('dark');
+      }
+      root.style.setProperty('--primary', 'oklch(0.577 0.245 27.325)');
+      root.style.setProperty('--sidebar-primary', 'oklch(0.577 0.245 27.325)');
     })();
   </script>
-    <style>
-    /* ===== WARM WHEAT + ORANGE THEME ===== */
-    :root {
-      --primary: #e34614;
-      --primary-dark: #cc5227;
-      --primary-light: #da8159;
-      --accent: #f5b891;
-      --wheat: #f7e8ca;
-      --wheat-light: #fedfb9;
-      --wheat-lighter: #fef6e8;
-    }
+  <style>
+    /* ===== Playground Page Styles (Warm Wheat Theme) ===== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { overflow-x: hidden; }
 
-    html { color-scheme: light !important; }
-    html.dark { color-scheme: light !important; }
-
-    /* --- Base --- */
     body {
       background: #fedfb9 !important;
-      color: #3b2314 !important;
+      color: #2d1a0e !important;
+      overscroll-behavior: none;
     }
+
+    /* Override theme overrides for warm wheat page */
     .bg-background { background: #fedfb9 !important; }
-
-    /* --- Backgrounds: force warm light --- */
     .bg-white { background: #fef6e8 !important; }
-    .bg-neutral-50 { background: #fef6e8 !important; }
-    .bg-neutral-100 { background: #f7e8ca !important; }
-    .bg-neutral-200 { background: #fedfb9 !important; }
-    .bg-neutral-900 { background: #fef6e8 !important; }
-    .bg-black { background: #fedfb9 !important; }
+    /* NOTE: Do NOT override .text-white globally — it breaks banner text */
 
-    /* Override ALL dark: bg classes to warm light */
-    .dark\:bg-black { background: #fedfb9 !important; }
-    .dark\:bg-\[\#0a0a0a\] { background: #fedfb9 !important; }
-    .dark\:bg-\[\#1a1a1a\] { background: #f7e8ca !important; }
-    .dark\:bg-\[\#222222\] { background: #f7e8ca !important; }
-    .dark\:bg-\[\#111111\] { background: #fef6e8 !important; }
-    .dark\:bg-\[\#18191A\] { background: #fef6e8 !important; }
-    .dark\:bg-neutral-800 { background: #f7e8ca !important; }
-    .dark\:bg-neutral-800\/50 { background: #fef6e8 !important; }
-    .dark\:bg-neutral-900 { background: #fedfb9 !important; }
-    .dark\:bg-neutral-900\/50 { background: #fef6e8 !important; }
-    .dark\:bg-neutral-950 { background: #fedfb9 !important; }
-    .dark\:bg-zinc-800\/50 { background: #fef6e8 !important; }
-
-    /* --- Text: dark brown on warm bg --- */
-    h1, h2, h3, h4, h5, h6 { color: #2d1a0e !important; }
-    p { color: #3b2314; }
-    .text-white { color: #2d1a0e !important; }
-    .text-neutral-900, .text-black { color: #2d1a0e !important; }
-    .text-neutral-800 { color: #3b2314 !important; }
-    .text-neutral-700, .text-gray-700 { color: #4a3222 !important; }
-    .text-neutral-600, .text-gray-600 { color: #5c4033 !important; }
-    .text-neutral-500, .text-gray-500 { color: #7a6352 !important; }
-    .text-neutral-400, .text-gray-400 { color: #9a8574 !important; }
-    .text-neutral-300, .text-gray-300 { color: #9a8574 !important; }
-    .dark\:text-white { color: #2d1a0e !important; }
-    .dark\:text-neutral-100 { color: #2d1a0e !important; }
-    .dark\:text-neutral-200 { color: #3b2314 !important; }
-    .dark\:text-neutral-300 { color: #4a3222 !important; }
-    .dark\:text-neutral-400 { color: #5c4033 !important; }
-    .dark\:text-gray-300 { color: #4a3222 !important; }
-
-    /* Keep white text inside ALL primary-bg elements and CTA buttons */
-    .bg-\[var\(--primary\)\] *,
-    [style*="background-color: var(--primary)"] *,
-    [style*="background-color:var(--primary)"] *,
-    [style*="background:var(--primary)"] *,
-    [style*="background: var(--primary)"] *,
-    [style*="background:linear-gradient"][style*="var(--primary)"] *,
-    .bg-primary *, .bg-red-600 *,
-    .bg-\[var\(--primary\)\],
-    [style*="background:var(--primary)"],
-    [style*="background: var(--primary)"],
-    [style*="background-color:var(--primary)"],
-    [style*="background-color: var(--primary)"],
-    .bg-primary, .bg-red-600,
-    a[href*="apply.niatindia.com"],
-    a[href*="apply.niatindia.com"] * { color: #fff !important; }
-
-    /* --- Primary accent (orange-red) --- */
-    .text-\[var\(--primary\)\], .text-primary { color: #e34614 !important; }
-    span.text-\[var\(--primary\)\] { color: #e34614 !important; }
-    .text-red-600 { color: #e34614 !important; }
-    .text-red-500 { color: #e34614 !important; }
-    .text-orange-600 { color: #e34614 !important; }
-
-    /* --- Borders: warm mode --- */
-    .border-neutral-200, .border-neutral-300 { border-color: #e8d5b5 !important; }
-    .border-neutral-700 { border-color: #e8d5b5 !important; }
-    .dark\:border-neutral-700, .dark\:border-neutral-800 { border-color: #e8d5b5 !important; }
-    .border-gray-200, .border-gray-800, .dark\:border-gray-800 { border-color: #e8d5b5 !important; }
-    .border-\[var\(--primary\)\], .dark\:border-\[var\(--primary\)\] { border-color: rgba(227, 70, 20, 0.3) !important; }
-
-    /* --- Navbar --- */
+    /* Navbar: warm wheat tones */
     header nav > div {
-      background: rgba(254, 246, 232, 0.9) !important;
+      background: rgba(254, 246, 232, 0.85) !important;
       border-color: #e8d5b5 !important;
-      box-shadow: 0 1px 3px rgba(45,26,14,0.08) !important;
+      box-shadow: 0 4px 24px rgba(45, 26, 14, 0.08), 0 0 20px rgba(227, 70, 20, 0.04) !important;
       backdrop-filter: blur(20px) !important;
     }
     header nav ul a .leading-none,
-    header nav ul div .leading-none { color: #3b2314 !important; }
-    header nav ul a.text-primary .leading-none,
-    header nav ul a[href="/"] .leading-none { color: #e34614 !important; }
+    header nav ul div .leading-none,
+    header nav ul button .leading-none { color: #2d1a0e !important; }
     header nav ul a:hover .leading-none,
-    header nav ul div:hover .leading-none { color: #e34614 !important; }
-    header nav ul a::after, header nav ul div::after { background: #e34614 !important; }
+    header nav ul div:hover .leading-none,
+    header nav ul button:hover .leading-none { color: var(--primary) !important; }
+    header nav ul a::after, header nav ul div::after, header nav ul button::after { background: var(--primary) !important; }
 
-    /* --- CTA buttons (primary orange-red) --- */
-    a[href*="apply.niatindia.com"] {
-      background: linear-gradient(135deg, #e34614, #cc5227) !important;
-      color: #fff !important;
-      border-color: #e34614 !important;
-      font-weight: 600 !important;
-    }
-    a[href*="apply.niatindia.com"]:hover {
-      background: linear-gradient(135deg, #cc5227, #da8159) !important;
-      box-shadow: 0 0 20px rgba(227, 70, 20, 0.25) !important;
-    }
-    button.bg-primary { background: #e34614 !important; color: #fff !important; }
-
-    /* --- Active tabs / primary bg elements --- */
-    .bg-\[var\(--primary\)\],
-    [style*="background-color: var(--primary)"] {
-      background-color: #e34614 !important;
-      color: #fff !important;
-    }
-    .bg-primary { background-color: #e34614 !important; }
-    .bg-primary\/10 { background-color: rgba(227, 70, 20, 0.1) !important; }
-    .bg-red-600 { background-color: #e34614 !important; }
-
-    /* --- Cards --- */
-    .bg-neutral-200.rounded-xl, .bg-neutral-200.rounded-2xl {
-      background: #fef6e8 !important;
+    /* Campuses dropdown */
+    .group\/item .absolute {
+      background: rgba(254, 246, 232, 0.97) !important;
       border-color: #e8d5b5 !important;
+      box-shadow: 0 10px 25px rgba(45, 26, 14, 0.1) !important;
     }
-    .bg-neutral-200.rounded-xl:hover, .bg-neutral-200.rounded-2xl:hover {
-      border-color: rgba(227, 70, 20, 0.4) !important;
+    .group\/item .absolute ul {
+      background: rgba(254, 246, 232, 0.97) !important;
     }
-    .bg-neutral-100.rounded-2xl, .bg-neutral-100.rounded-3xl { background: #f7e8ca !important; }
+    .group\/card .font-semibold { color: #2d1a0e !important; }
+    .group\/card:hover .font-semibold { color: var(--primary) !important; }
+    .group\/card p { color: rgba(45, 26, 14, 0.6) !important; }
 
-    /* --- Stats section --- */
-    .bg-neutral-50.rounded-2xl { background: #fef6e8 !important; border: 1px solid #e8d5b5 !important; }
-
-    /* --- Footer --- */
-    footer, footer > div { background: #f7e8ca !important; border-color: #e8d5b5 !important; }
-    footer a { color: #7a6352 !important; }
-    footer a:hover { color: #e34614 !important; }
-    footer h3, footer h4 { color: #2d1a0e !important; }
-    footer p, footer span { color: #5c4033 !important; }
-    footer .text-white { color: #2d1a0e !important; }
-
-    /* --- Mega menu --- */
+    /* --- Mega menu (warm wheat) --- */
     #resources-mega-menu {
       background: rgba(254, 246, 232, 0.98) !important;
       border-color: #e8d5b5 !important;
-      box-shadow: 0 20px 40px rgba(45,26,14,0.1) !important;
+      box-shadow: 0 25px 60px rgba(45, 26, 14, 0.1) !important;
+      backdrop-filter: blur(20px) !important;
     }
-    #resources-mega-menu h4 { color: #e34614 !important; border-bottom-color: #e8d5b5 !important; }
-    #resources-mega-menu a { color: #5c4033 !important; }
-    #resources-mega-menu a:hover { color: #e34614 !important; }
-
-    /* --- Dropdowns --- */
-    .group\/item .absolute {
-      background: rgba(254, 246, 232, 0.98) !important;
-      border-color: #e8d5b5 !important;
-      box-shadow: 0 10px 25px rgba(45,26,14,0.08) !important;
+    #resources-mega-menu .mega-col-title {
+      color: #e34614 !important;
+      font-size: 1.1rem;
+      font-weight: 600;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 4px;
     }
-
-    /* --- Mobile menu --- */
-    #mobile-menu-panel { background: #fef6e8 !important; }
-    #mobile-menu-panel button, #mobile-menu-panel a { color: #3b2314 !important; }
-    .lucide-menu { stroke: #3b2314 !important; }
-
-    /* --- Dark-mode gradient overrides for warm bg --- */
-    .dark\:from-black { --tw-gradient-from: #fedfb9 !important; }
-    .dark\:from-black\/70 { --tw-gradient-from: rgba(254,223,185,0.7) !important; }
-    .bg-white\/70, .dark\:bg-black\/70 { background: rgba(254,246,232,0.7) !important; }
-
-    /* --- Decorative blurs --- */
-    .blur-3xl { opacity: 0.2 !important; }
-
-    /* --- Scrollbar --- */
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #f7e8ca; }
-    ::-webkit-scrollbar-thumb { background: #da8159; border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: #e34614; }
-
-    /* --- Selection --- */
-    ::selection { background: rgba(227, 70, 20, 0.2); color: #2d1a0e; }
-
-    /* --- Shadows --- */
-    .shadow-lg { box-shadow: 0 1px 3px rgba(45,26,14,0.08), 0 1px 2px rgba(45,26,14,0.04) !important; }
-    .dark\:shadow-neutral-900\/50 { --tw-shadow-color: rgba(45,26,14,0.05) !important; }
-
-    /* --- Ensure dark: text overrides don't break warm mode --- */
-    .dark\:text-neutral-100, .dark\:text-white { color: #2d1a0e !important; }
-
-    /* --- Gradient fade edges (scrolling sections) --- */
-    .bg-gradient-to-r.from-white, .bg-gradient-to-l.from-white { from: #fedfb9 !important; }
-
-    /* --- color-mix references use var(--primary) — auto-updates with new --primary --- */
-
-    /* --- Ring / focus --- */
-    .ring-neutral-200 { --tw-ring-color: #e8d5b5 !important; }
-
-    /* ===== PAGE-SPECIFIC: uGNET Banner Marquee ===== */
-    @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .animate-marquee {
-      animation: marquee 20s linear infinite;
-    }
-    #ugnet-banner * { color: #fff !important; }
-
-    /* ===== PAGE-SPECIFIC: Orbit Animation ===== */
-    .orbit-container {
-      animation: orbit-spin 20s linear infinite;
-    }
-    @keyframes orbit-spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-    .orbit-item {
+    #resources-mega-menu .mega-col-title::after {
+      content: '';
       position: absolute;
-      animation: counter-spin 20s linear infinite;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 100%;
+      background: rgba(227, 70, 20, 0.5);
+      border-radius: 2px;
     }
-    @keyframes counter-spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(-360deg); }
+    #resources-mega-menu a {
+      color: #2d1a0e !important;
+      transition: color 0.15s ease;
     }
-    .orbit-item:nth-child(1) { top: 0; left: 50%; transform: translateX(-50%); }
-    .orbit-item:nth-child(2) { right: 0; top: 50%; transform: translateY(-50%); }
-    .orbit-item:nth-child(3) { bottom: 0; left: 50%; transform: translateX(-50%); }
-    .orbit-item:nth-child(4) { left: 0; top: 50%; transform: translateY(-50%); }
+    #resources-mega-menu a:hover {
+      color: #e34614 !important;
+    }
+    #resources-mega-menu .mega-sub-link {
+      color: #5c4033 !important;
+    }
+    #resources-mega-menu .mega-sub-link:hover {
+      color: #e34614 !important;
+    }
 
-    /* ===== PAGE-SPECIFIC: Keep hero dark section truly dark ===== */
-    .hero-dark-section { background: linear-gradient(135deg, #0a0a0a, #1a1a1a) !important; }
-    .hero-dark-section h1, .hero-dark-section h2, .hero-dark-section h3,
-    .hero-dark-section p, .hero-dark-section span, .hero-dark-section div { color: inherit !important; }
+    /* Mobile menu */
+    #mobile-menu-panel { background: #fef6e8 !important; }
+    #mobile-menu-panel button, #mobile-menu-panel a { color: #2d1a0e !important; }
+    #mobile-menu-panel a { border-color: #e8d5b5 !important; }
+    .lucide-menu { stroke: #2d1a0e !important; }
 
+    /* IIAT SAT Banner */
+    @keyframes slide {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .animate-slide {
+      display: flex;
+      animation: slide 25s linear infinite;
+    }
+    #ugnet-banner, #ugnet-banner * { color: #fff !important; }
+
+    /* ===== Hero Section ===== */
+    .playground-hero {
+      min-height: 50vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 160px 24px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .playground-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 40%, rgba(227, 70, 20, 0.06) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 30% 70%, rgba(227, 70, 20, 0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      border: 1px solid #e8d5b5;
+      background: rgba(254, 246, 232, 0.7);
+      font-size: 13px;
+      font-weight: 500;
+      color: #5c4033;
+      margin-bottom: 24px;
+      backdrop-filter: blur(8px);
+    }
+    .hero-badge .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--primary);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+    .hero-title {
+      font-size: clamp(32px, 6vw, 64px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      color: #2d1a0e;
+    }
+    .hero-title .accent {
+      color: var(--primary);
+    }
+    .hero-subtitle {
+      font-size: clamp(15px, 2vw, 18px);
+      color: #5c4033;
+      max-width: 600px;
+      line-height: 1.6;
+      margin: 0 auto;
+    }
+
+    /* ===== Agent Cards Grid ===== */
+    .agents-section {
+      padding: 40px 24px 100px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .agents-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 768px) {
+      .agents-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    /* Individual agent card */
+    .agent-card {
+      position: relative;
+      border-radius: 20px;
+      border: 1px solid #e8d5b5;
+      background: #fef6e8;
+      padding: 40px 32px 36px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow: hidden;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .agent-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 20px;
+      background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(227, 70, 20, 0.06) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.35s;
+      pointer-events: none;
+    }
+    .agent-card:hover {
+      border-color: rgba(227, 70, 20, 0.25);
+      background: #fff8ee;
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(45, 26, 14, 0.08), 0 0 60px rgba(227, 70, 20, 0.05);
+    }
+    .agent-card:hover::before {
+      opacity: 1;
+    }
+
+    .agent-number {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(45, 26, 14, 0.3);
+      margin-bottom: 20px;
+    }
+    .agent-card-image {
+      width: 160px;
+      height: 180px;
+      object-fit: contain;
+      margin-bottom: 24px;
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      filter: drop-shadow(0 8px 24px rgba(45, 26, 14, 0.15));
+    }
+    @media (min-width: 768px) {
+      .agent-card-image {
+        width: 180px;
+        height: 200px;
+      }
+    }
+    .agent-card:hover .agent-card-image {
+      transform: scale(1.05) translateY(-4px);
+    }
+
+    .agent-card-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #2d1a0e;
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+    @media (min-width: 768px) {
+      .agent-card-title {
+        font-size: 22px;
+      }
+    }
+    .agent-card-title .accent {
+      color: var(--primary);
+    }
+    .agent-card-desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #5c4033;
+      max-width: 340px;
+      margin-bottom: 24px;
+    }
+    @media (min-width: 768px) {
+      .agent-card-desc {
+        font-size: 15px;
+      }
+    }
+    .explore-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      border-radius: 9999px;
+      border: 1px solid #e8d5b5;
+      background: rgba(254, 246, 232, 0.7);
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .explore-btn:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+      box-shadow: 0 4px 20px rgba(227, 70, 20, 0.3);
+    }
+    .explore-btn svg {
+      transition: transform 0.25s;
+    }
+    .explore-btn:hover svg {
+      transform: translateX(3px);
+    }
+
+    /* Beta bar */
+    .beta-bar {
+      position: fixed;
+      bottom: 12px;
+      left: 0; right: 0;
+      display: flex;
+      justify-content: center;
+      padding: 0 16px;
+      z-index: 40;
+      pointer-events: none;
+    }
+    .beta-bar-inner {
+      padding: 6px 16px;
+      border-radius: 9999px;
+      background: rgba(254, 246, 232, 0.9);
+      backdrop-filter: blur(12px);
+      border: 1px solid #e8d5b5;
+      pointer-events: auto;
+    }
+    .beta-bar p {
+      font-size: 13px;
+      color: #5c4033 !important;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    /* Theme toggle placeholder */
+    .theme-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px; height: 36px;
+      border-radius: 6px;
+      border: 1px solid #e8d5b5;
+      background: rgba(254, 246, 232, 0.5);
+      backdrop-filter: blur(4px);
+      cursor: pointer;
+    }
+
+    /* Avatar placeholder */
+    .avatar-placeholder {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: rgba(45, 26, 14, 0.06);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    /* Subtle entrance animations */
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-up {
+      animation: fade-up 0.6s ease-out both;
+    }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+    .delay-5 { animation-delay: 0.5s; }
+    .delay-6 { animation-delay: 0.6s; }
+
+    @media (max-width: 1023px) {
+      #resources-mega-menu { display: none !important; }
+    }
+
+    /* --- Missing Tailwind utility fallbacks (navbar logo) --- */
+    .max-w-\[140px\] { max-width: 140px; }
+    @media (min-width: 640px) { .sm\:max-w-\[160px\] { max-width: 160px; } }
+    @media (min-width: 1024px) { .lg\:max-w-\[220px\] { max-width: 220px; } }
+
+    @media (max-width: 639px) {
+      header nav { padding-top: 0.35rem; }
+      header nav > div { border-radius: 0.6rem; margin-left: 0.35rem; margin-right: 0.35rem; }
+    }
   </style>
 </head>
-<body class="antialiased bg-background">
+<body class="__variable_188709 __variable_9a8899 antialiased bg-background">
 
   <!-- uGNET Scrolling Banner -->
-  <div class="fixed top-0 left-0 right-0 z-[10001] bg-red-700 text-white text-xs py-1.5 overflow-hidden" id="ugnet-banner" style="background:#b91c1c !important;">
-    <div class="flex animate-marquee whitespace-nowrap">
-      <span class="mx-8">Our uGNET Exam is now live &bull; <a href="/uGNET/" class="underline font-semibold">Register Now! &rarr;</a></span>
-      <span class="mx-8">Our uGNET Exam is now live &bull; <a href="/uGNET/" class="underline font-semibold">Register Now! &rarr;</a></span>
-      <span class="mx-8">Our uGNET Exam is now live &bull; <a href="/uGNET/" class="underline font-semibold">Register Now! &rarr;</a></span>
-      <span class="mx-8">Our uGNET Exam is now live &bull; <a href="/uGNET/" class="underline font-semibold">Register Now! &rarr;</a></span>
-      <span class="mx-8">Our uGNET Exam is now live &bull; <a href="/uGNET/" class="underline font-semibold">Register Now! &rarr;</a></span>
-      <span class="mx-8">Our uGNET Exam is now live &bull; <a href="/uGNET/" class="underline font-semibold">Register Now! &rarr;</a></span>
-      <span class="mx-8">Our uGNET Exam is now live &bull; <a href="/uGNET/" class="underline font-semibold">Register Now! &rarr;</a></span>
-      <span class="mx-8">Our uGNET Exam is now live &bull; <a href="/uGNET/" class="underline font-semibold">Register Now! &rarr;</a></span>
-      <span class="mx-8">Our uGNET Exam is now live &bull; <a href="/uGNET/" class="underline font-semibold">Register Now! &rarr;</a></span>
-      <span class="mx-8">Our uGNET Exam is now live &bull; <a href="/uGNET/" class="underline font-semibold">Register Now! &rarr;</a></span>
-    </div>
+  <div class="fixed top-0 left-0 right-0 z-[10001] w-full overflow-hidden" id="ugnet-banner">
+    <a class="block relative bg-red-700 shadow-lg" href="/apply/" style="background:#b91c1c !important; box-shadow: 0 10px 15px -3px rgba(127,29,29,0.5);">
+      <div class="flex items-center justify-center gap-3 sm:gap-4 px-4 sm:px-6 py-2 sm:py-2.5">
+        <div class="flex-shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white w-5 h-5 sm:w-6 sm:h-6" style="color:#fff !important;"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
+        </div>
+        <div class="flex-1 overflow-hidden min-w-0">
+          <div class="flex animate-slide">
+            <span class="text-white whitespace-nowrap text-xs sm:text-sm md:text-base">IIAT SAT Registration is now open &bull; Free to Register &rarr;</span>
+            <span class="text-white whitespace-nowrap ml-8 text-xs sm:text-sm md:text-base">IIAT SAT Registration is now open &bull; Free to Register &rarr;</span>
+            <span class="text-white whitespace-nowrap ml-8 text-xs sm:text-sm md:text-base">IIAT SAT Registration is now open &bull; Free to Register &rarr;</span>
+            <span class="text-white whitespace-nowrap ml-8 text-xs sm:text-sm md:text-base">IIAT SAT Registration is now open &bull; Free to Register &rarr;</span>
+            <span class="text-white whitespace-nowrap ml-8 text-xs sm:text-sm md:text-base">IIAT SAT Registration is now open &bull; Free to Register &rarr;</span>
+          </div>
+        </div>
+      </div>
+    </a>
   </div>
 
   <!-- Navbar -->
   <header>
-    <nav class="fixed z-[10000] w-full pt-2 transition-all duration-300" style="top:28px">
-      <div class="mx-auto max-w-7xl rounded-xl border px-4 sm:px-6 lg:px-12 duration-300 relative overflow-visible backdrop-blur-xl shadow-lg bg-background/50" style="border-color:rgba(255,255,255,0.1);border-bottom-width:1px;border-radius:1rem;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06),0 0 20px rgba(227,70,20,0.1)">
-        <div class="relative flex items-center justify-between py-3 sm:py-4 lg:py-6">
-          <a href="/" class="flex items-center">
-            <img alt="upGrad School of Technology" loading="eager" width="120" height="40" class="h-8 sm:h-10 w-auto" src="../_next/image/url=%2Fassets%2FU_light_logo.png&w=256&q=75">
-          </a>
-          <!-- Mobile hamburger -->
-          <button id="mobile-menu-btn" class="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg" aria-label="Open menu">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-          </button>
+    <nav data-state="false" class="group fixed z-[10000] w-full pt-2 transition-all duration-300" style="top:42px">
+      <div class="mx-auto max-w-7xl rounded-xl border px-4 sm:px-6 lg:px-12 duration-300 relative overflow-visible backdrop-blur-xl shadow-lg" style="background:rgba(254,246,232,0.85);border-color:rgba(45,26,14,0.12);border-bottom-width:1px;border-radius:1rem;">
+        <div class="relative flex flex-wrap items-center justify-between gap-4 py-2.5 sm:py-4 lg:gap-0 transition-all duration-300 lg:py-6" style="z-index:1">
+          <div class="flex w-full items-center justify-between gap-3 sm:gap-4 lg:w-auto">
+            <a class="flex items-center space-x-2 relative" aria-label="home" href="/">
+              <img alt="IIAT logo" width="200" height="86" class="h-10 sm:h-12 lg:h-16 w-auto max-w-[200px] sm:max-w-[260px] lg:max-w-[340px] object-contain shrink-0 relative" style="color:transparent" src="../assets/new/IIAT_logo.png">
+            </a>
+            <div class="flex items-center gap-2 lg:hidden">
+              <button aria-label="Open Menu" class="z-20 p-2 sm:p-2.5 relative" type="button" id="mobile-menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu size-5 sm:size-6" style="color:#2d1a0e;" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+              </button>
+            </div>
+          </div>
           <div class="hidden lg:flex items-center gap-8 xl:gap-10">
             <ul class="flex items-center gap-8 xl:gap-10 text-sm sm:text-base font-medium relative">
-              <li><a class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full text-white" href="/"><span class="leading-none">Home</span></a></li>
               <li class="relative group/item">
-                <div class="relative inline-flex items-center gap-1.5 duration-150 cursor-pointer after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full text-white">
-                  <span class="leading-none">University Collaborations</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-4 h-4 shrink-0 transition-transform group-hover/item:rotate-180 duration-300"><path d="m6 9 6 6 6-6"></path></svg>
+                <a class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full focus:outline-none focus-visible:outline-none" style="color:#2d1a0e;" href="/">
+                  <span class="leading-none">Home</span>
+                </a>
+              </li>
+              <li class="relative group/item">
+                <div class="relative inline-flex items-center gap-1.5 duration-150 cursor-pointer after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full focus:outline-none" style="color:#2d1a0e;">
+                  <span class="leading-none">Campuses</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-4 h-4 shrink-0 leading-none transition-transform group-hover/item:rotate-180 duration-300" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
                 </div>
                 <div class="absolute left-0 top-full pt-2 hidden group-hover/item:block">
-                  <ul class="w-80 rounded-xl backdrop-blur-xl shadow-2xl border overflow-hidden bg-background/90 border-border">
-                    <li><a class="group/card block px-5 py-4 text-sm transition-all duration-200 text-foreground hover:text-primary" href="/university/smru/">
-                      <div class="flex items-start gap-3"><div class="flex-1 min-w-0">
-                        <div class="font-semibold text-white group-hover/card:text-primary group-hover/card:underline group-hover/card:decoration-2 group-hover/card:underline-offset-4">SMRU</div>
-                        <p class="text-xs text-neutral-400 mt-1">St. Mary's Rehabilitation University, Hyderabad</p>
-                      </div></div>
-                    </a></li>
+                  <ul class="w-80 rounded-xl backdrop-blur-xl shadow-2xl border overflow-hidden" style="background:rgba(254,246,232,0.95);border-color:rgba(45,26,14,0.12);">
+                    <li>
+                      <a class="group/card block px-5 py-4 text-sm transition-all duration-200 border-b last:border-b-0 bg-transparent hover:bg-transparent hover:text-primary" style="color:#2d1a0e;border-color:rgba(45,26,14,0.12);" href="/university/smru">
+                        <div class="flex items-start gap-3"><div class="flex-1 min-w-0">
+                          <div class="font-semibold transition-colors group-hover/card:text-primary group-hover/card:underline group-hover/card:decoration-2 group-hover/card:underline-offset-4 group-hover/card:decoration-primary" style="color:#2d1a0e;"><span>SMRU</span></div>
+                        </div></div>
+                      </a>
+                    </li>
                   </ul>
                 </div>
               </li>
-              <li class="relative" id="resources-menu-item">
-                <button type="button" id="resources-toggle" class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:bg-primary after:transition-all after:duration-300 after:w-full text-primary">
+              <li class="relative group/item" id="resources-menu-item">
+                <button type="button" aria-expanded="false" id="resources-toggle" class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 focus:outline-none" style="color:#2d1a0e;">
                   <span class="leading-none">Resources</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-4 h-4 shrink-0 transition-transform duration-300" id="resources-chevron"><path d="m6 9 6 6 6-6"></path></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-4 h-4 shrink-0 leading-none transition-transform duration-300" id="resources-chevron" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
                 </button>
-                <div id="resources-mega-menu" class="absolute right-0 top-full pt-2 hidden" style="width:720px;transform:translateX(40%);">
-                  <div class="rounded-xl backdrop-blur-xl shadow-2xl border overflow-hidden bg-background/90 border-border p-6">
-                    <div class="grid grid-cols-4 gap-6">
-                      <div><h4 class="text-xs font-bold uppercase tracking-wider text-primary mb-3">AI Playground</h4><ul class="space-y-2"><li><a href="/Playground/" class="block text-sm text-white hover:text-primary font-semibold">Agentic Multiverse</a></li><li class="pl-3"><a href="/Playground/" class="block text-xs text-neutral-400 hover:text-primary">ResumeCraft Agent</a></li><li class="pl-3"><a href="/Playground/" class="block text-xs text-neutral-400 hover:text-primary">CollegePredict Agent</a></li><li class="pl-3"><a href="/Playground/" class="block text-xs text-neutral-400 hover:text-primary">EntrancePractice Agent</a></li><li class="pl-3"><a href="/Playground/" class="block text-xs text-neutral-400 hover:text-primary">InterviewPrep Agent</a></li></ul></div>
-                      <div><h4 class="text-xs font-bold uppercase tracking-wider text-primary mb-3">For Students</h4><ul class="space-y-2"><li><a href="/internship/" class="block text-sm text-white hover:text-primary font-semibold">Ignite Internship</a></li><li><a href="/uGNET/" class="block text-sm text-white hover:text-primary font-semibold">uGNET</a></li></ul></div>
-                      <div><h4 class="text-xs font-bold uppercase tracking-wider text-primary mb-3">For Faculty</h4><ul class="space-y-2"><li><a href="/edp/" class="block text-sm text-white hover:text-primary font-semibold">EDP</a></li></ul></div>
-                      <div><h4 class="text-xs font-bold uppercase tracking-wider text-primary mb-3">Others</h4><ul class="space-y-2"><li><a href="/contactus/" class="block text-sm text-white hover:text-primary font-semibold">Contact Us</a></li><li><a href="/admission/" class="block text-sm text-white hover:text-primary font-semibold">Admissions</a></li></ul></div>
-                    </div>
-                  </div>
-                </div>
               </li>
-              <li><a class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full text-white" href="/allfaqs/"><span class="leading-none">FAQs</span></a></li>
+              <li class="relative group/item">
+                <a class="relative inline-flex items-center gap-1.5 duration-150 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full focus:outline-none focus-visible:outline-none" style="color:#2d1a0e;" href="/allfaqs/">
+                  <span class="leading-none">FAQs</span>
+                </a>
+              </li>
             </ul>
+            <div class="flex items-center gap-3">
+              <a href="/apply/"
+                class="inline-flex items-center justify-center whitespace-nowrap rounded-full px-5 h-10 text-sm font-semibold text-white bg-[var(--primary)] hover:bg-[var(--primary)]/90 transition-colors shadow-md">
+                Apply Now
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Resources Mega Menu (full-width, below nav bar) -->
+        <div id="resources-mega-menu" class="hidden border-t transition-all duration-200"
+          style="border-color:rgba(45,26,14,0.12); border-bottom-left-radius:1rem; border-bottom-right-radius:1rem; padding:2rem 2.5rem 2.5rem;">
+          <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:2rem;">
+            <div>
+              <span class="mega-col-title">AI Playground</span>
+              <div style="margin-top:1.25rem; display:flex; flex-direction:column; gap:1.25rem;">
+                <a href="/Playground/" class="text-base font-semibold" style="text-decoration:none;">Agentic Multiverse</a>
+                <div style="padding-left:1rem; display:flex; flex-direction:column; gap:0.75rem;">
+                  <a href="/Playground/resumecraft/" class="mega-sub-link text-sm" style="text-decoration:none;">ResumeCraft Agent</a>
+                  <a href="/Playground/collegepredict/" class="mega-sub-link text-sm" style="text-decoration:none;">CollegePredict Agent</a>
+                  <a href="/Playground/entrancepractice/" class="mega-sub-link text-sm" style="text-decoration:none;">Engg EntrancePractice Agent</a>
+                  <a href="/Playground/interviewprep/" class="mega-sub-link text-sm" style="text-decoration:none;">InterviewPrep Agent</a>
+                </div>
+              </div>
+            </div>
+            <div>
+              <span class="mega-col-title">For Students</span>
+              <div style="margin-top:1.25rem; display:flex; flex-direction:column; gap:1.25rem;">
+                <a href="/internship/" class="text-base font-semibold" style="text-decoration:none;">Ignite Internship</a>
+                <a href="/iiat-sat/" class="text-base font-semibold" style="text-decoration:none;">IIAT SAT</a>
+              </div>
+            </div>
+            <div>
+              <span class="mega-col-title">For Faculty</span>
+              <div style="margin-top:1.25rem; display:flex; flex-direction:column; gap:1.25rem;">
+                <a href="/edp/" class="text-base font-semibold" style="text-decoration:none;">EDP</a>
+              </div>
+            </div>
+            <div>
+              <span class="mega-col-title">Others</span>
+              <div style="margin-top:1.25rem; display:flex; flex-direction:column; gap:1.25rem;">
+                <a href="/contactus/" class="text-base font-semibold" style="text-decoration:none;">Contact Us</a>
+                <a href="/admission/" class="text-base font-semibold" style="text-decoration:none;">Admissions</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </nav>
   </header>
 
-  <!-- Mobile Menu Panel -->
-  <div id="mobile-menu-panel" class="fixed inset-0 z-[10002] hidden flex-col bg-background p-6 pt-20 overflow-y-auto">
-    <button id="mobile-menu-close" class="absolute top-5 right-5 w-10 h-10 flex items-center justify-center rounded-lg" aria-label="Close menu">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
-    </button>
-    <nav class="flex flex-col gap-6 text-lg font-medium">
-      <a href="/" class="py-2 border-b border-neutral-200">Home</a>
-      <a href="/university/smru/" class="py-2 border-b border-neutral-200">SMRU</a>
-      <a href="/Playground/" class="py-2 border-b border-neutral-200" style="color:#e34614 !important;font-weight:700;">AI Playground</a>
-      <a href="/internship/" class="py-2 border-b border-neutral-200">Ignite Internship</a>
-      <a href="/uGNET/" class="py-2 border-b border-neutral-200">uGNET</a>
-      <a href="/edp/" class="py-2 border-b border-neutral-200">EDP</a>
-      <a href="/allfaqs/" class="py-2 border-b border-neutral-200">FAQs</a>
-      <a href="/contactus/" class="py-2 border-b border-neutral-200">Contact Us</a>
-      <a href="https://apply.niatindia.com/login?utm_source=apply+button&utm_medium=website&utm_campaign=cta-apply-now-variant" class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold text-white mt-4" style="background:linear-gradient(135deg, #e34614, #da8159);color:#fff !important;">Apply Now</a>
-    </nav>
+  <!-- Mobile slide-out menu -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/60 z-[9999] hidden lg:hidden" style="backdrop-filter:blur(4px);"></div>
+  <div id="mobile-menu-panel"
+    class="fixed top-0 right-0 h-full w-80 max-w-[85vw] z-[10001] bg-neutral-950 border-l border-neutral-800 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden overflow-y-auto">
+    <div class="flex items-center justify-between p-5 border-b border-neutral-800">
+      <span class="text-white font-semibold text-lg">Menu</span>
+      <button id="mobile-menu-close" class="p-2 text-white hover:text-primary" aria-label="Close Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18" /><path d="m6 6 12 12" />
+        </svg>
+      </button>
+    </div>
+    <ul class="p-5 space-y-1">
+      <li><a href="/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">Home</a></li>
+      <li><a href="/university/smru/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">SMRU Campus</a></li>
+      <li><a href="/Playground/" class="block py-3 px-4 rounded-lg text-primary font-semibold text-base hover:bg-neutral-900">AI Playground</a></li>
+      <li><a href="/internship/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">Ignite Internship</a></li>
+      <li><a href="/iiat-sat/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">IIAT SAT</a></li>
+      <li><a href="/edp/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">EDP</a></li>
+      <li><a href="/contactus/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">Contact Us</a></li>
+      <li><a href="/admission/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">Admissions</a></li>
+      <li><a href="/allfaqs/" class="block py-3 px-4 rounded-lg text-white font-semibold text-base hover:bg-neutral-900">FAQs</a></li>
+    </ul>
+    <div class="p-5 border-t border-neutral-800">
+      <a href="/apply/" class="block w-full text-center py-3 px-6 rounded-full bg-primary text-white font-semibold text-base hover:bg-primary/90 transition-colors">Apply Now</a>
+    </div>
   </div>
 
   <!-- Main Content -->
-  <main style="padding-top: 76px;">
+  <main>
 
     <!-- Hero Section -->
-    <section class="hero-dark-section relative min-h-screen flex items-center justify-center overflow-hidden" style="background: linear-gradient(135deg, #0a0a0a, #1a1a1a);">
-      <!-- Background effects -->
-      <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 20% 50%, rgba(227,70,20,0.3) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(227,70,20,0.2) 0%, transparent 50%);"></div>
-
-      <!-- Orbiting bubbles container -->
-      <div class="relative w-full max-w-2xl mx-auto aspect-square flex items-center justify-center">
-        <!-- Central glow -->
-        <div class="absolute w-48 h-48 rounded-full" style="background: radial-gradient(circle, rgba(227,70,20,0.3), transparent 70%);"></div>
-
-        <!-- Orbiting bubbles -->
-        <div class="orbit-container absolute inset-0">
-          <div class="orbit-item" style="--orbit-delay: 0s; --orbit-color: #06b6d4;">
-            <div class="w-16 h-16 rounded-full flex items-center justify-center text-xs font-bold" style="background: rgba(6,182,212,0.15); border: 2px solid rgba(6,182,212,0.4); color: #06b6d4 !important;">Resume</div>
-          </div>
-          <div class="orbit-item" style="--orbit-delay: -5s; --orbit-color: #eab308;">
-            <div class="w-16 h-16 rounded-full flex items-center justify-center text-xs font-bold" style="background: rgba(234,179,8,0.15); border: 2px solid rgba(234,179,8,0.4); color: #eab308 !important;">Interview</div>
-          </div>
-          <div class="orbit-item" style="--orbit-delay: -10s; --orbit-color: #a855f7;">
-            <div class="w-16 h-16 rounded-full flex items-center justify-center text-xs font-bold" style="background: rgba(168,85,247,0.15); border: 2px solid rgba(168,85,247,0.4); color: #a855f7 !important;">College</div>
-          </div>
-          <div class="orbit-item" style="--orbit-delay: -15s; --orbit-color: #e34614;">
-            <div class="w-16 h-16 rounded-full flex items-center justify-center text-xs font-bold" style="background: rgba(227,70,20,0.15); border: 2px solid rgba(227,70,20,0.4); color: #e34614 !important;">Assessment</div>
-          </div>
-        </div>
-
-        <!-- Center text -->
-        <div class="relative text-center z-10 px-4">
-          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight mb-4" style="color: #fff !important;">
-            <span style="background: linear-gradient(135deg, #e34614, #f5b891, #da8159); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Agentic Multiverse</span>
-          </h1>
-          <p class="text-neutral-400 text-base sm:text-lg max-w-xl mx-auto" style="color: #a3a3a3 !important;">
-            From building your resume to mastering interviews and staying exam-ready &mdash; your AI buddies have you covered.
-          </p>
-        </div>
+    <section class="playground-hero">
+      <div class="hero-badge animate-fade-up delay-1">
+        <span class="dot"></span>
+        AI-Powered Tools
       </div>
-
-      <!-- Scroll indicator -->
-      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-center">
-        <p class="text-xs uppercase tracking-[0.3em] text-neutral-500 mb-3" style="color: #737373 !important;">Scroll to navigate your AI orbits</p>
-        <div class="w-6 h-10 rounded-full border-2 border-neutral-600 mx-auto flex justify-center" style="border-color: #525252 !important;">
-          <div class="w-1.5 h-3 bg-neutral-400 rounded-full mt-2 animate-bounce" style="background: #a3a3a3 !important;"></div>
-        </div>
-      </div>
+      <h1 class="hero-title animate-fade-up delay-2">
+        <span class="accent">Agentic</span> Multiverse
+      </h1>
+      <p class="hero-subtitle animate-fade-up delay-3">
+        From building your resume to mastering interviews and staying exam-ready &mdash; your AI buddies have you covered.
+      </p>
     </section>
 
-    <!-- Agent Section 01: ResumeCraft Agent -->
-    <section class="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 relative border-b border-neutral-200 dark:border-neutral-800">
-      <div class="max-w-6xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div>
-            <div class="text-sm font-mono mb-4" style="color: #9a8574;">01.</div>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">ResumeCraft Agent</h2>
-            <p class="text-base sm:text-lg leading-relaxed mb-8" style="color: #5c4033;">AI that writes and scores your resume in seconds &mdash; giving you instant insights to help you land your dream job faster.</p>
-            <a href="https://apply.niatindia.com/login?utm_source=apply+button&utm_medium=website&utm_campaign=cta-apply-now-variant" class="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:scale-105" style="background:linear-gradient(135deg, #e34614, #da8159);">
-              Explore
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
-          </div>
-          <div class="relative flex items-center justify-center">
-            <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-3xl flex items-center justify-center" style="background: linear-gradient(135deg, rgba(6,182,212,0.08), rgba(6,182,212,0.04)); border: 1px solid rgba(6,182,212,0.2);">
-              <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.7;">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Agent Cards Grid -->
+    <section class="agents-section">
+      <div class="agents-grid">
 
-    <!-- Agent Section 02: CollegePredict Agent -->
-    <section class="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 relative border-b border-neutral-200 dark:border-neutral-800" style="background: #fef6e8;">
-      <div class="max-w-6xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div class="order-2 lg:order-1 relative flex items-center justify-center">
-            <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-3xl flex items-center justify-center" style="background: linear-gradient(135deg, rgba(168,85,247,0.08), rgba(168,85,247,0.04)); border: 1px solid rgba(168,85,247,0.2);">
-              <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.7;">
-                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 2 6 2s6-.9 6-2v-5"/>
-              </svg>
-            </div>
-          </div>
-          <div class="order-1 lg:order-2">
-            <div class="text-sm font-mono mb-4" style="color: #9a8574;">02.</div>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">CollegePredict Agent</h2>
-            <p class="text-base sm:text-lg leading-relaxed mb-8" style="color: #5c4033;">Discover your admission chances for top colleges and branches based on your engineering entrance exam marks or rank.</p>
-            <a href="https://apply.niatindia.com/login?utm_source=apply+button&utm_medium=website&utm_campaign=cta-apply-now-variant" class="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:scale-105" style="background:linear-gradient(135deg, #e34614, #da8159);">
-              Explore
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
-          </div>
+        <!-- Agent 1: ResumeCraft -->
+        <div class="agent-card animate-fade-up delay-3">
+          <span class="agent-number">01</span>
+          <img alt="ResumeCraft Agent" loading="lazy" width="180" height="200" class="agent-card-image" src="../assets/new/agents/resume_agent.png">
+          <h3 class="agent-card-title"><span class="accent">ResumeCraft</span> Agent</h3>
+          <p class="agent-card-desc">AI that writes and scores your resume in seconds &mdash; giving you instant insights to help you land your dream job faster.</p>
+          <button class="explore-btn" onclick="window.location.href='/Playground/resumecraft/'">
+            Explore
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
         </div>
-      </div>
-    </section>
 
-    <!-- Agent Section 03: Engg EntrancePractice Agent -->
-    <section class="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 relative border-b border-neutral-200 dark:border-neutral-800">
-      <div class="max-w-6xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div>
-            <div class="text-sm font-mono mb-4" style="color: #9a8574;">03.</div>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Engg EntrancePractice Agent</h2>
-            <p class="text-base sm:text-lg leading-relaxed mb-8" style="color: #5c4033;">Prepare smarter by choosing any engineering entrance test and practicing with past-pattern based question sets.</p>
-            <a href="https://apply.niatindia.com/login?utm_source=apply+button&utm_medium=website&utm_campaign=cta-apply-now-variant" class="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:scale-105" style="background:linear-gradient(135deg, #e34614, #da8159);">
-              Explore
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
-          </div>
-          <div class="relative flex items-center justify-center">
-            <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-3xl flex items-center justify-center" style="background: linear-gradient(135deg, rgba(234,179,8,0.08), rgba(234,179,8,0.04)); border: 1px solid rgba(234,179,8,0.2);">
-              <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#eab308" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.7;">
-                <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/>
-              </svg>
-            </div>
-          </div>
+        <!-- Agent 2: CollegePredict -->
+        <div class="agent-card animate-fade-up delay-4">
+          <span class="agent-number">02</span>
+          <img alt="CollegePredict Agent" loading="lazy" width="180" height="200" class="agent-card-image" src="../assets/new/agents/college_proctor.png">
+          <h3 class="agent-card-title"><span class="accent">CollegePredict</span> Agent</h3>
+          <p class="agent-card-desc">Discover your admission chances for top colleges and branches based on your engineering entrance exam marks or rank.</p>
+          <button class="explore-btn" onclick="window.location.href='/Playground/collegepredict/'">
+            Explore
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
         </div>
-      </div>
-    </section>
 
-    <!-- Agent Section 04: InterviewPrep Agent -->
-    <section class="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 relative border-b border-neutral-200 dark:border-neutral-800" style="background: #fef6e8;">
-      <div class="max-w-6xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div class="order-2 lg:order-1 relative flex items-center justify-center">
-            <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-3xl flex items-center justify-center" style="background: linear-gradient(135deg, rgba(227,70,20,0.08), rgba(227,70,20,0.04)); border: 1px solid rgba(227,70,20,0.2);">
-              <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#e34614" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.7;">
-                <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/>
-              </svg>
-            </div>
-          </div>
-          <div class="order-1 lg:order-2">
-            <div class="text-sm font-mono mb-4" style="color: #9a8574;">04.</div>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">InterviewPrep Agent</h2>
-            <p class="text-base sm:text-lg leading-relaxed mb-8" style="color: #5c4033;">Level up your interview skills with realistic AI mock sessions designed to make you job-ready.</p>
-            <a href="https://apply.niatindia.com/login?utm_source=apply+button&utm_medium=website&utm_campaign=cta-apply-now-variant" class="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:scale-105" style="background:linear-gradient(135deg, #e34614, #da8159);">
-              Explore
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
-          </div>
+        <!-- Agent 3: EntrancePractice -->
+        <div class="agent-card animate-fade-up delay-5">
+          <span class="agent-number">03</span>
+          <img alt="EntrancePractice Agent" loading="lazy" width="180" height="200" class="agent-card-image" src="../assets/new/agents/assessment_agent.png">
+          <h3 class="agent-card-title"><span class="accent">Engg EntrancePractice</span> Agent</h3>
+          <p class="agent-card-desc">Prepare smarter by choosing any engineering entrance test and practicing with past-pattern based question sets.</p>
+          <button class="explore-btn" onclick="window.location.href='/Playground/entrancepractice/'">
+            Explore
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
         </div>
+
+        <!-- Agent 4: InterviewPrep -->
+        <div class="agent-card animate-fade-up delay-6">
+          <span class="agent-number">04</span>
+          <img alt="InterviewPrep Agent" loading="lazy" width="180" height="200" class="agent-card-image" src="../assets/new/agents/ai_agent.png">
+          <h3 class="agent-card-title"><span class="accent">InterviewPrep</span> Agent</h3>
+          <p class="agent-card-desc">Level up your interview skills with realistic AI mock sessions designed to make you job-ready.</p>
+          <button class="explore-btn" onclick="window.location.href='/Playground/interviewprep/'">
+            Explore
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </div>
+
       </div>
     </section>
 
   </main>
 
-  <!-- Beta Disclaimer -->
-  <div class="text-center py-6 px-4 text-xs text-neutral-500 dark:text-neutral-400 border-t border-neutral-200 dark:border-neutral-700">
-    <span style="color: #e34614;">Beta Version</span> &nbsp;&bull;&nbsp; Under Testing &bull; Do try these features and report if any issue or suggestion &bull; <a href="/contactus/" class="underline hover:text-primary">Report issues</a>
+  <!-- Beta disclaimer bar -->
+  <div class="beta-bar">
+    <div class="beta-bar-inner">
+      <p style="font-size:13px;">
+        <span>Beta Version </span> &bull;
+        <span>Under Testing <span style="font-weight:600;">Do try these features and report if any issue or suggestion</span></span>
+        &bull;
+        <a href="/contactus/" style="text-decoration:underline;cursor:pointer;color:#e34614 !important;" onmouseover="this.style.color='#2d1a0e'" onmouseout="this.style.color='#e34614'">Report issues</a>
+      </p>
+    </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="text-neutral-700 dark:text-white pb-8 pt-6 relative">
-    <div class="max-w-full mx-4 sm:mx-6 py-8 px-4 sm:px-6 rounded-2xl bg-neutral-100 dark:bg-[#18191A] border border-neutral-300 dark:border-neutral-800 relative overflow-hidden">
-      <div class="max-w-7xl mx-auto relative z-10">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
-          <div>
-            <h3 class="text-base sm:text-lg font-semibold mb-5">Quick Links</h3>
-            <ul class="space-y-2 sm:space-y-3">
-              <li><a href="/#admission-process" class="text-neutral-600 dark:text-neutral-300 hover:text-red-600 transition-colors text-sm sm:text-base">Admissions</a></li>
-              <li><a href="/#scholarships" class="text-neutral-600 dark:text-neutral-300 hover:text-red-600 transition-colors text-sm sm:text-base">Scholarships</a></li>
-              <li><a href="/allfaqs/" class="text-neutral-600 dark:text-neutral-300 hover:text-red-600 transition-colors text-sm sm:text-base">FAQs</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-base sm:text-lg font-semibold mb-5">Contact</h3>
-            <div class="space-y-3">
-              <div class="flex items-center space-x-3"><a href="tel:18002108080" class="text-neutral-600 dark:text-neutral-300 hover:text-red-600 transition-colors text-sm sm:text-base">1800 210 8080</a></div>
-              <div class="flex items-center space-x-3"><a href="mailto:admission@sot.upgrad.com" class="text-neutral-600 dark:text-neutral-300 hover:text-red-600 transition-colors text-sm sm:text-base">admission@sot.upgrad.com</a></div>
-            </div>
-          </div>
-          <div>
-            <h3 class="text-base sm:text-lg font-semibold mb-5">Address</h3>
-            <p class="text-neutral-600 dark:text-neutral-300 text-sm sm:text-base">AMR Tech Park, Hosur Main Rd, Bengaluru, Karnataka 560068</p>
-          </div>
-        </div>
-        <div class="border-t border-neutral-300 dark:border-neutral-700 pt-6 text-center">
-          <p class="text-neutral-500 dark:text-neutral-400 text-xs sm:text-sm">&copy; 2026 upGrad School of Technology. All rights reserved.</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Resources Mega Menu Script -->
+  <!-- Scripts -->
   <script>
+    // ===== Resources Mega Menu =====
     (function() {
       var toggle = document.getElementById('resources-toggle');
       var menu = document.getElementById('resources-mega-menu');
@@ -552,33 +678,35 @@
       });
       document.addEventListener('click', function(e) {
         var item = document.getElementById('resources-menu-item');
-        if (item && !item.contains(e.target)) {
+        var mp = document.getElementById('resources-mega-menu');
+        if (item && !item.contains(e.target) && mp && !mp.contains(e.target)) {
           menu.classList.add('hidden');
           chevron && chevron.classList.remove('rotate-180');
           toggle.setAttribute('aria-expanded', 'false');
         }
       });
     })();
-  </script>
 
-  <!-- Mobile Menu Script -->
-  <script>
+    // ===== Mobile Menu =====
     (function() {
       var btn = document.getElementById('mobile-menu-btn');
       var panel = document.getElementById('mobile-menu-panel');
+      var overlay = document.getElementById('mobile-menu-overlay');
       var close = document.getElementById('mobile-menu-close');
       if (!btn || !panel) return;
-      btn.addEventListener('click', function() {
-        panel.classList.remove('hidden');
-        panel.classList.add('flex');
+      function openMenu() {
+        if (overlay) overlay.classList.remove('hidden');
+        panel.classList.remove('translate-x-full');
         document.body.style.overflow = 'hidden';
-      });
+      }
       function closeMenu() {
-        panel.classList.add('hidden');
-        panel.classList.remove('flex');
+        panel.classList.add('translate-x-full');
+        if (overlay) overlay.classList.add('hidden');
         document.body.style.overflow = '';
       }
+      btn.addEventListener('click', openMenu);
       if (close) close.addEventListener('click', closeMenu);
+      if (overlay) overlay.addEventListener('click', closeMenu);
       panel.querySelectorAll('a').forEach(function(a) {
         a.addEventListener('click', closeMenu);
       });

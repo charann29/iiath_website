@@ -99,18 +99,18 @@
 
     /* Navbar: warm wheat tones */
     header nav > div {
-      background: rgba(254, 246, 232, 0.85) !important;
-      border-color: #e8d5b5 !important;
-      box-shadow: 0 4px 24px rgba(45, 26, 14, 0.08), 0 0 20px rgba(227, 70, 20, 0.04) !important;
-      backdrop-filter: blur(20px) !important;
+      background: #aa0e1c !important;
+      border-color: rgba(255,255,255,0.15) !important;
+      box-shadow: 0 4px 12px rgba(170,14,28,0.35) !important;
+      backdrop-filter: none !important;
     }
     header nav ul a .leading-none,
     header nav ul div .leading-none,
-    header nav ul button .leading-none { color: #2d1a0e !important; }
+    header nav ul button .leading-none { color: #fff !important; }
     header nav ul a:hover .leading-none,
     header nav ul div:hover .leading-none,
-    header nav ul button:hover .leading-none { color: var(--primary) !important; }
-    header nav ul a::after, header nav ul div::after, header nav ul button::after { background: var(--primary) !important; }
+    header nav ul button:hover .leading-none { color: #ffd700 !important; }
+    header nav ul a::after, header nav ul div::after, header nav ul button::after { background: #ffd700 !important; }
 
     /* Campuses dropdown */
     .group\/item .absolute {
@@ -168,7 +168,7 @@
     #mobile-menu-panel { background: #fef6e8 !important; }
     #mobile-menu-panel button, #mobile-menu-panel a { color: #2d1a0e !important; }
     #mobile-menu-panel a { border-color: #e8d5b5 !important; }
-    .lucide-menu { stroke: #2d1a0e !important; }
+    .lucide-menu { stroke: #fff !important; }
 
     /* IIAT SAT Banner */
     @keyframes slide {
@@ -449,6 +449,12 @@
 
     @media (max-width: 1023px) {
       #resources-mega-menu { display: none !important; }
+    }
+
+    /* --- Fix missing Tailwind translate-x-full utility (tree-shaken by Next.js build) --- */
+    .translate-x-full {
+      --tw-translate-x: 100%;
+      translate: var(--tw-translate-x) var(--tw-translate-y);
     }
 
     /* --- Missing Tailwind utility fallbacks (navbar logo) --- */
@@ -736,10 +742,12 @@
       function openMenu() {
         if (overlay) overlay.classList.remove('hidden');
         panel.classList.remove('translate-x-full');
+        panel.classList.add('translate-x-0');
         document.body.style.overflow = 'hidden';
       }
       function closeMenu() {
         panel.classList.add('translate-x-full');
+        panel.classList.remove('translate-x-0');
         if (overlay) overlay.classList.add('hidden');
         document.body.style.overflow = '';
       }

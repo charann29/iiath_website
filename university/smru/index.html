@@ -161,20 +161,22 @@
     .border-\[var\(--primary\)\], .dark\:border-\[var\(--primary\)\] { border-color: rgba(227, 70, 20, 0.3) !important; }
 
     header nav > div {
-      background: rgba(254, 246, 232, 0.9) !important;
-      border-color: #e8d5b5 !important;
-      box-shadow: 0 1px 3px rgba(45,26,14,0.08) !important;
-      backdrop-filter: blur(20px) !important;
+      background: #aa0e1c !important;
+      border-color: rgba(255,255,255,0.15) !important;
+      box-shadow: 0 4px 12px rgba(170,14,28,0.35) !important;
+      backdrop-filter: none !important;
     }
     header nav ul a .leading-none,
     header nav ul div .leading-none,
-    header nav ul button .leading-none { color: #3b2314 !important; }
+    header nav ul button .leading-none { color: #fff !important; }
     header nav ul a.text-primary .leading-none,
-    header nav ul a[href="/"] .leading-none { color: #e34614 !important; }
+    header nav ul a[href="/"] .leading-none { color: #ffd700 !important; }
     header nav ul a:hover .leading-none,
     header nav ul div:hover .leading-none,
-    header nav ul button:hover .leading-none { color: #e34614 !important; }
-    header nav ul a::after, header nav ul div::after, header nav ul button::after { background: #e34614 !important; }
+    header nav ul button:hover .leading-none { color: #ffd700 !important; }
+    header nav ul a::after, header nav ul div::after, header nav ul button::after { background: #ffd700 !important; }
+    header nav svg.lucide-menu { color: #fff !important; }
+    header nav svg.lucide-chevron-down { color: #fff !important; }
 
     a[href="/apply/"] {
       background: linear-gradient(135deg, #e34614, #cc5227) !important;
@@ -264,7 +266,7 @@
 
     #mobile-menu-panel { background: #fef6e8 !important; }
     #mobile-menu-panel button, #mobile-menu-panel a { color: #3b2314 !important; }
-    .lucide-menu { stroke: #3b2314 !important; }
+    .lucide-menu { stroke: #fff !important; }
 
     .dark\:from-black { --tw-gradient-from: #fedfb9 !important; }
     .dark\:from-black\/70 { --tw-gradient-from: rgba(254,223,185,0.7) !important; }
@@ -420,11 +422,78 @@
     }
 
     /* Step card */
-    .step-card {
-      border-radius: 16px;
+    .steps-timeline {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      justify-content: center;
+    }
+    .step-card-v2 {
+      flex: 1;
+      max-width: 260px;
+      border-radius: 1rem;
       border: 1px solid #e8d5b5;
       background: #fef6e8;
-      padding: 24px;
+      padding: 1.5rem 1.25rem;
+      position: relative;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .step-card-v2:hover {
+      border-color: rgba(227,70,20,0.35);
+      box-shadow: 0 8px 24px rgba(227,70,20,0.08);
+      transform: translateY(-3px);
+    }
+    .step-icon-wrap {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      border-radius: 0.75rem;
+      background: rgba(227,70,20,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      color: #e34614;
+    }
+    .step-badge {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #aa0e1c;
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 4px rgba(170,14,28,0.3);
+    }
+    .step-connector {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 0.25rem;
+      opacity: 0.4;
+      flex-shrink: 0;
+    }
+    @media (max-width: 1024px) {
+      .steps-timeline {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .step-card-v2 {
+        flex: 0 0 calc(50% - 0.5rem);
+        max-width: none;
+      }
+      .step-connector { display: none; }
+    }
+    @media (max-width: 640px) {
+      .step-card-v2 {
+        flex: 0 0 100%;
+      }
     }
     .step-number {
       font-size: 13px;
@@ -449,19 +518,87 @@
       color: #e34614;
     }
 
+    /* ===== COLLABORATION SECTION ===== */
+    .collab-section-card {
+      text-align: center;
+      background: linear-gradient(135deg, #fffaf2, #fef6e8);
+      border: 1px solid #e8d5b5;
+      border-radius: 1.5rem;
+      padding: 2.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .collab-section-card::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: rgba(170,14,28,0.04);
+    }
+    .collab-section-card::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: -40px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: rgba(227,70,20,0.04);
+    }
+    .collab-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .collab-logo-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .collab-x-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.6;
+    }
+    .collab-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+    .collab-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #2d1a0e;
+      background: rgba(255,255,255,0.7);
+      border: 1px solid rgba(232,213,181,0.8);
+    }
+    .collab-badge svg { color: #16a34a; }
+    @media (max-width: 640px) {
+      .collab-section-card { padding: 2rem 1.25rem; }
+      .collab-logos { gap: 0.75rem; }
+      .collab-logo-item img { height: 36px; }
+    }
+
     /* Collaboration section responsive */
     @media (max-width: 768px) {
-      .collab-flex {
-        flex-direction: column !important;
-        gap: 20px !important;
-      }
-      .collab-img-wrap {
-        flex: none !important;
-        max-width: 100% !important;
-        width: 100% !important;
-      }
-      .collab-text-wrap {
-        text-align: center;
+      .collab-section-card {
+        padding: 2rem 1.25rem !important;
       }
     }
 
@@ -602,6 +739,585 @@
     .translate-x-full {
       --tw-translate-x: 100%;
       translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+
+    /* ===== ELIGIBILITY CARD ===== */
+    .eligibility-card {
+      text-align: center;
+      background: #fef6e8;
+      border: 1px solid #e8d5b5;
+      border-radius: 1.5rem;
+      padding: 2.5rem 2rem;
+    }
+    .eligibility-items {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    .eligibility-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-align: left;
+      font-size: 0.95rem;
+      color: #3b2314;
+      padding: 0.75rem 1rem;
+      background: rgba(255,255,255,0.6);
+      border-radius: 0.75rem;
+      border: 1px solid rgba(232,213,181,0.4);
+    }
+    .eligibility-item svg { flex-shrink: 0; }
+    @media (max-width: 640px) {
+      .eligibility-card { padding: 2rem 1.25rem; }
+      .eligibility-item { font-size: 0.875rem; padding: 0.6rem 0.85rem; }
+    }
+
+    /* ===== LOCATION CARD ===== */
+    .location-card {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 1.5rem;
+      background: #fef6e8;
+      border: 1px solid #e8d5b5;
+      border-radius: 1.25rem;
+      padding: 1.25rem;
+      overflow: hidden;
+    }
+    .location-map {
+      border-radius: 0.75rem;
+      overflow: hidden;
+      min-height: 260px;
+      background: #f7e8ca;
+    }
+    .location-map iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+    }
+    .location-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.5rem 0;
+    }
+    .location-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .location-info-item svg { flex-shrink: 0; margin-top: 2px; }
+    @media (max-width: 768px) {
+      .location-card {
+        grid-template-columns: 1fr;
+      }
+      .location-map { min-height: 200px; }
+    }
+
+    /* ===== WHY CHOOSE GRID ===== */
+    .why-choose-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+    .why-choose-card {
+      background: #fef6e8;
+      border: 1px solid #e8d5b5;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+      position: relative;
+    }
+    .why-choose-card:hover {
+      border-color: rgba(170,14,28,0.3);
+      box-shadow: 0 8px 24px rgba(170,14,28,0.08);
+      transform: translateY(-3px);
+    }
+    .why-choose-number {
+      font-size: 2rem;
+      font-weight: 900;
+      color: rgba(170,14,28,0.1);
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+    .why-choose-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #2d1a0e;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+    .why-choose-card p {
+      font-size: 0.85rem;
+      color: #5c4033;
+      line-height: 1.65;
+    }
+    @media (max-width: 1024px) {
+      .why-choose-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .why-choose-grid { grid-template-columns: 1fr; }
+      .why-choose-card { padding: 1.25rem; }
+    }
+
+    /* ===== SCHOLARSHIP TEASER ===== */
+    .scholarship-teaser {
+      background: linear-gradient(135deg, #fffdf5, #fef6e8);
+      border: 1px solid #e8d5b5;
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .scholarship-teaser::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: rgba(255,215,0,0.08);
+    }
+    .scholarship-teaser-content {
+      position: relative;
+      z-index: 1;
+    }
+    .scholarship-tiers {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .scholarship-tier {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      background: rgba(255,255,255,0.7);
+      border: 1px solid rgba(232,213,181,0.6);
+      border-radius: 0.75rem;
+      min-width: 90px;
+    }
+    .tier-value {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #aa0e1c;
+      line-height: 1;
+    }
+    .tier-label {
+      font-size: 0.65rem;
+      color: #7a6352;
+      font-weight: 600;
+      margin-top: 0.25rem;
+      text-align: center;
+    }
+    @media (max-width: 640px) {
+      .scholarship-teaser { padding: 1.75rem 1.25rem; }
+      .scholarship-tiers { gap: 0.5rem; }
+      .scholarship-tier { min-width: 70px; padding: 0.6rem 0.85rem; }
+      .tier-value { font-size: 1.2rem; }
+    }
+
+    /* ===== FEATURE CARDS ENHANCED ===== */
+    .feature-card-enhanced {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      background: #fef6e8;
+      border: 1px solid #e8d5b5;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .feature-card-enhanced:hover {
+      border-color: rgba(227,70,20,0.35);
+      box-shadow: 0 8px 24px rgba(227,70,20,0.08);
+      transform: translateY(-3px);
+    }
+    .feature-icon-wrap {
+      width: 56px;
+      height: 56px;
+      border-radius: 0.875rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    @media (max-width: 640px) {
+      .feature-card-enhanced {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.25rem;
+      }
+      .feature-icon-wrap {
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    /* ===== ABOUT PARTNER CARDS ===== */
+    .about-partner-card {
+      background: #fef6e8;
+      border: 1px solid #e8d5b5;
+      border-radius: 1.25rem;
+      padding: 2rem 1.75rem;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .about-partner-card:hover {
+      border-color: rgba(227,70,20,0.3);
+      box-shadow: 0 12px 32px rgba(227,70,20,0.08);
+      transform: translateY(-3px);
+    }
+    .about-partner-logo-wrap {
+      margin-bottom: 1.25rem;
+    }
+    .about-partner-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.25rem;
+    }
+    .about-partner-highlights span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #2d1a0e;
+      background: rgba(255,255,255,0.7);
+      border: 1px solid rgba(232,213,181,0.8);
+    }
+    @media (max-width: 640px) {
+      .about-partner-card {
+        padding: 1.5rem 1.25rem;
+      }
+    }
+
+    /* ===== STATS BANNER ===== */
+    .stats-banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1.5rem 2rem;
+      background: linear-gradient(135deg, #fef6e8, #fff8f0);
+      border: 1px solid #e8d5b5;
+      border-radius: 1.25rem;
+      box-shadow: 0 2px 12px rgba(45,26,14,0.06);
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-align: left;
+    }
+    .stat-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 0.75rem;
+      background: rgba(227,70,20,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #e34614;
+    }
+    .stat-value {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #2d1a0e;
+      line-height: 1.2;
+    }
+    .stat-label {
+      display: block;
+      font-size: 0.72rem;
+      color: #7a6352;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+    .stat-divider {
+      width: 1px;
+      height: 36px;
+      background: #e8d5b5;
+      flex-shrink: 0;
+    }
+    @media (max-width: 1024px) {
+      .stats-banner {
+        gap: 1rem;
+        padding: 1.25rem 1.5rem;
+      }
+      .stat-divider { display: none; }
+      .stat-item { flex: 0 0 calc(33.33% - 0.75rem); justify-content: center; }
+    }
+    @media (max-width: 640px) {
+      .stats-banner {
+        gap: 0.75rem;
+        padding: 1rem;
+      }
+      .stat-item { flex: 0 0 calc(50% - 0.5rem); }
+      .stat-icon { width: 40px; height: 40px; }
+      .stat-icon svg { width: 22px; height: 22px; }
+      .stat-value { font-size: 0.95rem; }
+      .stat-label { font-size: 0.65rem; }
+    }
+
+    /* ===== PROGRAM CARDS GRID ===== */
+    .program-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      max-width: 72rem;
+      margin: 0 auto;
+    }
+    .program-card {
+      background: #fef6e8;
+      border: 1px solid #e8d5b5;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 200px;
+      transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+    }
+    .program-card:hover {
+      border-color: rgba(227,70,20,0.4);
+      box-shadow: 0 8px 24px rgba(227,70,20,0.1);
+      transform: translateY(-4px);
+    }
+    .program-card-badge {
+      display: inline-block;
+      padding: 0.2rem 0.7rem;
+      border-radius: 9999px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(227,70,20,0.1);
+      color: #e34614;
+      margin-bottom: 0.75rem;
+      width: fit-content;
+    }
+    .program-card h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #2d1a0e;
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .program-card-seats {
+      font-size: 0.8rem;
+      color: #5c4033;
+      line-height: 1.5;
+      margin-top: auto;
+    }
+    @media (max-width: 1024px) {
+      .program-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 640px) {
+      .program-cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .program-card {
+        min-height: auto;
+        padding: 1.25rem;
+      }
+    }
+
+    /* ===== CAMPUS GALLERY ===== */
+    .campus-gallery {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 1rem;
+      border-radius: 1.25rem;
+      overflow: hidden;
+    }
+    .campus-gallery-main {
+      position: relative;
+      border-radius: 1rem;
+      overflow: hidden;
+      min-height: 320px;
+    }
+    .campus-gallery-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .campus-gallery-main:hover img { transform: scale(1.04); }
+    .campus-gallery-side {
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+    .campus-gallery-item {
+      position: relative;
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    .campus-gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .campus-gallery-item:hover img { transform: scale(1.06); }
+    .campus-gallery-label {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #fff;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    @media (max-width: 768px) {
+      .campus-gallery {
+        grid-template-columns: 1fr;
+      }
+      .campus-gallery-main { min-height: 220px; }
+      .campus-gallery-side {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+      }
+      .campus-gallery-item { min-height: 120px; }
+    }
+    @media (max-width: 480px) {
+      .campus-gallery-side {
+        grid-template-columns: 1fr 1fr;
+      }
+      .campus-gallery-side .campus-gallery-item:last-child {
+        grid-column: span 2;
+      }
+    }
+
+    /* ===== MENTORS SECTION ===== */
+    .mentors-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      max-width: 56rem;
+      margin: 0 auto;
+    }
+    .mentor-card-smru {
+      background: linear-gradient(to bottom, #fffaf2, #fef6e8);
+      border: 1px solid rgba(232,213,184,0.6);
+      border-radius: 1rem;
+      padding: 1.75rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 0.35s cubic-bezier(.25,.46,.45,.94), box-shadow 0.35s ease;
+    }
+    .mentor-card-smru:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 20px 40px rgba(227,70,20,0.12), 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .mentor-avatar-wrap {
+      position: relative;
+      margin-bottom: 1rem;
+    }
+    .mentor-avatar-wrap img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border: 3px solid rgba(227,70,20,0.15);
+    }
+    .mentor-linkedin-badge {
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #0A66C2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      opacity: 0;
+      transform: scale(0.8);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    .mentor-card-smru:hover .mentor-linkedin-badge {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .mentor-card-smru h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #2d1a0e;
+      margin-bottom: 0.2rem;
+    }
+    .mentor-company {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #e34614;
+      margin-bottom: 0.15rem;
+    }
+    .mentor-role {
+      font-size: 0.72rem;
+      color: #7a6352;
+      line-height: 1.4;
+    }
+    .mentor-logos-strip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2.5rem;
+      padding: 1.25rem 2rem;
+      background: rgba(45,26,14,0.04);
+      border: 1px solid rgba(232,213,181,0.5);
+      border-radius: 1rem;
+    }
+    .mentor-logos-strip img {
+      height: 28px;
+      width: auto;
+      object-fit: contain;
+      opacity: 0.8;
+      filter: grayscale(100%) brightness(0.3);
+      transition: opacity 0.3s, filter 0.3s;
+    }
+    .mentor-logos-strip img:hover {
+      opacity: 1;
+      filter: grayscale(0%) brightness(1);
+    }
+    @media (max-width: 768px) {
+      .mentors-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 28rem;
+      }
+      .mentor-logos-strip { gap: 1.25rem; }
+      .mentor-logos-strip img { height: 22px; }
+    }
+    @media (max-width: 480px) {
+      .mentors-grid {
+        grid-template-columns: 1fr;
+        max-width: 18rem;
+      }
     }
   </style>
 </head>
@@ -805,54 +1521,463 @@
       </div>
     </section>
 
+    <!-- University Stats Banner -->
+    <section class="py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="stats-banner">
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div>
+              <span class="stat-value">UGC</span>
+              <span class="stat-label">Recognized University</span>
+            </div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <div>
+              <span class="stat-value">NAAC</span>
+              <span class="stat-label">Accredited</span>
+            </div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+            </div>
+            <div>
+              <span class="stat-value">Est. 2024</span>
+              <span class="stat-label">University Founded</span>
+            </div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <span class="stat-value">Hyderabad</span>
+              <span class="stat-label">Telangana, India</span>
+            </div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <span class="stat-value">720+</span>
+              <span class="stat-label">Total Seats (IIAT Program)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Phase-1 IIAT SAT Banner -->
     <section class="py-4 px-4 sm:px-6 lg:px-8">
       <div class="max-w-5xl mx-auto text-center">
-        <div style="background:linear-gradient(135deg, #e34614, #cc5227);border-radius:12px;padding:14px 24px;display:inline-block;">
+        <div style="background:linear-gradient(135deg, #aa0e1c, #8a0b16);border-radius:12px;padding:14px 24px;display:inline-flex;align-items:center;gap:10px;box-shadow:0 4px 16px rgba(170,14,28,0.25);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           <p style="color:#fff !important;font-size:15px;font-weight:700;margin:0;">Phase-1 IIAT SAT is on March 22nd 2026</p>
         </div>
       </div>
     </section>
 
-    <!-- Feature Cards -->
-    <section class="py-10 sm:py-16 px-4 sm:px-6 lg:px-8 bg-neutral-50">
+    <!-- About the Partnership -->
+    <section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-neutral-50">
       <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-          <div class="rounded-2xl border border-neutral-200 bg-white p-6 sm:p-8">
-            <h3 class="text-xl font-bold mb-3">India's First Rehabilitation-Focused Campus</h3>
-            <p style="color:#5c4033;">A purpose-driven campus dedicated to health sciences and rehabilitation, designed to support rigorous training, student wellness, and clinical application from early in the academic journey, fostering future experts in care and therapy.</p>
+        <div class="text-center mb-12">
+          <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.375rem 1rem;border-radius:9999px;border:1px solid rgba(170,14,28,0.2);background:rgba(170,14,28,0.05);margin-bottom:1rem;">
+            <span style="width:8px;height:8px;border-radius:50%;background:#aa0e1c;display:inline-block;"></span>
+            <span style="font-size:0.75rem;font-weight:600;color:#aa0e1c;letter-spacing:0.05em;text-transform:uppercase;">Know Your Partners</span>
           </div>
-          <div class="rounded-2xl border border-neutral-200 bg-white p-6 sm:p-8">
-            <h3 class="text-xl font-bold mb-3">Clinical-Linked Learning Infrastructure</h3>
-            <p style="color:#5c4033;">Well-equipped labs, simulation centres, clinical facilities, and teaching hospitals that provide students with real patient care exposure, ensuring learning through practice under expert supervision.</p>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-black" style="color:#2d1a0e;">Two Institutions. <span style="color:#aa0e1c;">One Mission.</span></h2>
+          <p class="mt-3 text-sm sm:text-base max-w-2xl mx-auto" style="color:#5c4033;line-height:1.7;">A UGC-recognized university and a next-gen technology institute &mdash; coming together to build industry-ready engineers from day one.</p>
+        </div>
+
+        <!-- Two-column About Cards -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-10">
+
+          <!-- About IIAT -->
+          <div class="about-partner-card">
+            <div class="about-partner-logo-wrap">
+              <img src="../../assets/new/IIAT_logo.png" alt="IIAT Logo" style="height:52px;width:auto;object-fit:contain;">
+            </div>
+            <h3 class="text-xl sm:text-2xl font-black mb-2" style="color:#2d1a0e;">Indian Institute of Advanced Technologies</h3>
+            <p class="text-xs font-semibold uppercase tracking-wider mb-4" style="color:#e34614;">Technology &amp; Industry Partner</p>
+            <p style="color:#5c4033;font-size:0.9rem;line-height:1.75;">
+              IIAT is a next-generation engineering institute built by InnoFutureTech Pvt. Ltd., focused on bridging the gap between academia and industry. With a curriculum designed by alumni from IIT Delhi, IIT Bombay, and engineers at Microsoft, Google, and Amazon, IIAT delivers a learning experience rooted in real-world tech &mdash; not just textbooks.
+            </p>
+            <div class="about-partner-highlights">
+              <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e34614" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                Industry-designed curriculum
+              </span>
+              <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e34614" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                FAANG mentorship network
+              </span>
+              <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e34614" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                15+ real-world projects
+              </span>
+              <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e34614" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                100+ hiring partners
+              </span>
+              <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e34614" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                Placement &amp; career support
+              </span>
+              <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#e34614" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                Scholarship via IIAT SAT
+              </span>
+            </div>
           </div>
-          <div class="rounded-2xl border border-neutral-200 bg-white p-6 sm:p-8">
-            <h3 class="text-xl font-bold mb-3">Immersive Healthcare &amp; Applied Sciences Education</h3>
-            <p style="color:#5c4033;">A curriculum built around rehabilitation sciences, allied health, psychology, and therapy disciplines that integrates theoretical knowledge with real-world clinical immersion, research, and applied problem-solving.</p>
+
+          <!-- About SMRU -->
+          <div class="about-partner-card">
+            <div class="about-partner-logo-wrap">
+              <img src="https://smru.edu.in/assets/Logo-C3Lnjwre.png" alt="SMRU Logo" style="height:52px;width:auto;object-fit:contain;">
+            </div>
+            <h3 class="text-xl sm:text-2xl font-black mb-2" style="color:#2d1a0e;">St. Mary's Rehabilitation University</h3>
+            <p class="text-xs font-semibold uppercase tracking-wider mb-4" style="color:#aa0e1c;">UGC-Recognized University Partner</p>
+            <p style="color:#5c4033;font-size:0.9rem;line-height:1.75;">
+              Located in Hyderabad, Telangana, SMRU is India's pioneering private university devoted to rehabilitation sciences, inclusive healthcare, and allied health education. Established with a purpose-driven vision, SMRU provides a state-of-the-art campus with clinical-linked infrastructure, simulation centres, and teaching hospitals &mdash; creating an immersive learning environment.
+            </p>
+            <div class="about-partner-highlights">
+              <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#aa0e1c" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                UGC recognized &amp; AICTE approved
+              </span>
+              <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#aa0e1c" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                Hyderabad, Telangana campus
+              </span>
+              <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#aa0e1c" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                Clinical &amp; simulation labs
+              </span>
+              <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#aa0e1c" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                Teaching hospital access
+              </span>
+              <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#aa0e1c" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                Purpose-driven campus culture
+              </span>
+              <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#aa0e1c" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                Multi-disciplinary academics
+              </span>
+            </div>
           </div>
-          <div class="rounded-2xl border border-neutral-200 bg-white p-6 sm:p-8">
-            <h3 class="text-xl font-bold mb-3">Compassion-Centred Campus Life</h3>
-            <p style="color:#5c4033;">A supportive and student-centric culture that promotes community, empathy, leadership, and interdisciplinary collaboration, essential traits in healthcare professions and rehabilitation practice.</p>
+        </div>
+
+        <!-- Collaboration Banner -->
+        <div class="collab-section-card">
+          <!-- Dual logos -->
+          <div class="collab-logos">
+            <div class="collab-logo-item">
+              <img src="../../assets/new/IIAT_logo.png" alt="IIAT Logo" style="height:44px;width:auto;object-fit:contain;">
+            </div>
+            <div class="collab-x-divider">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#e34614" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </div>
+            <div class="collab-logo-item">
+              <img src="https://smru.edu.in/assets/Logo-C3Lnjwre.png" alt="SMRU Logo" style="height:44px;width:auto;object-fit:contain;">
+            </div>
+          </div>
+          <!-- Text -->
+          <p class="text-sm uppercase tracking-widest mb-2" style="color:#aa0e1c;font-weight:600;">The Partnership</p>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black mb-3" style="color:#2d1a0e !important;line-height:1.15;">Building <span style="color:#aa0e1c;">Industry-Ready Engineers</span> Together</h2>
+          <p class="text-sm sm:text-base mb-5" style="color:#5c4033;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.7;">
+            SMRU provides the UGC-recognized degree and world-class campus infrastructure. IIAT brings the industry-aligned curriculum, mentorship from FAANG engineers, hands-on projects, and dedicated placement support. Together, they deliver a B.Tech CSE experience that goes far beyond traditional engineering education.
+          </p>
+          <!-- Badges -->
+          <div class="collab-badges">
+            <span class="collab-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+              UGC Recognized Degree
+            </span>
+            <span class="collab-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+              AICTE Guidelines
+            </span>
+            <span class="collab-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+              Industry Curriculum by IIAT
+            </span>
+            <span class="collab-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+              FAANG Mentorship
+            </span>
+            <span class="collab-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+              Placement Support
+            </span>
+            <span class="collab-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+              Campus in Hyderabad
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Programs Offered -->
+    <section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl sm:text-4xl font-black" style="color:#2d1a0e;">Programs Offered</h2>
+          <p style="color:#7a6352;font-size:0.9rem;margin-top:0.5rem;">6 specialised B.Tech CSE tracks &mdash; all with equal weight and opportunity</p>
+        </div>
+        <div class="program-cards-grid">
+          <!-- Card 1 -->
+          <div class="program-card">
+            <div>
+              <span class="program-card-badge">AI &amp; Data Science</span>
+              <h3>B.Tech CSE (AI &amp; Data Science)</h3>
+            </div>
+            <p class="program-card-seats">180 Seats &mdash; Build intelligent data-driven systems</p>
+          </div>
+          <!-- Card 2 -->
+          <div class="program-card">
+            <div>
+              <span class="program-card-badge">FinTech</span>
+              <h3>B.Tech CSE (FinTech &amp; AI)</h3>
+            </div>
+            <p class="program-card-seats">60 Seats &mdash; Master financial technology &amp; AI</p>
+          </div>
+          <!-- Card 3 -->
+          <div class="program-card">
+            <div>
+              <span class="program-card-badge">Cyber Security</span>
+              <h3>B.Tech CSE (Cyber Security with AI/ML)</h3>
+            </div>
+            <p class="program-card-seats">60 Seats &mdash; Protect systems with AI-powered security</p>
+          </div>
+          <!-- Card 4 -->
+          <div class="program-card">
+            <div>
+              <span class="program-card-badge">Core CSE</span>
+              <h3>B.Tech CSE (Core)</h3>
+            </div>
+            <p class="program-card-seats">180 Seats &mdash; Full-stack software engineering</p>
+          </div>
+          <!-- Card 5 -->
+          <div class="program-card">
+            <div>
+              <span class="program-card-badge">AI &amp; ML</span>
+              <h3>B.Tech CSE (AI &amp; Machine Learning)</h3>
+            </div>
+            <p class="program-card-seats">180 Seats &mdash; Deep learning, generative AI &amp; MLOps</p>
+          </div>
+          <!-- Card 6 -->
+          <div class="program-card">
+            <div>
+              <span class="program-card-badge">Biomedical</span>
+              <h3>B.Tech Biomedical Engineering, AI &amp; Medical Robotics</h3>
+            </div>
+            <p class="program-card-seats">60 Seats &mdash; HealthTech, medical imaging &amp; AI robotics</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Collaboration Section (Side by Side) -->
-    <section class="py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+    <!-- Mentors Section -->
+    <section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8" style="background:linear-gradient(180deg, #fef6e8 0%, #fdf0d8 50%, #fef6e8 100%);">
       <div class="max-w-6xl mx-auto">
-        <div style="display:flex;flex-direction:row;gap:32px;align-items:center;" class="collab-flex">
-          <!-- Left: Image -->
-          <div style="flex:0 0 50%;max-width:50%;" class="collab-img-wrap">
-            <div class="rounded-2xl overflow-hidden border border-neutral-200">
-              <img src="https://framerusercontent.com/images/iI2c01HK9aWVkM5UWLz8qtJKqE.webp" alt="IIAT Collaboration" class="w-full object-cover" style="border-radius:16px;">
-            </div>
+        <div class="text-center mb-10">
+          <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.375rem 1rem;border-radius:9999px;border:1px solid rgba(227,70,20,0.2);background:rgba(227,70,20,0.05);margin-bottom:1rem;">
+            <span style="width:8px;height:8px;border-radius:50%;background:#e34614;display:inline-block;"></span>
+            <span style="font-size:0.75rem;font-weight:600;color:#e34614;letter-spacing:0.05em;text-transform:uppercase;">Industry Mentors</span>
           </div>
-          <!-- Right: Text -->
-          <div style="flex:1;min-width:0;" class="collab-text-wrap">
-            <p class="text-sm uppercase tracking-widest mb-2" style="color:#991b1b;">Collaboration For</p>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4" style="color:#991b1b !important;">Industry-ready Education</h2>
-            <p class="text-sm sm:text-base" style="color:#5c4033;">as per provisions in the UGC and AICTE guidelines</p>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-black mb-3" style="color:#2d1a0e;">
+            Learn from the <span style="color:#e34614;">best</span>
+          </h2>
+          <h3 class="text-lg sm:text-xl font-bold mb-4" style="color:#2d1a0e;">Mentors &amp; Industry Leaders</h3>
+          <p class="text-sm sm:text-base max-w-2xl mx-auto" style="color:#6b5744;line-height:1.7;">
+            Our mentors aren't just guest speakers &mdash; they guide students on real projects, building confidence and industry&#8209;ready skills.
+          </p>
+        </div>
+        <div class="mentors-grid">
+          <!-- Mentor 1: Saurav -->
+          <a href="https://www.linkedin.com/in/sauravraghuvanshi/" target="_blank" rel="noopener noreferrer" class="mentor-card-smru group">
+            <div class="mentor-avatar-wrap">
+              <img src="../../assets/new/mentors/linkedin/saurav-raghuvanshi.jpg" alt="Saurav Raghuvanshi" loading="lazy" width="80" height="80">
+              <div class="mentor-linkedin-badge">
+                <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+            </div>
+            <h4>Saurav Raghuvanshi</h4>
+            <p class="mentor-company">Microsoft</p>
+            <p class="mentor-role">Digital Cloud Solution Architect</p>
+          </a>
+          <!-- Mentor 2: Nishkarsh -->
+          <a href="https://www.linkedin.com/in/nishkarshraj/" target="_blank" rel="noopener noreferrer" class="mentor-card-smru group">
+            <div class="mentor-avatar-wrap">
+              <img src="../../assets/new/mentors/linkedin/nishkarsh-raj.jpg" alt="Nishkarsh Raj" loading="lazy" width="80" height="80">
+              <div class="mentor-linkedin-badge">
+                <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+            </div>
+            <h4>Nishkarsh Raj</h4>
+            <p class="mentor-company">Google</p>
+            <p class="mentor-role">Developer Relations Engineer</p>
+          </a>
+          <!-- Mentor 3: Praveen -->
+          <a href="https://www.linkedin.com/in/praveenkumar017/" target="_blank" rel="noopener noreferrer" class="mentor-card-smru group">
+            <div class="mentor-avatar-wrap">
+              <img src="../../assets/new/mentors/linkedin/praveen-kumar.jpg" alt="Praveen Kumar P." loading="lazy" width="80" height="80">
+              <div class="mentor-linkedin-badge">
+                <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+            </div>
+            <h4>Praveen Kumar P.</h4>
+            <p class="mentor-company">Walmart</p>
+            <p class="mentor-role">Staff Software Engineer</p>
+          </a>
+          <!-- Mentor 4: Rocky -->
+          <a href="https://www.linkedin.com/in/rocky-bhatia-a4801010/" target="_blank" rel="noopener noreferrer" class="mentor-card-smru group">
+            <div class="mentor-avatar-wrap">
+              <img src="../../assets/new/mentors/linkedin/rocky-bhatia.jpg" alt="Rocky Bhatia" loading="lazy" width="80" height="80">
+              <div class="mentor-linkedin-badge">
+                <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+            </div>
+            <h4>Rocky Bhatia</h4>
+            <p class="mentor-company">Qualcomm</p>
+            <p class="mentor-role">Senior Staff Engineer</p>
+          </a>
+          <!-- Mentor 5: Palak -->
+          <a href="https://www.linkedin.com/in/palak-awasthi-5a0b45149/" target="_blank" rel="noopener noreferrer" class="mentor-card-smru group">
+            <div class="mentor-avatar-wrap">
+              <img src="../../assets/new/mentors/linkedin/palak-awasthi.jpg" alt="Palak Awasthi" loading="lazy" width="80" height="80">
+              <div class="mentor-linkedin-badge">
+                <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+            </div>
+            <h4>Palak Awasthi</h4>
+            <p class="mentor-company">ServiceNow</p>
+            <p class="mentor-role">Senior Software Engineer</p>
+          </a>
+          <!-- Mentor 6: Kartikey -->
+          <a href="https://www.linkedin.com/in/kartikey-rawat-530486123/" target="_blank" rel="noopener noreferrer" class="mentor-card-smru group">
+            <div class="mentor-avatar-wrap">
+              <img src="../../assets/new/mentors/linkedin/kartikey-rawat.jpg" alt="Kartikey Rawat" loading="lazy" width="80" height="80">
+              <div class="mentor-linkedin-badge">
+                <svg width="14" height="14" fill="white" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+            </div>
+            <h4>Kartikey Rawat</h4>
+            <p class="mentor-company">Amazon</p>
+            <p class="mentor-role">Software Development Engineer</p>
+          </a>
+        </div>
+        <!-- Company logos strip -->
+        <div class="mentor-logos-strip">
+          <img src="../../assets/new/mentors/company/Microsoft.png" alt="Microsoft" loading="lazy">
+          <img src="../../assets/new/mentors/company/google.png" alt="Google" loading="lazy">
+          <img src="../../assets/new/mentors/company/walmart.png" alt="Walmart" loading="lazy">
+          <img src="../../assets/new/mentors/company/qualcomm.png" alt="Qualcomm" loading="lazy">
+          <img src="../../assets/new/mentors/company/servicenow.png" alt="ServiceNow" loading="lazy">
+          <img src="../../assets/new/mentors/company/Amazon.png" alt="Amazon" loading="lazy">
+          <img src="../../assets/new/mentors/company/oracle.png" alt="Oracle" loading="lazy">
+          <img src="../../assets/new/mentors/company/PayPal.png" alt="PayPal" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose SMRU x IIAT -->
+    <section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-10">
+          <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.375rem 1rem;border-radius:9999px;border:1px solid rgba(170,14,28,0.2);background:rgba(170,14,28,0.05);margin-bottom:1rem;">
+            <span style="width:8px;height:8px;border-radius:50%;background:#aa0e1c;display:inline-block;"></span>
+            <span style="font-size:0.75rem;font-weight:600;color:#aa0e1c;letter-spacing:0.05em;text-transform:uppercase;">The IIAT Advantage</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-black" style="color:#2d1a0e;">
+            Why Choose <span style="color:#aa0e1c;">SMRU &times; IIAT</span>?
+          </h2>
+        </div>
+        <div class="why-choose-grid">
+          <div class="why-choose-card">
+            <div class="why-choose-number">01</div>
+            <h3>Industry-Aligned Curriculum</h3>
+            <p>Go beyond textbooks with a curriculum co-designed with tech leaders &mdash; covering AI/ML, cloud computing, cybersecurity, and full-stack development.</p>
+          </div>
+          <div class="why-choose-card">
+            <div class="why-choose-number">02</div>
+            <h3>Real Projects, Not Just Theory</h3>
+            <p>Work on 15+ industry-grade projects across 4 years, building a portfolio that impresses recruiters before you even graduate.</p>
+          </div>
+          <div class="why-choose-card">
+            <div class="why-choose-number">03</div>
+            <h3>Mentorship from FAANG Engineers</h3>
+            <p>Get guided by engineers from Microsoft, Google, Amazon, and more &mdash; through live sessions, project reviews, and career coaching.</p>
+          </div>
+          <div class="why-choose-card">
+            <div class="why-choose-number">04</div>
+            <h3>Placement &amp; Career Support</h3>
+            <p>Access IIAT's network of 100+ hiring partners, mock interviews, resume workshops, and dedicated placement support throughout your journey.</p>
+          </div>
+          <div class="why-choose-card">
+            <div class="why-choose-number">05</div>
+            <h3>UGC-Recognized Degree</h3>
+            <p>Earn a fully recognized B.Tech CSE degree from SMRU &mdash; valid for jobs, higher studies, and competitive exams in India and abroad.</p>
+          </div>
+          <div class="why-choose-card">
+            <div class="why-choose-number">06</div>
+            <h3>Scholarship Opportunities</h3>
+            <p>Merit-based and need-based scholarships available through the IIAT SAT, rewarding academic potential and financial need alike.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scholarship Teaser -->
+    <section class="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-neutral-50">
+      <div class="max-w-5xl mx-auto">
+        <div class="scholarship-teaser">
+          <div class="scholarship-teaser-content">
+            <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.3rem 0.85rem;border-radius:9999px;background:rgba(255,215,0,0.15);border:1px solid rgba(255,215,0,0.3);margin-bottom:1rem;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b8860b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <span style="font-size:0.72rem;font-weight:700;color:#b8860b;letter-spacing:0.05em;text-transform:uppercase;">Scholarships Available</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-black mb-3" style="color:#2d1a0e !important;">Up to 100% Scholarship via IIAT SAT</h2>
+            <p style="color:#5c4033;font-size:0.9rem;line-height:1.7;margin-bottom:1.25rem;">
+              Perform well on the IIAT Scholastic Assessment Test and unlock scholarship tiers ranging from 25% to 100% on the IIAT Upskilling Program fee. Your talent determines your reward.
+            </p>
+            <div class="scholarship-tiers">
+              <div class="scholarship-tier">
+                <span class="tier-value">100%</span>
+                <span class="tier-label">Top Performers</span>
+              </div>
+              <div class="scholarship-tier">
+                <span class="tier-value">75%</span>
+                <span class="tier-label">High Scorers</span>
+              </div>
+              <div class="scholarship-tier">
+                <span class="tier-value">50%</span>
+                <span class="tier-label">Strong Performance</span>
+              </div>
+              <div class="scholarship-tier">
+                <span class="tier-value">25%</span>
+                <span class="tier-label">Qualified</span>
+              </div>
+            </div>
+            <a href="/apply/" class="cta-btn cta-btn-primary" style="margin-top:1.25rem;">
+              Take IIAT SAT
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
           </div>
         </div>
       </div>
@@ -861,53 +1986,74 @@
     <!-- 4 Steps to Apply -->
     <section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-neutral-50">
       <div class="max-w-6xl mx-auto">
-        <h2 class="text-3xl sm:text-4xl font-black text-center mb-10">4 steps to apply for admission counselling at IIAT</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-black" style="color:#2d1a0e;">4 steps to apply for <span style="color:#aa0e1c;">admission counselling</span></h2>
+          <p style="color:#7a6352;font-size:0.9rem;margin-top:0.5rem;">Simple, transparent process from application to enrollment</p>
+        </div>
+        <div class="steps-timeline">
           <!-- Step 1 -->
-          <div class="step-card">
-            <p class="step-number">Step 1</p>
-            <h3 class="text-xl font-bold mb-3">Submit the IIAT SAT Application Form Online</h3>
-            <ul class="space-y-2" style="color:#5c4033;">
-              <li>&#8226; Fill out your details</li>
-              <li>&#8226; Pay &#8377;1200* as registration fee (non-refundable)</li>
+          <div class="step-card-v2">
+            <div class="step-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+              <span class="step-badge">1</span>
+            </div>
+            <h3 class="text-lg font-bold mb-2" style="color:#2d1a0e;">Submit IIAT SAT Application</h3>
+            <ul class="space-y-1.5" style="color:#5c4033;font-size:0.875rem;">
+              <li>&#8226; Fill out your details online</li>
+              <li>&#8226; Pay &#8377;1200* registration fee (non-refundable)</li>
             </ul>
-            <div class="mt-4">
-              <a href="/apply/" class="cta-btn cta-btn-primary text-sm">
-                Apply for Counselling
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            <div class="mt-3">
+              <a href="/apply/" class="cta-btn cta-btn-primary text-sm" style="padding:10px 22px;font-size:13px;">
+                Apply Now
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
               </a>
             </div>
-            <p class="mt-3 text-xs font-semibold" style="color:#e34614;">Phase-1 IIAT SAT is on March 22nd 2026</p>
+          </div>
+          <div class="step-connector" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e34614" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </div>
           <!-- Step 2 -->
-          <div class="step-card">
-            <p class="step-number">Step 2</p>
-            <h3 class="text-xl font-bold mb-3">Take IIAT SAT (IIAT Scholastic Assessment Test)</h3>
-            <p style="color:#5c4033;" class="mb-3">IIAT SAT is a 90-minute test designed to evaluate your cognitive abilities and potential as a future tech innovator. Here's the breakdown:</p>
-            <p class="font-semibold mb-2" style="color:#3b2314;">Test Format:</p>
-            <ul class="space-y-2" style="color:#5c4033;">
-              <li><strong>&#8226; Psychometric Test (30 minutes):</strong> 25 questions to gauge personality and emotional traits</li>
-              <li><strong>&#8226; Aptitude (30 minutes):</strong> 18 questions testing analytical and adaptive skills and adaptive skills</li>
-              <li><strong>&#8226; Mathematics (30 minutes):</strong> 17 questions focusing on practical problem-solving</li>
+          <div class="step-card-v2">
+            <div class="step-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <span class="step-badge">2</span>
+            </div>
+            <h3 class="text-lg font-bold mb-2" style="color:#2d1a0e;">Take IIAT SAT</h3>
+            <p style="color:#5c4033;font-size:0.875rem;margin-bottom:0.5rem;">90-minute test evaluating your cognitive abilities:</p>
+            <ul class="space-y-1" style="color:#5c4033;font-size:0.82rem;">
+              <li><strong>Psychometric (30 min):</strong> 25 questions</li>
+              <li><strong>Aptitude (30 min):</strong> 18 questions</li>
+              <li><strong>Mathematics (30 min):</strong> 17 questions</li>
             </ul>
+          </div>
+          <div class="step-connector" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e34614" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </div>
           <!-- Step 3 -->
-          <div class="step-card">
-            <p class="step-number">Step 3</p>
-            <h3 class="text-xl font-bold mb-3">Appear For Counselling</h3>
-            <ul class="space-y-2" style="color:#5c4033;">
-              <li>&#8226; Once you qualify for IIAT SAT, you'll be invited for a one-on-one counselling session to discuss your goals.</li>
-              <li>&#8226; Based on your performance in IIAT SAT and preferences expressed in the counselling session, you will be suggested a university collaborating with IIAT, that best suits your needs.</li>
+          <div class="step-card-v2">
+            <div class="step-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span class="step-badge">3</span>
+            </div>
+            <h3 class="text-lg font-bold mb-2" style="color:#2d1a0e;">Attend Counselling</h3>
+            <ul class="space-y-1.5" style="color:#5c4033;font-size:0.875rem;">
+              <li>&#8226; One-on-one session to discuss your goals</li>
+              <li>&#8226; Get matched with the best-fit university</li>
             </ul>
           </div>
+          <div class="step-connector" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e34614" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </div>
           <!-- Step 4 -->
-          <div class="step-card">
-            <p class="step-number">Step 4</p>
-            <h3 class="text-xl font-bold mb-3">Confirm Your Admission</h3>
-            <ul class="space-y-2" style="color:#5c4033;">
-              <li>&#8226; Apply to your preferred university where IIAT academic program is offered.</li>
-              <li>&#8226; The University will process your admission following its established eligibility criteria and admission policies.</li>
-              <li>&#8226; The admission is solely at the discretion of the university as per UGC and AICTE norms.</li>
+          <div class="step-card-v2">
+            <div class="step-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>
+              <span class="step-badge">4</span>
+            </div>
+            <h3 class="text-lg font-bold mb-2" style="color:#2d1a0e;">Confirm Admission</h3>
+            <ul class="space-y-1.5" style="color:#5c4033;font-size:0.875rem;">
+              <li>&#8226; Apply to your preferred IIAT partner university</li>
+              <li>&#8226; Admission per UGC and AICTE norms</li>
             </ul>
           </div>
         </div>
@@ -923,18 +2069,33 @@
 
     <!-- Who Can Apply -->
     <section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-4xl mx-auto rounded-2xl border border-neutral-200 bg-white p-7 sm:p-10 text-center">
-        <h2 class="text-3xl sm:text-4xl font-black mb-6">Who Can Apply?</h2>
-        <div class="space-y-2 text-base sm:text-lg" style="color:#5c4033;">
-          <p>Passed out in 2023, 2024, 2025 or 2026</p>
-          <p>Completed 12th grade with Maths, Physics, and Chemistry</p>
-          <p class="text-sm sm:text-base mt-3" style="color:#7a6352;"><strong>Note:</strong> 12th pass-outs before 2023 aren't eligible.</p>
-        </div>
-        <div class="mt-7">
-          <a href="/apply/" class="cta-btn cta-btn-primary">
-            Apply for Counselling
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
+      <div class="max-w-4xl mx-auto">
+        <div class="eligibility-card">
+          <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.375rem 1rem;border-radius:9999px;border:1px solid rgba(170,14,28,0.2);background:rgba(170,14,28,0.05);margin-bottom:1rem;">
+            <span style="width:8px;height:8px;border-radius:50%;background:#aa0e1c;display:inline-block;"></span>
+            <span style="font-size:0.75rem;font-weight:600;color:#aa0e1c;letter-spacing:0.05em;text-transform:uppercase;">Eligibility</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black mb-6" style="color:#2d1a0e !important;">Who Can Apply?</h2>
+          <div class="eligibility-items">
+            <div class="eligibility-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>12th pass-outs from <strong>2023, 2024, 2025,</strong> or <strong>2026</strong></span>
+            </div>
+            <div class="eligibility-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>Completed 12th with <strong>Maths, Physics, and Chemistry</strong></span>
+            </div>
+            <div class="eligibility-item" style="opacity:0.6;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+              <span>12th pass-outs before 2023 are <strong>not eligible</strong></span>
+            </div>
+          </div>
+          <div class="mt-6">
+            <a href="/apply/" class="cta-btn cta-btn-primary">
+              Apply for Counselling
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -1081,6 +2242,44 @@
               </div>
               <div class="faq-answer">Hostel accommodation availability depends on the specific university. Most collaborating universities offer on-campus or nearby hostel facilities. Contact the university directly for details on accommodation, fees, and availability.</div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Campus Location -->
+    <section class="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-neutral-50">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-8">
+          <h2 class="text-2xl sm:text-3xl font-black" style="color:#2d1a0e;">Find Us</h2>
+          <p style="color:#7a6352;font-size:0.9rem;margin-top:0.5rem;">St. Mary's Rehabilitation University, Hyderabad</p>
+        </div>
+        <div class="location-card">
+          <div class="location-map">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.5!2d78.38!3d17.44!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI2JzI0LjAiTiA3OMKwMjInNDguMCJF!5e0!3m2!1sen!2sin!4v1"
+              width="100%" height="100%" style="border:0;border-radius:0.75rem;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="SMRU Campus Location"></iframe>
+          </div>
+          <div class="location-info">
+            <div class="location-info-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e34614" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+              <div>
+                <strong style="color:#2d1a0e;font-size:0.9rem;">Campus Address</strong>
+                <p style="color:#5c4033;font-size:0.82rem;line-height:1.5;margin-top:2px;">St. Mary's Rehabilitation University, Hyderabad, Telangana, India</p>
+              </div>
+            </div>
+            <div class="location-info-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e34614" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+              <div>
+                <strong style="color:#2d1a0e;font-size:0.9rem;">Academic Session</strong>
+                <p style="color:#5c4033;font-size:0.82rem;line-height:1.5;margin-top:2px;">2026&ndash;27 admissions now open</p>
+              </div>
+            </div>
+            <a href="https://maps.app.goo.gl/YaND7BrtcqZWjJrW7" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-outline" style="font-size:13px;padding:10px 22px;margin-top:0.5rem;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+              Get Directions
+            </a>
           </div>
         </div>
       </div>
